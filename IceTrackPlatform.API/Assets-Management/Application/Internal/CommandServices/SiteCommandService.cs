@@ -47,5 +47,28 @@ public class SiteCommandService(ISiteRepository siteRepository,
         }
     }
 
+    public async Task<Site?> Handle(UpdateSiteCommand command)
+    {
+        var site = await siteRepository.FindByIdAsync(command.SiteId);
+        if (site is null) return null;
 
+        site.UpdateInformation(
+            command.Name,
+            command.Address,
+            command.ContactName,
+            command.Phone
+        );
+
+        try
+        {
+            siteRepository.Update(site);
+            await unitOfWork.CompleteAsync();
+            return site;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Error updating Site: {e.Message}");
+            return null;
+        }
+    }
 }

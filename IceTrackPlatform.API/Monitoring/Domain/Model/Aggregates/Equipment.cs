@@ -11,8 +11,6 @@ public partial class Equipment : EquipmentAudit
     public string Type { get; private set; }
     public string Serial { get; private set; }
     public StatusEquipment Status { get; private set; }
-    public DateTime Installed { get; }
-    public DateTime LastSeen { get; private set; }
     public float SetPoint { get; private set; }
     public string Name { get; private set; }
     public string Manufacturer { get; private set; }
@@ -25,8 +23,6 @@ public partial class Equipment : EquipmentAudit
         Type = string.Empty;
         Serial = string.Empty;
         Status = StatusEquipment.OFF;
-        Installed = DateTime.Now;
-        LastSeen = DateTime.Now;
         SetPoint = 0;
         Name = string.Empty;
         Manufacturer = string.Empty;
@@ -40,8 +36,6 @@ public partial class Equipment : EquipmentAudit
         Type = command.Type;
         Serial = command.Serial;
         Status = command.Status;
-        Installed = command.Installed;
-        LastSeen = command.LastSeen;
         SetPoint = command.SetPoint;
         Name = command.Name;
         Manufacturer = command.Manufacturer;

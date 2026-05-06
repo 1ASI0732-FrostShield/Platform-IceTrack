@@ -11,8 +11,6 @@ public record CreateEquipmentResource(
     [Required] string  Type,
     [Required] string  Serial,
     [Required] StatusEquipment  Status,
-    [Required] DateTime  Installed,
-    [Required] DateTime  LastSeen,
     [Required] float  SetPoint,
     [Required] string  Name,
     [Required] string  Manufacturer,

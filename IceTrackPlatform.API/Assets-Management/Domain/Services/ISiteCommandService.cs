@@ -24,4 +24,9 @@ public interface ISiteCommandService
     ///     Returns true if the site was deleted; otherwise false.
     /// </remarks>
     Task<bool> Handle(DeleteSiteCommand command);
+    
+    /// <summary>
+    ///  Handle the update site config command
+    /// </summary>
+    Task<Site?> Handle(UpdateSiteCommand command);
 }

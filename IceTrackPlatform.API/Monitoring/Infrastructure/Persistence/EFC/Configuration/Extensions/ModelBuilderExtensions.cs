@@ -15,8 +15,6 @@ public static class ModelBuilderExtensions
         builder.Entity<Equipment>().Property(e => e.Type).IsRequired();
         builder.Entity<Equipment>().Property(e => e.Serial).IsRequired();
         builder.Entity<Equipment>().Property(e => e.Status).IsRequired();
-        builder.Entity<Equipment>().Property(e => e.Installed).IsRequired();
-        builder.Entity<Equipment>().Property(e => e.LastSeen).IsRequired();
         builder.Entity<Equipment>().Property(e => e.SetPoint).IsRequired();
         builder.Entity<Equipment>().Property(e => e.Name).IsRequired();
         builder.Entity<Equipment>().Property(e => e.Manufacturer).IsRequired();

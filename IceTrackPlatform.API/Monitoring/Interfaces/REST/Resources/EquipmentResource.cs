@@ -6,5 +6,5 @@ namespace IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources;
 ///     Represents the resource for a new equipment.
 /// </summary>
 public record EquipmentResource(int Id, Guid EquipmentId, string Model, string Type, string Serial, StatusEquipment Status,
-    DateTime Installed, DateTime LastSeen, float SetPoint, string Name, string Manufacturer, bool Online,
+    float SetPoint, string Name, string Manufacturer, bool Online,
     DateTimeOffset? Created, DateTimeOffset? Updated);

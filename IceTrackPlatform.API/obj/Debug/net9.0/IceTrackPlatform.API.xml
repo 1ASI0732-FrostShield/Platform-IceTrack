@@ -1,0 +1,3378 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceTrackPlatform.API</name>
+    </assembly>
+    <members>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService">
+            <summary>
+            This class handles commands related to Site entities.
+            </summary>
+            <param name="siteRepository">The instance of SiteRepository</param>
+            <param name="unitOfWork">The instance of UnitOfwork</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+            <summary>
+            This class handles commands related to Site entities.
+            </summary>
+            <param name="siteRepository">The instance of SiteRepository</param>
+            <param name="unitOfWork">The instance of UnitOfwork</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Application.Internal.QueryServices.SiteQueryService">
+            <summary>
+                Site Query Service
+            </summary>
+            <remarks>
+                This class handles queries related to favorite news sources.
+                It interacts with the ISiteQueryServices to retrieve data.
+            </remarks>
+            <param name="siteRepository"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.QueryServices.SiteQueryService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository)">
+            <summary>
+                Site Query Service
+            </summary>
+            <remarks>
+                This class handles queries related to favorite news sources.
+                It interacts with the ISiteQueryServices to retrieve data.
+            </remarks>
+            <param name="siteRepository"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Aggregates.Site.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand)">
+            <summary>
+              Constructor for Site aggregate
+            </summary>
+            <param name="Name"></param>
+            <param name="Address"></param>
+            <param name="ContactName"></param>
+            <param name="Phone"></param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand">
+            <summary>
+                Command to create a FavoriteSource aggregate
+            </summary>
+            <param name="Name">The Name obtained from the site</param>
+            <param name="Address">The Address of the site</param>
+            <param name="ContactName">The ContactName of the site</param>
+            <param name="Phone">The Phone of the site</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+                Command to create a FavoriteSource aggregate
+            </summary>
+            <param name="Name">The Name obtained from the site</param>
+            <param name="Address">The Address of the site</param>
+            <param name="ContactName">The ContactName of the site</param>
+            <param name="Phone">The Phone of the site</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.Name">
+            <summary>The Name obtained from the site</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.Address">
+            <summary>The Address of the site</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.ContactName">
+            <summary>The ContactName of the site</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.Phone">
+            <summary>The Phone of the site</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Domain.Model.Queries.GetSiteByIdQuery">
+            <summary>
+                Query to get a Site aggregate by Id
+            </summary>
+            <param name="Id">The Source Id to search</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Queries.GetSiteByIdQuery.#ctor(System.Int32)">
+            <summary>
+                Query to get a Site aggregate by Id
+            </summary>
+            <param name="Id">The Source Id to search</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Assets_Management.Domain.Model.Queries.GetSiteByIdQuery.Id">
+            <summary>The Source Id to search</summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService.Handle(IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand)">
+            <summary>
+             Handle the create site command
+            </summary>
+            <remarks>
+                This method processes the CreateSiteCommand to create a new Site entity.
+                It performs necessary validations and persists the entity to the data store.
+                If it does not exist, it creates a new Site and returns it; otherwise, it returns null.
+            </remarks>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService.Handle(IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.DeleteSiteCommand)">
+            <summary>
+             Handle the delete site config command
+            </summary>
+            <remarks>
+                Returns true if the site was deleted; otherwise false.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService.Handle(IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.UpdateSiteCommand)">
+            <summary>
+             Handle the update site config command
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices">
+            <summary>
+                Interface for Site Query Services
+            </summary>
+            <remarks>
+                This interface defines the contract for query services related to Site entities.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices.Handle(IceTrackPlatform.API.Assets_Management.Domain.Model.Queries.GetSiteByIdQuery)">
+            <summary>
+                Handle the GetSiteByIdQuery 
+            </summary>
+            <remarks>
+                This method handles the GetSiteByIdQuery to retrieve a
+                Site entity by its unique identifier.
+            </remarks>
+            <param name="query">The GetSiteByIdQuery query</param>
+            <returns>
+                The Site if found; otherwise, null
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices.Handle(IceTrackPlatform.API.Assets_Management.Domain.Model.Queries.GetAllSitesQuery)">
+            <summary>
+                Handle the GetAllSitesQuery 
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Infrastructure.Persistence.EFC.Repositories.SiteRepository">
+            <summary>
+                Site Repository Implementation
+            </summary>
+            <remarks>
+                This class implements the repository pattern for managing Site entities using Entity Framework Core.
+                It provides methods to perform CRUD operations and custom queries specific to Site.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Infrastructure.Persistence.EFC.Repositories.SiteRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+                Site Repository Implementation
+            </summary>
+            <remarks>
+                This class implements the repository pattern for managing Site entities using Entity Framework Core.
+                It provides methods to perform CRUD operations and custom queries specific to Site.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.CreateSiteResource">
+            <summary>
+                Represents the resource to create a site source.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.CreateSiteResource.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+                Represents the resource to create a site source.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource">
+            <summary>
+                Represents the resource for a site.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+            <summary>
+                Represents the resource for a site.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController">
+            <summary>
+                Site REST API controller.
+            </summary>
+            <param name="siteCommandService">The Site Command Service</param>
+            <param name="siteQueryServices">The Site Query Service</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService,IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices)">
+            <summary>
+                Site REST API controller.
+            </summary>
+            <param name="siteCommandService">The Site Command Service</param>
+            <param name="siteQueryServices">The Site Query Service</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform.CreateSiteCommandFromResourceAssembler">
+            <summary>
+                Assembler to transform CreateSiteResource to CreateSiteCommand.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform.SiteResourceFromEntityAssembler">
+            <summary>
+                Assembler to transform Site entity to SiteResource.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Application.ACL.DashboardContextFacade">
+            <summary>
+                Facade for the Dashboard context.
+            </summary>
+            <param name="commandService">
+                The dashboard command service.
+            </param>
+            <param name="queryService">
+                The dashboard query service.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.ACL.DashboardContextFacade.#ctor(IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService,IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService)">
+            <summary>
+                Facade for the Dashboard context.
+            </summary>
+            <param name="commandService">
+                The dashboard command service.
+            </param>
+            <param name="queryService">
+                The dashboard query service.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.ACL.DashboardContextFacade.CreateDashboardConfigForUser(System.Int32,System.Nullable{System.Int32},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.ACL.DashboardContextFacade.FetchDashboardConfigIdByUserId(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService">
+            <summary>
+                Dashboard configuration command service.
+            </summary>
+            <param name="dashboardConfigRepository">
+                The dashboard config repository.
+            </param>
+            <param name="unitOfWork">
+                The unit of work.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.#ctor(IceTrackPlatform.API.Dashboard.Domain.Repositories.IDashboardConfigRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+            <summary>
+                Dashboard configuration command service.
+            </summary>
+            <param name="dashboardConfigRepository">
+                The dashboard config repository.
+            </param>
+            <param name="unitOfWork">
+                The unit of work.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.CommandServices.DashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Application.Internal.QueryServices.DashboardConfigQueryService">
+            <summary>
+                Dashboard configuration query service.
+            </summary>
+            <param name="dashboardConfigRepository">
+                The dashboard config repository.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.QueryServices.DashboardConfigQueryService.#ctor(IceTrackPlatform.API.Dashboard.Domain.Repositories.IDashboardConfigRepository)">
+            <summary>
+                Dashboard configuration query service.
+            </summary>
+            <param name="dashboardConfigRepository">
+                The dashboard config repository.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.QueryServices.DashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.QueryServices.DashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Application.Internal.QueryServices.DashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetAvailableDashboardCardsQuery)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig">
+            <summary>
+                Dashboard Configuration Aggregate Root.
+            </summary>
+            <remarks>
+                This class represents the dashboard configuration for a user.
+                It manages the dashboard cards and their settings.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> class with default values.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.#ctor(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> class.
+            </summary>
+            <param name="userId">The ID of the user who owns this dashboard.</param>
+            <param name="defaultSiteId">The default site ID (optional).</param>
+            <param name="defaultTemperatureRangeValue">The default temperature range value.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.#ctor(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand)">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> class from a command.
+            </summary>
+            <param name="command">The create dashboard config command.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.Id">
+            <summary>
+                Gets the unique identifier of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.UserId">
+            <summary>
+                Gets the ID of the user who owns this dashboard.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.DefaultSiteId">
+            <summary>
+                Gets or sets the default site ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.DefaultTemperatureRange">
+            <summary>
+                Gets the default temperature range.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.Cards">
+            <summary>
+                Gets the collection of dashboard cards.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.Update(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand)">
+            <summary>
+                Updates the dashboard configuration.
+            </summary>
+            <param name="command">The update command.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.AddCard(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand)">
+            <summary>
+                Adds a card to the dashboard.
+            </summary>
+            <param name="command">The add card command.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.RemoveCard(System.Int32)">
+            <summary>
+                Removes a card from the dashboard.
+            </summary>
+            <param name="cardId">The ID of the card to remove.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.ReorderCards(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand)">
+            <summary>
+                Reorders the dashboard cards.
+            </summary>
+            <param name="command">The reorder command.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.UpdateCardVisibility(System.Int32,System.Boolean)">
+            <summary>
+                Toggles the visibility of a card.
+            </summary>
+            <param name="cardId">The ID of the card.</param>
+            <param name="isVisible">The new visibility state.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.InitializeDefaultCards">
+            <summary>
+                Initializes default dashboard cards.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig.ParseTemperatureRange(System.String)">
+            <summary>
+                Parses a temperature range value string.
+            </summary>
+            <param name="value">The range value (e.g., "24h", "7d").</param>
+            <returns>The corresponding TemperatureRange.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand">
+            <summary>
+                Command to add a card to a dashboard.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardType">
+                The type of card to add.
+            </param>
+            <param name="Order">
+                The display order of the card.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand.#ctor(System.Int32,IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.CardType,System.Int32,System.Boolean)">
+            <summary>
+                Command to add a card to a dashboard.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardType">
+                The type of card to add.
+            </param>
+            <param name="Order">
+                The display order of the card.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand.CardType">
+            <summary>
+                The type of card to add.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand.Order">
+            <summary>
+                The display order of the card.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand.IsVisible">
+            <summary>
+                Whether the card is visible.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand">
+            <summary>
+                Command to create a new dashboard configuration.
+            </summary>
+            <param name="UserId">
+                The ID of the user who owns this dashboard.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The default temperature range value (e.g., "24h").
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand.#ctor(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+                Command to create a new dashboard configuration.
+            </summary>
+            <param name="UserId">
+                The ID of the user who owns this dashboard.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The default temperature range value (e.g., "24h").
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand.UserId">
+            <summary>
+                The ID of the user who owns this dashboard.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand.DefaultSiteId">
+            <summary>
+                The default site ID (optional).
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand.DefaultTemperatureRangeValue">
+            <summary>
+                The default temperature range value (e.g., "24h").
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand">
+            <summary>
+                Command to delete a dashboard configuration.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration to delete.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand.#ctor(System.Int32)">
+            <summary>
+                Command to delete a dashboard configuration.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration to delete.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration to delete.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand">
+            <summary>
+                Command to remove a card from a dashboard.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardId">
+                The ID of the card to remove.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Command to remove a card from a dashboard.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardId">
+                The ID of the card to remove.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand.CardId">
+            <summary>
+                The ID of the card to remove.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand">
+            <summary>
+                Command to reorder dashboard cards.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardOrders">
+                Dictionary mapping card IDs to their new order values.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.Int32,System.Int32})">
+            <summary>
+                Command to reorder dashboard cards.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardOrders">
+                Dictionary mapping card IDs to their new order values.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand.CardOrders">
+            <summary>
+                Dictionary mapping card IDs to their new order values.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand">
+            <summary>
+                Command to update a card's visibility.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardId">
+                The ID of the card to update.
+            </param>
+            <param name="IsVisible">
+                The new visibility state.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand.#ctor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+                Command to update a card's visibility.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="CardId">
+                The ID of the card to update.
+            </param>
+            <param name="IsVisible">
+                The new visibility state.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand.CardId">
+            <summary>
+                The ID of the card to update.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand.IsVisible">
+            <summary>
+                The new visibility state.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand">
+            <summary>
+                Command to update an existing dashboard configuration.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration to update.
+            </param>
+            <param name="DefaultSiteId">
+                The new default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The new default temperature range value.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand.#ctor(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+                Command to update an existing dashboard configuration.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration to update.
+            </param>
+            <param name="DefaultSiteId">
+                The new default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The new default temperature range value.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration to update.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand.DefaultSiteId">
+            <summary>
+                The new default site ID (optional).
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand.DefaultTemperatureRangeValue">
+            <summary>
+                The new default temperature range value.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard">
+            <summary>
+                Represents a dashboard card entity.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.Id">
+            <summary>
+                Gets the unique identifier of the dashboard card.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.DashboardConfigId">
+            <summary>
+                Gets the ID of the dashboard configuration this card belongs to.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.CardType">
+            <summary>
+                Gets or sets the type of card.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.Order">
+            <summary>
+                Gets or sets the display order of the card.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.IsVisible">
+            <summary>
+                Gets or sets whether the card is visible.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard" /> class with default values.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.#ctor(IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.CardType,System.Int32,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard" /> class.
+            </summary>
+            <param name="cardType">The type of the card.</param>
+            <param name="order">The display order.</param>
+            <param name="isVisible">Whether the card is visible.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.UpdateVisibility(System.Boolean)">
+            <summary>
+                Updates the card's visibility.
+            </summary>
+            <param name="isVisible">The new visibility state.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard.UpdateOrder(System.Int32)">
+            <summary>
+                Updates the card's order.
+            </summary>
+            <param name="order">The new order value.</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetAvailableDashboardCardsQuery">
+            <summary>
+                Query to get all available dashboard card types.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetAvailableDashboardCardsQuery.#ctor">
+            <summary>
+                Query to get all available dashboard card types.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery">
+            <summary>
+                Query to get dashboard configuration by its ID.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery.#ctor(System.Int32)">
+            <summary>
+                Query to get dashboard configuration by its ID.
+            </summary>
+            <param name="DashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery.DashboardConfigId">
+            <summary>
+                The ID of the dashboard configuration.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery">
+            <summary>
+                Query to get dashboard configuration by user ID.
+            </summary>
+            <param name="UserId">
+                The ID of the user whose dashboard to retrieve.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery.#ctor(System.Int32)">
+            <summary>
+                Query to get dashboard configuration by user ID.
+            </summary>
+            <param name="UserId">
+                The ID of the user whose dashboard to retrieve.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery.UserId">
+            <summary>
+                The ID of the user whose dashboard to retrieve.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.CardType">
+            <summary>
+                Represents the type of dashboard card.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange">
+            <summary>
+                Represents the temperature monitoring time range.
+            </summary>
+            <param name="Value">
+                The range value (e.g., "24h", "7d", "30d").
+            </param>
+            <param name="Label">
+                The human-readable label for the range.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.#ctor(System.String,System.String)">
+            <summary>
+                Represents the temperature monitoring time range.
+            </summary>
+            <param name="Value">
+                The range value (e.g., "24h", "7d", "30d").
+            </param>
+            <param name="Label">
+                The human-readable label for the range.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.Value">
+            <summary>
+                The range value (e.g., "24h", "7d", "30d").
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.Label">
+            <summary>
+                The human-readable label for the range.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange" /> record with default value.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.Last24Hours">
+            <summary>
+                Predefined range: Last 24 hours.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.Last7Days">
+            <summary>
+                Predefined range: Last 7 days.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange.Last30Days">
+            <summary>
+                Predefined range: Last 30 days.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Repositories.IDashboardConfigRepository">
+            <summary>
+                Repository interface for dashboard configurations.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Repositories.IDashboardConfigRepository.FindByUserIdAsync(System.Int32)">
+            <summary>
+                Finds a dashboard configuration by user ID.
+            </summary>
+            <param name="userId">
+                The ID of the user.
+            </param>
+            <returns>
+                The dashboard configuration if found, otherwise null.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Repositories.IDashboardConfigRepository.ExistsByUserIdAsync(System.Int32)">
+            <summary>
+                Checks if a dashboard configuration exists for a user.
+            </summary>
+            <param name="userId">
+                The ID of the user.
+            </param>
+            <returns>
+                True if a configuration exists, otherwise false.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService">
+            <summary>
+                Dashboard configuration command service interface.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand)">
+            <summary>
+                Handles the create dashboard config command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand" /> command.
+            </param>
+            <returns>
+                The created <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if creation failed.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand)">
+            <summary>
+                Handles the update dashboard config command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand" /> command.
+            </param>
+            <returns>
+                The updated <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if update failed.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand)">
+            <summary>
+                Handles the delete dashboard config command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.DeleteDashboardConfigCommand" /> command.
+            </param>
+            <returns>
+                True if deletion was successful, otherwise false.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand)">
+            <summary>
+                Handles the add card to dashboard command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.AddCardToDashboardCommand" /> command.
+            </param>
+            <returns>
+                The updated <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if operation failed.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand)">
+            <summary>
+                Handles the reorder cards command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.ReorderCardsCommand" /> command.
+            </param>
+            <returns>
+                The updated <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if operation failed.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand)">
+            <summary>
+                Handles the remove card from dashboard command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.RemoveCardFromDashboardCommand" /> command.
+            </param>
+            <returns>
+                The updated <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if operation failed.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand)">
+            <summary>
+                Handles the update card visibility command.
+            </summary>
+            <param name="command">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateCardVisibilityCommand" /> command.
+            </param>
+            <returns>
+                The updated <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> or null if operation failed.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService">
+            <summary>
+                Dashboard configuration query service interface.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery)">
+            <summary>
+                Handles the get dashboard config by user ID query.
+            </summary>
+            <param name="query">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByUserIdQuery" /> query.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> if found, otherwise null.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery)">
+            <summary>
+                Handles the get dashboard config by ID query.
+            </summary>
+            <param name="query">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetDashboardConfigByIdQuery" /> query.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> if found, otherwise null.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService.Handle(IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetAvailableDashboardCardsQuery)">
+            <summary>
+                Handles the get available dashboard cards query.
+            </summary>
+            <param name="query">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Queries.GetAvailableDashboardCardsQuery" /> query.
+            </param>
+            <returns>
+                A collection of available card types.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Infrastructure.Interfaces.ASP.Configuration.Extensions.WebApplicationBuilderExtensions">
+            <summary>
+                Extension methods for configuring Dashboard context services.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Infrastructure.Interfaces.ASP.Configuration.Extensions.WebApplicationBuilderExtensions.AddDashboardContextServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+                Adds Dashboard context services to the application.
+            </summary>
+            <param name="builder">
+                The web application builder.
+            </param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Configuration.Extensions.ModelBuilderExtensions">
+            <summary>
+                Model builder extensions for Dashboard context.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Configuration.Extensions.ModelBuilderExtensions.ApplyDashboardConfiguration(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+                Applies the Dashboard context configuration to the model builder.
+            </summary>
+            <param name="builder">
+                The model builder.
+            </param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Repositories.DashboardConfigRepository">
+            <summary>
+                Dashboard configuration repository implementation.
+            </summary>
+            <param name="context">
+                The database context.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Repositories.DashboardConfigRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+                Dashboard configuration repository implementation.
+            </summary>
+            <param name="context">
+                The database context.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Repositories.DashboardConfigRepository.FindByUserIdAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Repositories.DashboardConfigRepository.ExistsByUserIdAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.ACL.IDashboardContextFacade">
+            <summary>
+                Facade for the Dashboard context.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.ACL.IDashboardContextFacade.CreateDashboardConfigForUser(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+                Creates a dashboard configuration for a user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <param name="defaultSiteId">The default site ID (optional).</param>
+            <param name="defaultTemperatureRangeValue">The default temperature range.</param>
+            <returns>The ID of the created dashboard config, or 0 if creation failed.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.ACL.IDashboardContextFacade.FetchDashboardConfigIdByUserId(System.Int32)">
+            <summary>
+                Gets the dashboard configuration ID for a user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns>The dashboard config ID, or 0 if not found.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController">
+            <summary>
+                Controller for managing dashboard configurations.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.#ctor(IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigCommandService,IceTrackPlatform.API.Dashboard.Domain.Services.IDashboardConfigQueryService)">
+            <summary>
+                Controller for managing dashboard configurations.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.GetDashboardConfigById(System.Int32)">
+            <summary>
+                Gets a dashboard configuration by ID.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <returns>The dashboard configuration resource.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.GetDashboardConfigByUserId(System.Int32)">
+            <summary>
+                Gets a dashboard configuration by user ID.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns>The dashboard configuration resource.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.CreateDashboardConfig(IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource)">
+            <summary>
+                Creates a new dashboard configuration.
+            </summary>
+            <param name="resource">The create dashboard config resource.</param>
+            <returns>The created dashboard configuration.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.UpdateDashboardConfig(System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource)">
+            <summary>
+                Updates an existing dashboard configuration.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <param name="resource">The update dashboard config resource.</param>
+            <returns>The updated dashboard configuration.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.DeleteDashboardConfig(System.Int32)">
+            <summary>
+                Deletes a dashboard configuration.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <returns>No content if successful.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.AddCardToDashboard(System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource)">
+            <summary>
+                Adds a card to a dashboard.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <param name="resource">The add card resource.</param>
+            <returns>The updated dashboard configuration.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.RemoveCardFromDashboard(System.Int32,System.Int32)">
+            <summary>
+                Removes a card from a dashboard.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <param name="cardId">The card ID to remove.</param>
+            <returns>No content if successful.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.UpdateCardVisibility(System.Int32,System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateCardVisibilityResource)">
+            <summary>
+                Updates the visibility of a card.
+            </summary>
+            <param name="id">The dashboard configuration ID.</param>
+            <param name="cardId">The card ID.</param>
+            <param name="resource">The update visibility resource.</param>
+            <returns>The updated dashboard configuration.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.GetAvailableDashboardCards">
+            <summary>
+                Gets all available dashboard card types.
+            </summary>
+            <returns>A list of available card types.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource">
+            <summary>
+                Resource for adding a card to a dashboard.
+            </summary>
+            <param name="CardType">
+                The type of card to add.
+            </param>
+            <param name="Order">
+                The display order.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+                Resource for adding a card to a dashboard.
+            </summary>
+            <param name="CardType">
+                The type of card to add.
+            </param>
+            <param name="Order">
+                The display order.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource.CardType">
+            <summary>
+                The type of card to add.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource.Order">
+            <summary>
+                The display order.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource.IsVisible">
+            <summary>
+                Whether the card is visible.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource">
+            <summary>
+                Resource for creating a dashboard configuration.
+            </summary>
+            <param name="UserId">
+                The ID of the user.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The default temperature range (e.g., "24h", "7d").
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource.#ctor(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+                Resource for creating a dashboard configuration.
+            </summary>
+            <param name="UserId">
+                The ID of the user.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID (optional).
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The default temperature range (e.g., "24h", "7d").
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource.UserId">
+            <summary>
+                The ID of the user.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource.DefaultSiteId">
+            <summary>
+                The default site ID (optional).
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource.DefaultTemperatureRangeValue">
+            <summary>
+                The default temperature range (e.g., "24h", "7d").
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource">
+            <summary>
+                Resource representing a dashboard card.
+            </summary>
+            <param name="Id">
+                The card ID.
+            </param>
+            <param name="CardType">
+                The type of card.
+            </param>
+            <param name="Order">
+                The display order.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource.#ctor(System.Int32,System.String,System.Int32,System.Boolean)">
+            <summary>
+                Resource representing a dashboard card.
+            </summary>
+            <param name="Id">
+                The card ID.
+            </param>
+            <param name="CardType">
+                The type of card.
+            </param>
+            <param name="Order">
+                The display order.
+            </param>
+            <param name="IsVisible">
+                Whether the card is visible.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource.Id">
+            <summary>
+                The card ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource.CardType">
+            <summary>
+                The type of card.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource.Order">
+            <summary>
+                The display order.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource.IsVisible">
+            <summary>
+                Whether the card is visible.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource">
+            <summary>
+                Resource representing a dashboard configuration.
+            </summary>
+            <param name="Id">
+                The dashboard config ID.
+            </param>
+            <param name="UserId">
+                The user ID.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID.
+            </param>
+            <param name="DefaultTemperatureRange">
+                The default temperature range value.
+            </param>
+            <param name="Cards">
+                The collection of dashboard cards.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.#ctor(System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Collections.Generic.IEnumerable{IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource})">
+            <summary>
+                Resource representing a dashboard configuration.
+            </summary>
+            <param name="Id">
+                The dashboard config ID.
+            </param>
+            <param name="UserId">
+                The user ID.
+            </param>
+            <param name="DefaultSiteId">
+                The default site ID.
+            </param>
+            <param name="DefaultTemperatureRange">
+                The default temperature range value.
+            </param>
+            <param name="Cards">
+                The collection of dashboard cards.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.Id">
+            <summary>
+                The dashboard config ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.UserId">
+            <summary>
+                The user ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.DefaultSiteId">
+            <summary>
+                The default site ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.DefaultTemperatureRange">
+            <summary>
+                The default temperature range value.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource.Cards">
+            <summary>
+                The collection of dashboard cards.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateCardVisibilityResource">
+            <summary>
+                Resource for updating card visibility.
+            </summary>
+            <param name="IsVisible">
+                Whether the card should be visible.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateCardVisibilityResource.#ctor(System.Boolean)">
+            <summary>
+                Resource for updating card visibility.
+            </summary>
+            <param name="IsVisible">
+                Whether the card should be visible.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateCardVisibilityResource.IsVisible">
+            <summary>
+                Whether the card should be visible.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource">
+            <summary>
+                Resource for updating a dashboard configuration.
+            </summary>
+            <param name="DefaultSiteId">
+                The new default site ID.
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The new default temperature range.
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource.#ctor(System.Nullable{System.Int32},System.String)">
+            <summary>
+                Resource for updating a dashboard configuration.
+            </summary>
+            <param name="DefaultSiteId">
+                The new default site ID.
+            </param>
+            <param name="DefaultTemperatureRangeValue">
+                The new default temperature range.
+            </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource.DefaultSiteId">
+            <summary>
+                The new default site ID.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource.DefaultTemperatureRangeValue">
+            <summary>
+                The new default temperature range.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.CreateDashboardConfigCommandFromResourceAssembler">
+            <summary>
+                Assembler to create a CreateDashboardConfigCommand from a resource.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.CreateDashboardConfigCommandFromResourceAssembler.ToCommandFromResource(IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource)">
+            <summary>
+                Converts a resource to a command.
+            </summary>
+            <param name="resource">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.CreateDashboardConfigResource" />.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.CreateDashboardConfigCommand" />.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.DashboardCardResourceFromEntityAssembler">
+            <summary>
+                Assembler to convert DashboardCard entity to resource.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.DashboardCardResourceFromEntityAssembler.ToResourceFromEntity(IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard)">
+            <summary>
+                Converts an entity to a resource.
+            </summary>
+            <param name="entity">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Entities.DashboardCard" /> entity.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardCardResource" />.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.DashboardConfigResourceFromEntityAssembler">
+            <summary>
+                Assembler to convert DashboardConfig entity to resource.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.DashboardConfigResourceFromEntityAssembler.ToResourceFromEntity(IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig)">
+            <summary>
+                Converts an entity to a resource.
+            </summary>
+            <param name="entity">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Aggregates.DashboardConfig" /> entity.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.DashboardConfigResource" />.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.UpdateDashboardConfigCommandFromResourceAssembler">
+            <summary>
+                Assembler to create an UpdateDashboardConfigCommand from a resource.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.Transform.UpdateDashboardConfigCommandFromResourceAssembler.ToCommandFromResource(System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource)">
+            <summary>
+                Converts a resource to a command.
+            </summary>
+            <param name="dashboardConfigId">
+                The ID of the dashboard configuration.
+            </param>
+            <param name="resource">
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource" />.
+            </param>
+            <returns>
+                The <see cref="T:IceTrackPlatform.API.Dashboard.Domain.Model.Commands.UpdateDashboardConfigCommand" />.
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Application.ACL.Services.IamContextFacade">
+            <summary>
+            Facade for the IAM context, providing access to user-related operations.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.ACL.Services.IamContextFacade.#ctor(IceTrackPlatform.API.IAM.Domain.Services.IUserCommandService,IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService)">
+            <summary>
+            Facade for the IAM context, providing access to user-related operations.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.ACL.Services.IamContextFacade.CreateUser(System.String,System.String,IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles)">
+            <summary>
+            Creates a new user with the specified username, password, and role.
+            </summary>
+            <param name="username">The username for the new user.</param>
+            <param name="password">The password for the new user.</param>
+            <param name="role">The role for the new user.</param> 
+            <returns>The ID of the created user, or 0 if creation failed.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.ACL.Services.IamContextFacade.FetchUserIdByUsername(System.String)">
+            <summary>
+            Fetches the user ID by username.
+            </summary>
+            <param name="username">The username to search for.</param>
+            <returns>The user ID if found, otherwise 0.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.ACL.Services.IamContextFacade.FetchUsernameByUserId(System.Int32)">
+            <summary>
+            Fetches the username by user ID.
+            </summary>
+            <param name="userId">The user ID to search for.</param>
+            <returns>The username if found, otherwise an empty string.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Application.Internal.CommandServices.UserCommandService">
+            <summary>
+                Handles user-related commands such as sign-in and sign-up.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.CommandServices.UserCommandService.#ctor(IceTrackPlatform.API.IAM.Domain.Repositories.IUserRepository,IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.ITokenService,IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.IHashingService,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+            <summary>
+                Handles user-related commands such as sign-in and sign-up.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.CommandServices.UserCommandService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand)">
+            <summary>
+                Authenticate a user using the provided credentials.
+            </summary>
+            <param name="command">The sign-in command containing username and password.</param>
+            <returns>A tuple with the authenticated <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> and the generated JWT token.</returns>
+            <exception cref="T:System.Exception">Thrown when credentials are invalid.</exception>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.CommandServices.UserCommandService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand)">
+            <summary>
+                Create a new user account.
+            </summary>
+            <param name="command">The sign-up command with username, password, and role.</param> 
+            <returns>A completed <see cref="T:System.Threading.Tasks.Task" /> when the operation succeeds.</returns>
+            <exception cref="T:System.Exception">Thrown when the username is already taken or creation fails.</exception>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.IHashingService">
+            <summary>
+                Contract for hashing and verifying passwords.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.IHashingService.HashPassword(System.String)">
+            <summary>
+                Creates a secure hash for the provided password.
+            </summary>
+            <param name="password">The plain-text password to hash.</param>
+            <returns>The hashed password string.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.IHashingService.VerifyPassword(System.String,System.String)">
+            <summary>
+                Verifies that a plain-text password matches the provided hash.
+            </summary>
+            <param name="password">The plain-text password to verify.</param>
+            <param name="passwordHash">The stored password hash to compare against.</param>
+            <returns><c>true</c> when the password matches the hash; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.ITokenService">
+            <summary>
+                Contract to generate and validate JWT tokens for users.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.ITokenService.GenerateToken(IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User)">
+            <summary>
+                Generates a JWT token for the specified user.
+            </summary>
+            <param name="user">The user for which to create the token.</param>
+            <returns>The generated JWT token string.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.ITokenService.ValidateToken(System.String)">
+            <summary>
+                Validates the provided JWT token and returns the user id when valid.
+            </summary>
+            <param name="token">The JWT token to validate.</param>
+            <returns>The user id if the token is valid; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Application.Internal.QueryServices.UserQueryService">
+            <summary>
+                Implementation of <see cref="T:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService" /> that uses the repository.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.QueryServices.UserQueryService.#ctor(IceTrackPlatform.API.IAM.Domain.Repositories.IUserRepository)">
+            <summary>
+                Implementation of <see cref="T:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService" /> that uses the repository.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.QueryServices.UserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery)">
+            <summary>
+                Handle get user by id query.
+            </summary>
+            <param name="query">The query object containing the user id to search.</param>
+            <returns>The matching <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> or <c>null</c> if not found.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.QueryServices.UserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetAllUsersQuery)">
+            <summary>
+                Handle get all users query.
+            </summary>
+            <param name="query">The query object for getting all users.</param>
+            <returns>A collection of users.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Application.Internal.QueryServices.UserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery)">
+            <summary>
+                Handle get user by username query.
+            </summary>
+            <param name="query">The query object containing the username to search.</param>
+            <returns>The matching <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> or <c>null</c> if not found.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User">
+            <summary>
+                Represents an application user.
+            </summary>
+            <remarks>
+                This aggregate encapsulates user identity details and exposes methods to update mutable fields.
+                Password hashes are ignored for JSON serialization.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.#ctor(System.String,System.String,IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles)">
+            <summary>
+                Represents an application user.
+            </summary>
+            <remarks>
+                This aggregate encapsulates user identity details and exposes methods to update mutable fields.
+                Password hashes are ignored for JSON serialization.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> class with empty values.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.Id">
+            <summary>
+                Gets the identifier of the user.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.Username">
+            <summary>
+                Gets the username.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.PasswordHash">
+            <summary>
+                Gets the password hash. This property is ignored for JSON serialization.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.UpdateUsername(System.String)">
+            <summary>
+                Update the user's username.
+            </summary>
+            <param name="username">The new username.</param>
+            <returns>The updated <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> instance.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User.UpdatePasswordHash(System.String)">
+            <summary>
+                Update the user's password hash.
+            </summary>
+            <param name="passwordHash">The new password hash.</param>
+            <returns>The updated <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> instance.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand">
+            <summary>
+                Command used to authenticate a user (sign in).
+            </summary>
+            <param name="Username">The username to authenticate.</param>
+            <param name="Password">The plain-text password to authenticate.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand.#ctor(System.String,System.String)">
+            <summary>
+                Command used to authenticate a user (sign in).
+            </summary>
+            <param name="Username">The username to authenticate.</param>
+            <param name="Password">The plain-text password to authenticate.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand.Username">
+            <summary>The username to authenticate.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand.Password">
+            <summary>The plain-text password to authenticate.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand">
+            <summary>
+                Command used to create a new user (sign up).
+            </summary>
+            <param name="Username">The username for the new user.</param>
+            <param name="Password">The plain-text password for the new user.</param>
+            <param name="Role">The role for the new user.</param> 
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand.#ctor(System.String,System.String,IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles)">
+            <summary>
+                Command used to create a new user (sign up).
+            </summary>
+            <param name="Username">The username for the new user.</param>
+            <param name="Password">The plain-text password for the new user.</param>
+            <param name="Role">The role for the new user.</param> 
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand.Username">
+            <summary>The username for the new user.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand.Password">
+            <summary>The plain-text password for the new user.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand.Role">
+            <summary>The role for the new user.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetAllUsersQuery">
+            <summary>
+                Query object used to request all users.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery">
+            <summary>
+                Query object used to request a user by identifier.
+            </summary>
+            <param name="Id">The identifier of the user to retrieve.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery.#ctor(System.Int32)">
+            <summary>
+                Query object used to request a user by identifier.
+            </summary>
+            <param name="Id">The identifier of the user to retrieve.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery.Id">
+            <summary>The identifier of the user to retrieve.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery">
+            <summary>
+            Query object used to request a user by username.
+            </summary>
+            <param name="Username">The username of the user to retrieve.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery.#ctor(System.String)">
+            <summary>
+            Query object used to request a user by username.
+            </summary>
+            <param name="Username">The username of the user to retrieve.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery.Username">
+            <summary>The username of the user to retrieve.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles">
+            <summary>
+                Defines the possible roles for an application user.
+            </summary>
+        </member>
+        <member name="F:IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles.Owner">
+            <summary>
+                Default role for users who own equipment and request services (Client).
+            </summary>
+        </member>
+        <member name="F:IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles.Provider">
+            <summary>
+                Role for users who provide maintenance and management services (Company/Provider).
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Repositories.IUserRepository">
+            <summary>
+                Repository interface for <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> aggregates.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Repositories.IUserRepository.FindByUsernameAsync(System.String)">
+            <summary>
+                Find a user by username asynchronously.
+            </summary>
+            <param name="username">The username to search.</param>
+            <returns>The <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> when found; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Repositories.IUserRepository.ExistsByUsername(System.String)">
+            <summary>
+                Checks if a user exists by username.
+            </summary>
+            <param name="username">The username to check.</param>
+            <returns><c>true</c> if a user with the given username exists; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Services.IUserCommandService">
+            <summary>
+                Contract for commands that change user state (sign-in / sign-up).
+            </summary>
+            <remarks>
+                Implementations execute command objects and return domain results.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Services.IUserCommandService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Commands.SignInCommand)">
+            <summary>
+                Handle a sign-in operation.
+            </summary>
+            <param name="command">The sign-in command containing credentials.</param>
+            <returns>A tuple containing the authenticated <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> and the JWT token string.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Services.IUserCommandService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Commands.SignUpCommand)">
+            <summary>
+                Handle a sign-up operation to create a new user.
+            </summary>
+            <param name="command">The sign-up command with new user data.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task" /> that completes when the operation finishes.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService">
+            <summary>
+                Contract for querying user information.
+            </summary>
+            <remarks>
+                Implementations handle query objects to retrieve user aggregates.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery)">
+            <summary>
+                Handle a <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByIdQuery" /> to retrieve a user by id.
+            </summary>
+            <param name="query">The query containing the user id.</param>
+            <returns>The <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> when found; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetAllUsersQuery)">
+            <summary>
+                Handle a <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetAllUsersQuery" /> to retrieve all users.
+            </summary>
+            <param name="query">The query instance.</param>
+            <returns>A collection of <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> objects.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService.Handle(IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery)">
+            <summary>
+                Handle a <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Queries.GetUserByUsernameQuery" /> to retrieve a user by username.
+            </summary>
+            <param name="query">The query containing the username to search.</param>
+            <returns>The <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> when found; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Hashing.BCrypt.Services.HashingService">
+            <summary>
+                Implements <see cref="T:IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.IHashingService" /> using BCrypt.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Hashing.BCrypt.Services.HashingService.HashPassword(System.String)">
+            <summary>
+                Hashes a plain-text password using BCrypt.
+            </summary>
+            <param name="password">The plain-text password to hash.</param>
+            <returns>The resulting password hash.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Hashing.BCrypt.Services.HashingService.VerifyPassword(System.String,System.String)">
+            <summary>
+                Verifies that the provided plain-text password matches the stored hash.
+            </summary>
+            <param name="password">The plain-text password to verify.</param>
+            <param name="passwordHash">The stored password hash to compare against.</param>
+            <returns><c>true</c> if the password matches the hash; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Interfaces.ASP.Configuration.Extensions.WebApplicationBuilderExtensions">
+            <summary>
+                Extension methods for configuring IAM context services in a WebApplicationBuilder.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Interfaces.ASP.Configuration.Extensions.WebApplicationBuilderExtensions.AddIamContextServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+                Adds the IAM context services to the WebApplicationBuilder.
+            </summary>
+            <param name="builder">The WebApplicationBuilder to configure.</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories.UserRepository">
+            <summary>
+                Entity Framework Core repository for <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> aggregates.
+            </summary>
+            <remarks>
+                Provides common user-specific queries on top of <see cref="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.BaseRepository`1" />.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories.UserRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+                Entity Framework Core repository for <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> aggregates.
+            </summary>
+            <remarks>
+                Provides common user-specific queries on top of <see cref="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.BaseRepository`1" />.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories.UserRepository.FindByUsernameAsync(System.String)">
+            <summary>
+                Finds a user by username asynchronously.
+            </summary>
+            <param name="username">The username to search.</param>
+            <returns>The matching <see cref="T:IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User" /> or <c>null</c> if none found.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories.UserRepository.ExistsByUsername(System.String)">
+            <summary>
+                Checks whether a user exists with the given username.
+            </summary>
+            <param name="username">The username to search.</param>
+            <returns><c>true</c> if a user with the username exists; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AllowAnonymousAttribute">
+            <summary>
+                Marks an action or controller to bypass the custom authorization middleware.
+            </summary>
+            <remarks>
+                When present, the
+                <see
+                    cref="!:ACME.LearningCenterPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Components.RequestAuthorizationMiddleware" />
+                will skip authorization for the decorated endpoint.
+            </remarks>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AuthorizeAttribute">
+            <summary>
+                Indicates that the decorated controller or action requires an authenticated user.
+            </summary>
+            <remarks>
+                The filter checks <c>HttpContext.Items["User"]</c> to determine whether a user was set
+                by the request authorization middleware. If no user is present it sets a <see cref="T:Microsoft.AspNetCore.Mvc.UnauthorizedResult" />.
+                Endpoints annotated with <see cref="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AllowAnonymousAttribute" /> are skipped.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+                Called by the MVC framework to perform authorization.
+            </summary>
+            <param name="context">The authorization filter context.</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Components.RequestAuthorizationMiddleware">
+            <summary>
+                Middleware that authorizes incoming HTTP requests by validating a JWT token in the Authorization header.
+            </summary>
+            <remarks>
+                If a valid token is present the corresponding
+                <see cref="!:ACME.LearningCenterPlatform.API.IAM.Domain.Model.Aggregates.User" /> is loaded
+                and placed into <c>HttpContext.Items["User"]</c>. Endpoints decorated with <see cref="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AllowAnonymousAttribute" />
+                are skipped.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Components.RequestAuthorizationMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+                Middleware that authorizes incoming HTTP requests by validating a JWT token in the Authorization header.
+            </summary>
+            <remarks>
+                If a valid token is present the corresponding
+                <see cref="!:ACME.LearningCenterPlatform.API.IAM.Domain.Model.Aggregates.User" /> is loaded
+                and placed into <c>HttpContext.Items["User"]</c>. Endpoints decorated with <see cref="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes.AllowAnonymousAttribute" />
+                are skipped.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Components.RequestAuthorizationMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService,IceTrackPlatform.API.IAM.Application.Internal.OutboundServices.ITokenService)">
+            <summary>
+                Invoked by the ASP.NET Core pipeline to authorize the request.
+            </summary>
+            <param name="context">The current <see cref="T:Microsoft.AspNetCore.Http.HttpContext" />.</param>
+            <param name="userQueryService">Service used to load users by id.</param>
+            <param name="tokenService">Service used to validate JWT tokens.</param>
+            <returns>A task that represents the completion of request processing.</returns>
+            <exception cref="T:System.Exception">Thrown when the token is missing or invalid.</exception>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Extensions.RequestAuthorizationMiddlewareExtensions">
+            <summary>
+                Extension methods to register the custom request authorization middleware.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Extensions.RequestAuthorizationMiddlewareExtensions.UseRequestAuthorization(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+                Registers the <see cref="T:IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Components.RequestAuthorizationMiddleware" /> into the application's request pipeline.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder" /> to configure.</param>
+            <returns>The original <paramref name="builder" /> for chaining.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Configuration.TokenSettings">
+            <summary>
+                Configuration settings used by JWT token generation and validation.
+            </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Configuration.TokenSettings.Secret">
+            <summary>
+                Secret signing key used to sign JWT tokens. Configure in appsettings.json.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Services.TokenService">
+            <summary>
+                JWT token generation and validation implementation.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Services.TokenService.#ctor(Microsoft.Extensions.Options.IOptions{IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Configuration.TokenSettings})">
+            <summary>
+                JWT token generation and validation implementation.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Services.TokenService.GenerateToken(IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User)">
+            <summary>
+                Generates a signed JWT token for the provided user.
+            </summary>
+            <param name="user">The user for whom to create the token.</param>
+            <returns>The JWT token string.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Infrastructure.Tokens.JWT.Services.TokenService.ValidateToken(System.String)">
+            <summary>
+                Validates the provided JWT token and returns the embedded user id when valid.
+            </summary>
+            <param name="token">The JWT token to validate.</param>
+            <returns>The user id extracted from the token when valid; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.ACL.IIamContextFacade">
+            <summary>
+            Interface for the IAM context facade.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.ACL.IIamContextFacade.CreateUser(System.String,System.String,IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles)">
+            <summary>
+            Creates a new user.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="role">The user role.</param> 
+            <returns>The user ID.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.ACL.IIamContextFacade.FetchUserIdByUsername(System.String)">
+            <summary>
+            Fetches the user ID by username.
+            </summary>
+            <param name="username">The username.</param>
+            <returns>The user ID.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.ACL.IIamContextFacade.FetchUsernameByUserId(System.Int32)">
+            <summary>
+            Fetches the username by user ID.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns>The username.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.AuthenticationController.SignIn(IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource)">
+            <summary>
+                Authenticate a user using username and password.
+            </summary>
+            <param name="signInResource">The sign-in resource containing credentials.</param>
+            <returns>
+                Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains an <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource" /> with a JWT
+                token when authentication succeeds.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.AuthenticationController.SignUp(IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource)">
+            <summary>
+                Create a new user account (sign up).
+            </summary>
+            <param name="signUpResource">The sign-up resource containing the new user's credentials.</param>
+            <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that indicates the operation result.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource">
+            <summary>
+            Resource representing an authenticated user with a JWT token.
+            </summary>
+            <param name="Id">The unique identifier of the user.</param>
+            <param name="Username">The username of the user.</param>
+            <param name="Token">The JWT token for authentication.</param>
+            <param name="Role">The role of the authenticated user.</param> 
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource.#ctor(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Resource representing an authenticated user with a JWT token.
+            </summary>
+            <param name="Id">The unique identifier of the user.</param>
+            <param name="Username">The username of the user.</param>
+            <param name="Token">The JWT token for authentication.</param>
+            <param name="Role">The role of the authenticated user.</param> 
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource.Id">
+            <summary>The unique identifier of the user.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource.Username">
+            <summary>The username of the user.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource.Token">
+            <summary>The JWT token for authentication.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.AuthenticatedUserResource.Role">
+            <summary>The role of the authenticated user.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource">
+            <summary>
+            Resource for user sign-in requests.
+            </summary>
+            <param name="Username">The username for sign-in.</param>
+            <param name="Password">The password for sign-in.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource.#ctor(System.String,System.String)">
+            <summary>
+            Resource for user sign-in requests.
+            </summary>
+            <param name="Username">The username for sign-in.</param>
+            <param name="Password">The password for sign-in.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource.Username">
+            <summary>The username for sign-in.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource.Password">
+            <summary>The password for sign-in.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource">
+            <summary>
+            Resource for user sign-up requests.
+            </summary>
+            <param name="Username">The username for sign-up.</param>
+            <param name="Password">The password for sign-up.</param>
+            <param name="Role">The role for sign-up.</param> 
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource.#ctor(System.String,System.String,IceTrackPlatform.API.IAM.Domain.Model.ValueObjects.Roles)">
+            <summary>
+            Resource for user sign-up requests.
+            </summary>
+            <param name="Username">The username for sign-up.</param>
+            <param name="Password">The password for sign-up.</param>
+            <param name="Role">The role for sign-up.</param> 
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource.Username">
+            <summary>The username for sign-up.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource.Password">
+            <summary>The password for sign-up.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource.Role">
+            <summary>The role for sign-up.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource">
+            <summary>
+            Resource representing a user for REST API responses.
+            </summary>
+            <param name="Id">The unique identifier of the user.</param>
+            <param name="Username">The username of the user.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource.#ctor(System.Int32,System.String)">
+            <summary>
+            Resource representing a user for REST API responses.
+            </summary>
+            <param name="Id">The unique identifier of the user.</param>
+            <param name="Username">The username of the user.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource.Id">
+            <summary>The unique identifier of the user.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource.Username">
+            <summary>The username of the user.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.AuthenticatedUserResourceFromEntityAssembler">
+            <summary>
+            Assembler for converting User entities and tokens to AuthenticatedUserResource DTOs.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.AuthenticatedUserResourceFromEntityAssembler.ToResourceFromEntity(IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User,System.String)">
+            <summary>
+            Converts a User entity and JWT token to an AuthenticatedUserResource.
+            </summary>
+            <param name="user">The authenticated User entity.</param>
+            <param name="token">The JWT token for the user.</param>
+            <returns>An AuthenticatedUserResource containing the user's data and token.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.SignInCommandFromResourceAssembler">
+            <summary>
+            Assembler for converting SignInResource DTOs to SignInCommand objects.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.SignInCommandFromResourceAssembler.ToCommandFromResource(IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignInResource)">
+            <summary>
+            Converts a SignInResource to a SignInCommand.
+            </summary>
+            <param name="resource">The SignInResource containing sign-in data.</param>
+            <returns>A SignInCommand for user authentication.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.SignUpCommandFromResourceAssembler">
+            <summary>
+            Assembler for converting SignUpResource DTOs to SignUpCommand objects.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.SignUpCommandFromResourceAssembler.ToCommandFromResource(IceTrackPlatform.API.IAM.Interfaces.REST.Resources.SignUpResource)">
+            <summary>
+            Converts a SignUpResource to a SignUpCommand.
+            </summary>
+            <param name="resource">The SignUpResource containing sign-up data.</param>
+            <returns>A SignUpCommand for user registration.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.UserResourceFromEntityAssembler">
+            <summary>
+            Assembler for converting User entities to UserResource DTOs.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.Transform.UserResourceFromEntityAssembler.ToResourceFromEntity(IceTrackPlatform.API.IAM.Domain.Model.Aggregates.User)">
+            <summary>
+            Converts a User entity to a UserResource.
+            </summary>
+            <param name="user">The User entity to convert.</param>
+            <returns>A UserResource containing the user's data.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.IAM.Interfaces.REST.UsersController">
+            <summary>
+                Controller that exposes endpoints to work with users.
+            </summary>
+            <remarks>
+                Routes are rooted at <c>api/v1/users</c>. Endpoints require authorization unless marked with
+                <see
+                    cref="!:Attributes.AllowAnonymousAttribute" />
+                .
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.UsersController.#ctor(IceTrackPlatform.API.IAM.Domain.Services.IUserQueryService)">
+            <summary>
+                Controller that exposes endpoints to work with users.
+            </summary>
+            <remarks>
+                Routes are rooted at <c>api/v1/users</c>. Endpoints require authorization unless marked with
+                <see
+                    cref="!:Attributes.AllowAnonymousAttribute" />
+                .
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.UsersController.GetUserById(System.Int32)">
+            <summary>
+                Get a user by its identifier.
+            </summary>
+            <param name="id">The identifier of the user to retrieve.</param>
+            <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains the <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> when found.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.UsersController.GetAllUsers">
+            <summary>
+                Get all users.
+            </summary>
+            <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains a collection of <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> objects.</returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.IAM.Interfaces.REST.UsersController.GetUsersByRole(System.String)">
+            <summary>
+                Get users by role.
+            </summary>
+            <param name="role">The role to filter users by.</param>
+            <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains a collection of <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> objects.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">
+            <summary>
+            This class handles commands related to Equipment entities.
+            </summary>
+            <param name="equipmentRepository">The instance of EquipmentRepository</param>
+            <param name="unitOfWork">The instance of UnitOfwork</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService.#ctor(IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+            <summary>
+            This class handles commands related to Equipment entities.
+            </summary>
+            <param name="equipmentRepository">The instance of EquipmentRepository</param>
+            <param name="unitOfWork">The instance of UnitOfwork</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.QueryServices.EquipmentQueryService">
+            <summary>
+                Equipment Query Service
+            </summary>
+            <remarks>
+                This class handles queries related to new equipment.
+                It interacts with the IEquipmentRepository to retrieve data.
+            </remarks>
+            <param name="equipmentRepository"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Application.Internal.QueryServices.EquipmentQueryService.#ctor(IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository)">
+            <summary>
+                Equipment Query Service
+            </summary>
+            <remarks>
+                This class handles queries related to new equipment.
+                It interacts with the IEquipmentRepository to retrieve data.
+            </remarks>
+            <param name="equipmentRepository"></param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand">
+            <summary>
+            Command used to create a new Alert entity.
+            </summary>
+            <param name="TenantId">Identifier of the tenant that owns the alert.</param>
+            <param name="EquipmentId">Identifier of the equipment where the alert originated.</param>
+            <param name="SiteId">Identifier of the site associated with the alert.</param>
+            <param name="Type">The type or category of the alert.</param>
+            <param name="Severity">The severity level of the alert.</param>
+            <param name="Description">Detailed explanation of the alert.</param>
+            <param name="Status">Current status of the alert.</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.#ctor(System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus)">
+            <summary>
+            Command used to create a new Alert entity.
+            </summary>
+            <param name="TenantId">Identifier of the tenant that owns the alert.</param>
+            <param name="EquipmentId">Identifier of the equipment where the alert originated.</param>
+            <param name="SiteId">Identifier of the site associated with the alert.</param>
+            <param name="Type">The type or category of the alert.</param>
+            <param name="Severity">The severity level of the alert.</param>
+            <param name="Description">Detailed explanation of the alert.</param>
+            <param name="Status">Current status of the alert.</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.TenantId">
+            <summary>Identifier of the tenant that owns the alert.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.EquipmentId">
+            <summary>Identifier of the equipment where the alert originated.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.SiteId">
+            <summary>Identifier of the site associated with the alert.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Type">
+            <summary>The type or category of the alert.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Severity">
+            <summary>The severity level of the alert.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Description">
+            <summary>Detailed explanation of the alert.</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Status">
+            <summary>Current status of the alert.</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand">
+            <summary>
+                Command to create a Equipment aggregate
+            </summary>
+            <param name="Model">The Model obtained from equipment</param>
+            <param name="Type">The Type of the equipment</param>
+            <param name="Serial">The Serial of the equipment</param>
+            <param name="Status">The Status of the equipment</param>
+            <param name="SetPoint">The Set Point of the equipment</param>
+            <param name="Manufacturer">The Manufacturer of the equipment</param>
+            <param name="Online">The Online of the equipment</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean)">
+            <summary>
+                Command to create a Equipment aggregate
+            </summary>
+            <param name="Model">The Model obtained from equipment</param>
+            <param name="Type">The Type of the equipment</param>
+            <param name="Serial">The Serial of the equipment</param>
+            <param name="Status">The Status of the equipment</param>
+            <param name="SetPoint">The Set Point of the equipment</param>
+            <param name="Manufacturer">The Manufacturer of the equipment</param>
+            <param name="Online">The Online of the equipment</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Model">
+            <summary>The Model obtained from equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Type">
+            <summary>The Type of the equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Serial">
+            <summary>The Serial of the equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Status">
+            <summary>The Status of the equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.SetPoint">
+            <summary>The Set Point of the equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Manufacturer">
+            <summary>The Manufacturer of the equipment</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Online">
+            <summary>The Online of the equipment</summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery">
+            <summary>
+            Query to get an Alert aggregate by ID
+            </summary>
+            <param name="Id"> The Alert ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get an Alert aggregate by ID
+            </summary>
+            <param name="Id"> The Alert ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery.Id">
+            <summary> The Alert ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery">
+            <summary>
+            Query to get all Alert aggregates by the ID of an Equipment
+            </summary>
+            <param name="EquipmentId"> The Equipment ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get all Alert aggregates by the ID of an Equipment
+            </summary>
+            <param name="EquipmentId"> The Equipment ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery.EquipmentId">
+            <summary> The Equipment ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery">
+            <summary>
+            Query to get all Alert aggregates by the ID of a Tenant
+            </summary>
+            <param name="TenantId"> The Tenant ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get all Alert aggregates by the ID of a Tenant
+            </summary>
+            <param name="TenantId"> The Tenant ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery.TenantId">
+            <summary> The Tenant ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery">
+            <summary>
+                Query to get an Equipment aggregate by Id
+            </summary>
+            <param name="Id">The Source Id to search</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery.#ctor(System.Int32)">
+            <summary>
+                Query to get an Equipment aggregate by Id
+            </summary>
+            <param name="Id">The Source Id to search</param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery.Id">
+            <summary>The Source Id to search</summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IAlertRepository.FindByTenantIdAsync(System.Int32)">
+            <summary>
+            Find Alerts by Tenant ID
+            </summary>
+            <param name="tenantId"> The identifier of a Tenant </param>
+            <returns>
+            An Enum of Alert if found; otherwise, an empty Enumerable
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IAlertRepository.FindByEquipmentIdAsync(System.Int32)">
+            <summary>
+            Find Alerts by Equipment ID
+            </summary>
+            <param name="equipmentId"> The identifier of an Equipment </param>
+            <returns>
+            An Enum of Alert if found; otherwise, an empty Enumerable
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository">
+            <summary>
+                The Equipment Repository interface
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository.FindByManufacturerAndOnlineAsync(System.String,System.Boolean)">
+            <summary>
+                Find equipment by Manufacturer Key and Online
+            </summary>
+            <param name="manufacturer">The manufacturer key</param>
+            <param name="online">The online key</param>
+            <returns>
+                The equipment if found; otherwise, null
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand)">
+            <summary>
+            Handle the create alert command
+            </summary>
+            <remarks>
+            This method processes the CreateAlertCommand to create a new Alert entity.
+            It performs necessary validations and persists the entity to the data store.
+            If it does not exist, it creates a new Alert and returns it; otherwise, it returns null.
+            </remarks>
+            <param name="command"> The create alert command </param>
+            <returns>
+            A newly created Alert if successful; otherwise, null.
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.AcknowledgeAlertCommand)">
+            <summary>
+            Handle the acknowledge alert command
+            </summary>
+            <param name="command">The acknowledge alert command</param>
+            <returns>The acknowledged alert if found; otherwise, null.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices">
+            <summary>
+            Interface for Alert Query Services
+            </summary>
+            <remarks>
+            This interface defines the contract for query services related to Alert entities.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery)">
+            <summary>
+            Handle the GetAllAlertsByTenantIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetAllAlertsByTenantIdQuery to retrieve all
+            Alert entities associated with a specific Tenant ID.
+            </remarks>
+            <param name="query"> The GetAllAlertsByTenantIdQuery query </param>
+            <returns> An IEnumerable containing the Alert objects </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery)">
+            <summary>
+            Handle the GetAllAlertsByEquipmentIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetAllAlertsByEquipmentIdQuery to retrieve all
+            Alert entities associated with a specific Equipment ID.
+            </remarks>
+            <param name="query"> The GetAllAlertsByEquipmentIdQuery query </param>
+            <returns> An IEnumerable containing the Alert objects </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery)">
+            <summary>
+            Handle the GetAlertByIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetAlertByIdQuery to retrieve an
+            Alert entity by its unique identifier.
+            </remarks>
+            <param name="query"> The GetAlertByIdQuery query </param>
+            <returns> The Alert if found; otherwise, null </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsQuery)">
+            <summary>
+            Handle the GetAllAlertsQuery
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand)">
+            <summary>
+             Handle the create equipment command
+            </summary>
+            <remarks>
+                This method processes the CreateEquipmentCommand to create a new Equipment entity.
+                It performs necessary validations and persists the entity to the data store.
+                If it does not exist, it creates a new Equipment and returns it; otherwise, it returns null.
+            </remarks>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.DeleteEquipmentCommand)">
+            <summary>
+             Handle the delete equipment config command
+            </summary>
+            <remarks>
+                Returns true if the equipment was deleted; otherwise false.
+            </remarks>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices">
+            <summary>
+                Interface for Equipment Query Services
+            </summary>
+            <remarks>
+                This interface defines the contract for query services related to Equipment entities.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery)">
+            <summary>
+                Handle the GetEquipmentByIdQuery 
+            </summary>
+            <remarks>
+                This method handles the GetEquipmentByIdQuery to retrieve an
+                Equipment entity by its unique identifier.
+            </remarks>
+            <param name="query">The GetEquipmentByIdQuery query</param>
+            <returns>
+                The Equipment if found; otherwise, null
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllEquipmentQuery)">
+            <summary>
+                Handle the GetAllEquipmentQuery 
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories.AlertRepository">
+            <summary>
+            Alert Repository Implementation
+            </summary>
+            <remarks>
+            This class implements the repository pattern for managing Alert entities using Entity Framework Core.
+            It provides methods to perform CRUD operations and custom queries specific to Alert.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories.AlertRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+            Alert Repository Implementation
+            </summary>
+            <remarks>
+            This class implements the repository pattern for managing Alert entities using Entity Framework Core.
+            It provides methods to perform CRUD operations and custom queries specific to Alert.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.AlertController">
+            <summary>
+            Alert REST API controller.
+            </summary>
+            <param name="alertCommandService"> The Alert Command Service </param>
+            <param name="alertQueryServices"> The Alert Query Service </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.AlertController.#ctor(IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService,IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices)">
+            <summary>
+            Alert REST API controller.
+            </summary>
+            <param name="alertCommandService"> The Alert Command Service </param>
+            <param name="alertQueryServices"> The Alert Query Service </param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.EquipmentController">
+            <summary>
+                Equipment REST API controller.
+            </summary>
+            <param name="equipmentCommandService">The Equipment Command Service</param>
+            <param name="equipmentQueryServices">The Equipment Query Service</param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.EquipmentController.#ctor(IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService,IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices)">
+            <summary>
+                Equipment REST API controller.
+            </summary>
+            <param name="equipmentCommandService">The Equipment Command Service</param>
+            <param name="equipmentQueryServices">The Equipment Query Service</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.AlertResource">
+            <summary>
+            Represents the resource for an Alert.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.AlertResource.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus,System.DateTime)">
+            <summary>
+            Represents the resource for an Alert.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateAlertResource">
+            <summary>
+            Represents the resource to create an Alert.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateAlertResource.#ctor(System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus)">
+            <summary>
+            Represents the resource to create an Alert.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource">
+            <summary>
+                Represents the resource to create a new equipment.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean)">
+            <summary>
+                Represents the resource to create a new equipment.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource">
+            <summary>
+                Represents the resource for a new equipment.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+            <summary>
+                Represents the resource for a new equipment.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.AlertResourceFromEntityAssembler">
+            <summary>
+            Assembler to transform Alert entity into AlertResource.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.CreateAlertCommandFromResourceAssembler">
+            <summary>
+            Assembler to transform CreateAlertResource to CreateAlertCommand.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.CreateEquipmentCommandFromResourceAssembler">
+            <summary>
+                Assembler to transform CreateEquipmentResource to CreateEquipmentCommand.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.EquipmentResourceFromEntityAssembler">
+            <summary>
+                Assembler to transform Equipment entity to EquipmentResource.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Application.Internal.CommandServices.ReportCommandService">
+            <summary>
+            This class handles commands related to Report entities.
+            </summary>
+            <param name="reportRepository"> The instance of ReportRepository </param>
+            <param name="unitOfWork"> The instance of UnitOfwork </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Application.Internal.CommandServices.ReportCommandService.#ctor(IceTrackPlatform.API.Reporting.Domain.Repositories.IReportRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+            <summary>
+            This class handles commands related to Report entities.
+            </summary>
+            <param name="reportRepository"> The instance of ReportRepository </param>
+            <param name="unitOfWork"> The instance of UnitOfwork </param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Application.Internal.QueryServices.ReportQueryService">
+            <summary>
+            Report Query Service
+            </summary>
+            <remarks>
+            This class handles queries related to reports.
+            It interacts with the IReportRepository to retrieve data.
+            </remarks>
+            <param name="reportRepository"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Application.Internal.QueryServices.ReportQueryService.#ctor(IceTrackPlatform.API.Reporting.Domain.Repositories.IReportRepository)">
+            <summary>
+            Report Query Service
+            </summary>
+            <remarks>
+            This class handles queries related to reports.
+            It interacts with the IReportRepository to retrieve data.
+            </remarks>
+            <param name="reportRepository"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Aggregates.Report.#ctor(IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand)">
+            <summary>
+            Creates a new Report from a CreateReportCommand
+            </summary>
+            <param name="command"> The CreateReportCommand </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Aggregates.Report.UpdateReport(System.Int32,System.Int32,System.String,IceTrackPlatform.API.Reporting.Domain.Model.ValueObjects.EReportStatus,System.String,System.String,System.String)">
+            <summary>
+            Updates the information of a Report
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand">
+            <summary>
+            Command to create a Report aggregate
+            </summary>
+            <param name="TenantId"> The tenant id of the new report </param>
+            <param name="Type"> The type of the new report</param>
+            <param name="EquipmentId"> The equipment id of the new report </param>
+            <param name="Title"> The title of the new report </param>
+            <param name="Summary"> The summary id of the new report </param>
+            <param name="Content"> The content of the new report </param>
+            <param name="Url"> The url of the new report </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.#ctor(System.Int32,IceTrackPlatform.API.Reporting.Domain.Model.ValueObjects.EReportType,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Command to create a Report aggregate
+            </summary>
+            <param name="TenantId"> The tenant id of the new report </param>
+            <param name="Type"> The type of the new report</param>
+            <param name="EquipmentId"> The equipment id of the new report </param>
+            <param name="Title"> The title of the new report </param>
+            <param name="Summary"> The summary id of the new report </param>
+            <param name="Content"> The content of the new report </param>
+            <param name="Url"> The url of the new report </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.TenantId">
+            <summary> The tenant id of the new report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.Type">
+            <summary> The type of the new report</summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.EquipmentId">
+            <summary> The equipment id of the new report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.Title">
+            <summary> The title of the new report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.Summary">
+            <summary> The summary id of the new report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.Content">
+            <summary> The content of the new report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand.Url">
+            <summary> The url of the new report </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Commands.DeleteReportCommand">
+            <summary>
+            Command to delete a Report aggregate
+            </summary>
+            <param name="Id"> The identifier of the report </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Commands.DeleteReportCommand.#ctor(System.Int32)">
+            <summary>
+            Command to delete a Report aggregate
+            </summary>
+            <param name="Id"> The identifier of the report </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.DeleteReportCommand.Id">
+            <summary> The identifier of the report </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand">
+            <summary>
+            Command to update a Report aggregate
+            </summary>
+            <param name="TenantId"> The tenant id of the report </param>
+            <param name="EquipmentId"> The equipment id of the report </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Status"> The status of the report </param>
+            <param name="Summary"> The summary id of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.#ctor(System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Reporting.Domain.Model.ValueObjects.EReportStatus,System.String,System.String,System.String)">
+            <summary>
+            Command to update a Report aggregate
+            </summary>
+            <param name="TenantId"> The tenant id of the report </param>
+            <param name="EquipmentId"> The equipment id of the report </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Status"> The status of the report </param>
+            <param name="Summary"> The summary id of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.TenantId">
+            <summary> The tenant id of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.EquipmentId">
+            <summary> The equipment id of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.Title">
+            <summary> The title of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.Status">
+            <summary> The status of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.Summary">
+            <summary> The summary id of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.Content">
+            <summary> The content of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand.Url">
+            <summary> The url of the report </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByEquipmentIdQuery">
+            <summary>
+            Query to get a Report aggregate by the ID of an Equipment
+            </summary>
+            <param name="EquipmentId"> The Equipment ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByEquipmentIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get a Report aggregate by the ID of an Equipment
+            </summary>
+            <param name="EquipmentId"> The Equipment ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByEquipmentIdQuery.EquipmentId">
+            <summary> The Equipment ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByTenantIdQuery">
+            <summary>
+            Query to get a Report aggregate by the ID of a Tenant
+            </summary>
+            <param name="TenantId"> The Tenant ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByTenantIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get a Report aggregate by the ID of a Tenant
+            </summary>
+            <param name="TenantId"> The Tenant ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByTenantIdQuery.TenantId">
+            <summary> The Tenant ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsQuery">
+            <summary>
+            Query to get all Report aggregates
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsQuery.#ctor">
+            <summary>
+            Query to get all Report aggregates
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetReportByIdQuery">
+            <summary>
+            Query to get a Report aggregate by ID
+            </summary>
+            <param name="Id"> The Report ID to search </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetReportByIdQuery.#ctor(System.Int32)">
+            <summary>
+            Query to get a Report aggregate by ID
+            </summary>
+            <param name="Id"> The Report ID to search </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetReportByIdQuery.Id">
+            <summary> The Report ID to search </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.ValueObjects.EReportStatus">
+            <summary>
+            Represents the status of a report.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Model.ValueObjects.EReportType">
+            <summary>
+            Represents the type of a report.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Repositories.IReportRepository.FindByTenantIdAsync(System.Int32)">
+            <summary>
+            Find Reports by Tenant ID
+            </summary>
+            <param name="tenantId"> The identifier of a Tenant </param>
+            <returns>
+            An Enumerable of Report if found; otherwise, an empty Enumerable
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Repositories.IReportRepository.FindByEquipmentIdAsync(System.Int32)">
+            <summary>
+            Find Reports by Equipment ID
+            </summary>
+            <param name="equipmentId"> The identifier of an Equipment </param>
+            <returns>
+            An Enumerable of Report if found; otherwise, an empty Enumerable
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportCommandService.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Commands.CreateReportCommand)">
+            <summary>
+            Handle the create report command
+            </summary>
+            <remarks>
+            This method processes the CreateReportCommand to create a new Report entity.
+            It performs necessary validations and persists the entity to the data store.
+            If it does not exist, it creates a new Report and returns it; otherwise, it returns null.
+            </remarks>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportCommandService.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Commands.UpdateReportCommand)">
+            <summary>
+            Handle the update report command
+            </summary>
+            <remarks>
+            This method processes the UpdateReportCommand to update an existing Report entity.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportCommandService.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Commands.DeleteReportCommand)">
+            <summary>
+            Handle the delete report command
+            </summary>
+            <remarks>
+            This method processes the DeleteReportCommand to delete an existing Report entity.
+            </remarks>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices">
+            <summary>
+            Interface for Report Query Services
+            </summary>
+            <remarks>
+            This interface defines the contract for query services related to Report entities.
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByTenantIdQuery)">
+            <summary>
+            Handle the GetAllReportsByTenantIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetAllReportsByTenantIdQuery to retrieve all
+            Report entities associated with a specific Tenant ID.
+            </remarks>
+            <param name="query"> The GetAllReportsByTenantIdQuery query </param>
+            <returns> An IEnumerable containing the Report objects </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsByEquipmentIdQuery)">
+            <summary>
+            Handle the GetAllReportsByEquipmentIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetAllReportsByEquipmentIdQuery to retrieve all
+            Report entities associated with a specific Equipment ID.
+            </remarks>
+            <param name="query"> The GetAllReportsByEquipmentIdQuery query </param>
+            <returns> An IEnumerable containing the Report objects </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetReportByIdQuery)">
+            <summary>
+            Handle the GetReportByIdQuery
+            </summary>
+            <remarks>
+            This method handles the GetReportByIdQuery to retrieve a
+            Report entity by its unique identifier.
+            </remarks>
+            <param name="query"> The GetReportByIdQuery query </param>
+            <returns> The Report if found; otherwise, null </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices.Handle(IceTrackPlatform.API.Reporting.Domain.Model.Queries.GetAllReportsQuery)">
+            <summary>
+            Handle the GetAllReportsQuery
+            </summary>
+            <remarks>
+            This method handles the GetAllReportsQuery to retrieve all Report entities.
+            </remarks>
+            <param name="query"> The GetAllReportsQuery query </param>
+            <returns> An IEnumerable containing the Report objects </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Infrastructure.Persistence.EFC.Repositories.ReportRepository">
+            <summary>
+            Report Repository Implementation
+            </summary>
+            <remarks>
+            This class implements the repository pattern for managing Report entities using Entity Framework Core.
+            It provides methods to perform CRUD operations and custom queries specific to Report.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Infrastructure.Persistence.EFC.Repositories.ReportRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+            Report Repository Implementation
+            </summary>
+            <remarks>
+            This class implements the repository pattern for managing Report entities using Entity Framework Core.
+            It provides methods to perform CRUD operations and custom queries specific to Report.
+            </remarks>
+            <param name="context"></param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.ReportsController">
+            <summary>
+            Report REST API controller.
+            </summary>
+            <param name="reportCommandService"> The Report Command Service </param>
+            <param name="reportQueryServices"> The Report Query Service </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Interfaces.REST.ReportsController.#ctor(IceTrackPlatform.API.Reporting.Domain.Services.IReportCommandService,IceTrackPlatform.API.Reporting.Domain.Services.IReportQueryServices)">
+            <summary>
+            Report REST API controller.
+            </summary>
+            <param name="reportCommandService"> The Report Command Service </param>
+            <param name="reportQueryServices"> The Report Query Service </param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource">
+            <summary>
+            Represents the resource to create a reports source.
+            </summary>
+            <param name="TenantId"> The identifier of the Tenant </param>
+            <param name="Type"> The type of the report </param>
+            <param name="EquipmentId"> The identifier of the Equipment </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Summary"> The summary of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.#ctor(System.Int32,System.String,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Represents the resource to create a reports source.
+            </summary>
+            <param name="TenantId"> The identifier of the Tenant </param>
+            <param name="Type"> The type of the report </param>
+            <param name="EquipmentId"> The identifier of the Equipment </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Summary"> The summary of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.TenantId">
+            <summary> The identifier of the Tenant </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.Type">
+            <summary> The type of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.EquipmentId">
+            <summary> The identifier of the Equipment </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.Title">
+            <summary> The title of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.Summary">
+            <summary> The summary of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.Content">
+            <summary> The content of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.CreateReportResource.Url">
+            <summary> The url of the report </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.ReportResource">
+            <summary>
+            Represents the resource for a report.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.ReportResource.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Represents the resource for a report.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource">
+            <summary>
+            Represents the resource to update a report.
+            </summary>
+            <param name="TenantId"> The identifier of the Tenant </param>
+            <param name="EquipmentId"> The identifier of the Equipment </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Status"> The status of the report </param>
+            <param name="Summary"> The summary of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Represents the resource to update a report.
+            </summary>
+            <param name="TenantId"> The identifier of the Tenant </param>
+            <param name="EquipmentId"> The identifier of the Equipment </param>
+            <param name="Title"> The title of the report </param>
+            <param name="Status"> The status of the report </param>
+            <param name="Summary"> The summary of the report </param>
+            <param name="Content"> The content of the report </param>
+            <param name="Url"> The url of the report </param>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.TenantId">
+            <summary> The identifier of the Tenant </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.EquipmentId">
+            <summary> The identifier of the Equipment </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.Title">
+            <summary> The title of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.Status">
+            <summary> The status of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.Summary">
+            <summary> The summary of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.Content">
+            <summary> The content of the report </summary>
+        </member>
+        <member name="P:IceTrackPlatform.API.Reporting.Interfaces.REST.Resources.UpdateReportResource.Url">
+            <summary> The url of the report </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Transform.CreateReportCommandFromResourceAssembler">
+            <summary>
+            Assembler to transform CreateReportResource to CreateReportCommand.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Transform.ReportResourceFromEntityAssembler">
+            <summary>
+            Assembler to transform Report entity to ReportResource.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Reporting.Interfaces.REST.Transform.UpdateReportCommandFromResourceAssembler">
+            <summary>
+            Assembler to transform UpdateReportResource to UpdateReportCommand.
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Domain.Model.Events.IEvent">
+            <summary>
+            Represents a domain event in the system.
+            </summary>
+            <remarks>
+            This interface is used to mark classes as domain events that can be published and handled by the event bus.
+            It extends from <see cref="T:Cortex.Mediator.Notifications.INotification"/> to integrate with the mediator pattern for event handling.
+            </remarks> 
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Domain.Repositories.IBaseRepository`1">
+            <summary>
+                Base repository interface for all repositories
+            </summary>
+            <remarks>
+                This interface is used to define the basic CRUD operations for all repositories
+            </remarks>
+            <typeparam name="TEntity">
+                The entity type for the repository
+            </typeparam>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Domain.Repositories.IBaseRepository`1.AddAsync(`0)">
+            <summary>
+                Add an entity to the repository
+            </summary>
+            <param name="entity">
+                The entity to add
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Domain.Repositories.IBaseRepository`1.FindByIdAsync(System.Int32)">
+            <summary>
+                Find an entity by its id
+            </summary>
+            <param name="id">
+                The id of the entity to find
+            </param>
+            <returns>
+                The entity if found, otherwise null
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Domain.Repositories.IBaseRepository`1.Remove(`0)">
+            <summary>
+                Remove an entity from the repository
+            </summary>
+            <param name="entity">
+                The entity to remove
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Domain.Repositories.IBaseRepository`1.ListAsync">
+            <summary>
+                List all entities in the repository
+            </summary>
+            <returns>
+                A list of all entities in the repository
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork">
+            <summary>
+                Unit of work interface for all repositories
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork.CompleteAsync">
+            <summary>
+                Save changes to the repository
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.Extensions.StringExtensions">
+            <summary>
+                Provides extension methods for string manipulation related to ASP.NET configuration.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.Extensions.StringExtensions.KebabCaseRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>(?&lt;!^)([A-Z][a-z]|(?&lt;=[a-z])[A-Z])</code><br/>
+            Options:<br/>
+            <code>RegexOptions.Compiled</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Zero-width negative lookbehind.<br/>
+                ○ Match if at the beginning of the string.<br/>
+            ○ 1st capture group.<br/>
+                ○ Match with 2 alternative expressions, atomically.<br/>
+                    ○ Match a sequence of expressions.<br/>
+                        ○ Match a character in the set [A-Z].<br/>
+                        ○ Match a character in the set [a-z].<br/>
+                    ○ Match a sequence of expressions.<br/>
+                        ○ Zero-width positive lookbehind.<br/>
+                            ○ Match a character in the set [a-z] right-to-left.<br/>
+                        ○ Match a character in the set [A-Z].<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.Extensions.StringExtensions.ToKebabCase(System.String)">
+            <summary>
+                Converts a string to kebab-case casing, e.g. "MyString" becomes "my-string"
+            </summary>
+            <param name="text">The string to convert.</param>
+            <returns>The string in the kebab-case.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.KebabCaseRouteNamingConvention">
+            <summary>
+                This class is used to replace the default route naming convention with a kebab-case naming convention.
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.KebabCaseRouteNamingConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+                This method applies the kebab-case naming convention to the controller.
+            </summary>
+            <param name="controller">The <see cref="T:Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel" /></param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.KebabCaseRouteNamingConvention.ReplaceControllerTemplate(Microsoft.AspNetCore.Mvc.ApplicationModels.SelectorModel,System.String)">
+            <summary>
+                This method replaces the default controller template with a kebab-case template.
+            </summary>
+            <param name="selector">The <see cref="T:Microsoft.AspNetCore.Mvc.ApplicationModels.SelectorModel" /></param>
+            <param name="name">string containing the name</param>
+            <returns></returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext">
+            <summary>
+                Application database context for the Learning Center Platform
+            </summary>
+            <param name="options">
+                The options for the database context
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)">
+            <summary>
+                Application database context for the Learning Center Platform
+            </summary>
+            <param name="options">
+                The options for the database context
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+                On configuring the database context
+            </summary>
+            <remarks>
+                This method is used to configure the database context.
+                It also adds the created and updated date interceptor to the database context.
+            </remarks>
+            <param name="builder">
+                The option builder for the database context
+            </param>
+            
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+             <summary>
+                 On creating the database model
+             </summary>
+             <remarks>
+                 This method is used to create the database model for the application.
+             </remarks>
+             <param name="builder">
+                 The model builder for the database context
+             </param>
+            
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions.StringExtensions">
+            <summary>
+                String extensions for the database context
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions.StringExtensions.ToSnakeCase(System.String)">
+            <summary>
+                Convert the string to snake case
+            </summary>
+            <param name="text">
+                The text to convert to snake case
+            </param>
+            <returns>
+                The snake cased text
+            </returns>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions.StringExtensions.ToPlural(System.String)">
+            <summary>
+                Convert the string to plural
+            </summary>
+            <param name="text">
+                The text to convert to plural
+            </param>
+            <returns>
+                The pluralized text
+            </returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.ModelBuilderExtensions">
+            <summary>
+                Model builder extensions for the database context
+            </summary>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.ModelBuilderExtensions.UseSnakeCaseNamingConvention(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+                Applies snake_case naming convention to the model.
+            </summary>
+            <param name="builder">The model builder.</param>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.BaseRepository`1">
+            <summary>
+                Base repository for all repositories
+            </summary>
+            <remarks>
+                This class is used to define the basic CRUD operations for all repositories.
+                This class implements the IBaseRepository interface.
+            </remarks>
+            <typeparam name="TEntity">
+                The entity type for the repository
+            </typeparam>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.BaseRepository`1.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+                Default constructor for the base repository
+            </summary>
+        </member>
+        <member name="T:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.UnitOfWork">
+            <summary>
+                Unit of work for the application.
+            </summary>
+            <remarks>
+                This class is used to save changes to the database context.
+                It implements the IUnitOfWork interface.
+            </remarks>
+            <param name="context">
+                The database context for the application
+            </param>
+        </member>
+        <member name="M:IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories.UnitOfWork.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
+            <summary>
+                Unit of work for the application.
+            </summary>
+            <remarks>
+                This class is used to save changes to the database context.
+                It implements the IUnitOfWork interface.
+            </remarks>
+            <param name="context">
+                The database context for the application
+            </param>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.KebabCaseRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the KebabCaseRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.KebabCaseRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

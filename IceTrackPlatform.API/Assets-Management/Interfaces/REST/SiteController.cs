@@ -94,4 +94,32 @@ public class SiteController(
 
         return NoContent();
     }
+    
+    [HttpPut("{id:int}")]
+    [SwaggerOperation(
+        Summary = "Update Site",
+        Description = "Updates an existing site.",
+        OperationId = "UpdateSite")]
+    [SwaggerResponse(200, "Site updated.", typeof(SiteResource))]
+    [SwaggerResponse(404, "Site not found.")]
+    [SwaggerResponse(400, "Invalid request.")]
+    public async Task<IActionResult> UpdateSite(int id, [FromBody] UpdateSiteResource resource)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        var command = new UpdateSiteCommand(
+            id,
+            resource.Name,
+            resource.Address,
+            resource.ContactName,
+            resource.Phone
+        );
+
+        var result = await siteCommandService.Handle(command);
+
+        if (result is null)
+            return NotFound($"Site with ID {id} not found.");
+
+        return Ok(SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
 }

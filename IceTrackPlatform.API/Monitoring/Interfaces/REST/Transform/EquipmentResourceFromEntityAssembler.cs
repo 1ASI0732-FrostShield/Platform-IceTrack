@@ -10,6 +10,6 @@ public static class EquipmentResourceFromEntityAssembler
 {
     public static EquipmentResource ToResourceFromEntity(Equipment entity) =>
         new EquipmentResource(entity.Id, entity.EquipmentId, entity.Model, entity.Type, entity.Serial, entity.Status,
-            entity.Installed, entity.LastSeen, entity.SetPoint, entity.Name, entity.Manufacturer, entity.Online,
+            entity.SetPoint, entity.Name, entity.Manufacturer, entity.Online,
             entity.CreatedDate, entity.UpdatedDate);
 }
