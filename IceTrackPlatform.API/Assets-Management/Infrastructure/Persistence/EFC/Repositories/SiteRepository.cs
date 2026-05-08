@@ -17,8 +17,15 @@ namespace IceTrackPlatform.API.Assets_Management.Infrastructure.Persistence.EFC.
 public class SiteRepository(AppDbContext context)
     : BaseRepository<Site>(context), ISiteRepository
 {
-    public async Task<IEnumerable<Site>> FindByContactNameAsync(string contactName)
-    {
-        return await Context.Set<Site>().Where( f => f.ContactName == contactName).ToListAsync();
-    }
+    public async Task<bool> ExistsByNameAsync(string name, int? excludeId = null)
+        => await Context.Set<Site>().AnyAsync(s => s.Name == name && s.Id != excludeId);
+
+    public async Task<bool> ExistsByAddressAsync(string address, int? excludeId = null)
+        => await Context.Set<Site>().AnyAsync(s => s.Address == address && s.Id != excludeId);
+
+    public async Task<bool> ExistsByPhoneAsync(string phone, int? excludeId = null)
+        => await Context.Set<Site>().AnyAsync(s => s.Phone == phone && s.Id != excludeId);
+    
+    public async Task<Site?> FindByNameAsync(string name)
+        => await Context.Set<Site>().FirstOrDefaultAsync(s => s.Name == name);
 }

@@ -37,6 +37,15 @@ public class SiteCommandService(ISiteRepository siteRepository,
     {
         ValidateSite(command.Name, command.Address, command.ContactName, command.Phone);
         
+        if (await siteRepository.ExistsByNameAsync(command.Name))
+            throw new Exception("A site with the same Name already exists");
+
+        if (await siteRepository.ExistsByAddressAsync(command.Address))
+            throw new Exception("A site with the same Address already exists");
+
+        if (await siteRepository.ExistsByPhoneAsync(command.Phone))
+            throw new Exception("A site with the same Phone already exists");
+        
         var site = new Site(command);
         try
         {
@@ -70,6 +79,15 @@ public class SiteCommandService(ISiteRepository siteRepository,
     public async Task<Site?> Handle(UpdateSiteCommand command)
     {
         ValidateSite(command.Name, command.Address, command.ContactName, command.Phone);
+        
+        if (await siteRepository.ExistsByNameAsync(command.Name, command.SiteId))
+            throw new Exception("A site with the same Name already exists");
+
+        if (await siteRepository.ExistsByAddressAsync(command.Address, command.SiteId))
+            throw new Exception("A site with the same Address already exists");
+
+        if (await siteRepository.ExistsByPhoneAsync(command.Phone, command.SiteId))
+            throw new Exception("A site with the same Phone already exists");
         
         var site = await siteRepository.FindByIdAsync(command.SiteId);
         if (site is null) return null;

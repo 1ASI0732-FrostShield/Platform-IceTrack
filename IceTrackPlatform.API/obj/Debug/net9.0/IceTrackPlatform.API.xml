@@ -2199,7 +2199,7 @@
             <param name="equipmentRepository">The instance of EquipmentRepository</param>
             <param name="unitOfWork">The instance of UnitOfwork</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService.#ctor(IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService.#ctor(IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository,IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
             <summary>
             This class handles commands related to Equipment entities.
             </summary>

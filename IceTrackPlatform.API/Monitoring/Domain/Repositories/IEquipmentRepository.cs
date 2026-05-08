@@ -8,4 +8,5 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Repositories;
 /// </summary>
 public interface IEquipmentRepository : IBaseRepository<Equipment>
 {
+    Task<bool> ExistsBySerialAsync(string serial, int? excludeId = null);
 }

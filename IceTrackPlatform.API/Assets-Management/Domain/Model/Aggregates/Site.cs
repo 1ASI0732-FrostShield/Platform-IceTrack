@@ -4,14 +4,6 @@ namespace IceTrackPlatform.API.Assets_Management.Domain.Model.Aggregates;
 
 public partial class Site : SiteAudit
 {
-    public int Id { get; }
-    public string Name { get; private set; }
-    public string Address { get; private set; }
-    public string ContactName { get; private set; }
-    public string Phone { get; private set; }
-    
-    public int CantEquipment { get; private set; }
-    
     protected Site()
     {
         Name = string.Empty;
@@ -53,4 +45,22 @@ public partial class Site : SiteAudit
         ContactName = contactName;
         Phone = phone;
     }
+    
+    public void IncrementCantEquipment()
+    {
+        CantEquipment++;
+    }
+    
+    public void DecrementCantEquipment()
+    {
+        if (CantEquipment > 0) CantEquipment--;
+    }
+    
+    public int Id { get; }
+    public string Name { get; private set; }
+    public string Address { get; private set; }
+    public string ContactName { get; private set; }
+    public string Phone { get; private set; }
+    
+    public int CantEquipment { get; private set; }
 }

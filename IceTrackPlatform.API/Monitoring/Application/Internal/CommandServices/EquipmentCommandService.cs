@@ -1,4 +1,5 @@
-﻿using IceTrackPlatform.API.Monitoring.Domain.Model.Aggregates;
+﻿using IceTrackPlatform.API.Assets_Management.Domain.Repositories;
+using IceTrackPlatform.API.Monitoring.Domain.Model.Aggregates;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 using IceTrackPlatform.API.Monitoring.Domain.Repositories;
 using IceTrackPlatform.API.Monitoring.Domain.Services;
@@ -12,6 +13,7 @@ namespace IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices;
 /// <param name="equipmentRepository">The instance of EquipmentRepository</param>
 /// <param name="unitOfWork">The instance of UnitOfwork</param>
 public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
+                                        ISiteRepository siteRepository,
                                         IUnitOfWork unitOfWork)
     : IEquipmentCommandService
 {
@@ -34,10 +36,21 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
     {
         ValidateEquipment(command.Model, command.Type, command.Serial, command.Name);
         
+        if (await equipmentRepository.ExistsBySerialAsync(command.Serial))
+            throw new Exception("An Equipment with the same Serial already exists");
+        
         var equipment = new Equipment(command);
         try
         {
             await equipmentRepository.AddAsync(equipment);
+            
+            var site = await siteRepository.FindByNameAsync(command.Name);
+            if (site is not null)
+            {
+                site.IncrementCantEquipment();
+                siteRepository.Update(site);
+            }
+
             await unitOfWork.CompleteAsync();
         }
         catch (Exception ex)
@@ -51,11 +64,17 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
     public async Task<bool> Handle(DeleteEquipmentCommand command)
     {
         var equipment = await equipmentRepository.FindByIdAsync(command.EquipmentId);
-
         if (equipment is null) return false;
 
         try
         {
+            var site = await siteRepository.FindByNameAsync(equipment.Name);
+            if (site is not null)
+            {
+                site.DecrementCantEquipment();
+                siteRepository.Update(site);
+            }
+
             equipmentRepository.Remove(equipment);
             await unitOfWork.CompleteAsync();
             return true;
@@ -70,6 +89,9 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
     public async Task<Equipment?> Handle(UpdateEquipmentCommand command)
     {
         ValidateEquipment(command.Model, command.Type, command.Serial, command.Name);
+        
+        if (await equipmentRepository.ExistsBySerialAsync(command.Serial))
+            throw new Exception("An Equipment with the same Serial already exists");
         
         var equipment = await equipmentRepository.FindByIdAsync(command.EquipmentId);
         

@@ -5,16 +5,6 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Model.Aggregates;
 
 public partial class Equipment : EquipmentAudit
 {
-    public int Id { get; }
-    public Guid EquipmentId { get;}
-    public string Model { get; private set; }
-    public string Type { get; private set; }
-    public string Serial { get; private set; }
-    public StatusEquipment Status { get; private set; }
-    public string Name { get; private set; }
-    public int SiteId { get; private set; }
-    public bool Online { get; private set; }
-
     protected Equipment()
     {
         EquipmentId = Guid.NewGuid();
@@ -49,4 +39,14 @@ public partial class Equipment : EquipmentAudit
         SiteId = command.SiteId;
         Online = command.Online;
     }
+    
+    public int Id { get; }
+    public Guid EquipmentId { get;}
+    public string Model { get; private set; }
+    public string Type { get; private set; }
+    public string Serial { get; private set; }
+    public StatusEquipment Status { get; private set; }
+    public string Name { get; private set; }
+    public int SiteId { get; private set; }
+    public bool Online { get; private set; }
 }
