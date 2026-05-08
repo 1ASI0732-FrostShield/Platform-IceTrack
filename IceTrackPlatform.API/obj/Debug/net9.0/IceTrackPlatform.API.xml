@@ -2226,51 +2226,6 @@
             </remarks>
             <param name="equipmentRepository"></param>
         </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand">
-            <summary>
-            Command used to create a new Alert entity.
-            </summary>
-            <param name="TenantId">Identifier of the tenant that owns the alert.</param>
-            <param name="EquipmentId">Identifier of the equipment where the alert originated.</param>
-            <param name="SiteId">Identifier of the site associated with the alert.</param>
-            <param name="Type">The type or category of the alert.</param>
-            <param name="Severity">The severity level of the alert.</param>
-            <param name="Description">Detailed explanation of the alert.</param>
-            <param name="Status">Current status of the alert.</param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.#ctor(System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus)">
-            <summary>
-            Command used to create a new Alert entity.
-            </summary>
-            <param name="TenantId">Identifier of the tenant that owns the alert.</param>
-            <param name="EquipmentId">Identifier of the equipment where the alert originated.</param>
-            <param name="SiteId">Identifier of the site associated with the alert.</param>
-            <param name="Type">The type or category of the alert.</param>
-            <param name="Severity">The severity level of the alert.</param>
-            <param name="Description">Detailed explanation of the alert.</param>
-            <param name="Status">Current status of the alert.</param>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.TenantId">
-            <summary>Identifier of the tenant that owns the alert.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.EquipmentId">
-            <summary>Identifier of the equipment where the alert originated.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.SiteId">
-            <summary>Identifier of the site associated with the alert.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Type">
-            <summary>The type or category of the alert.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Severity">
-            <summary>The severity level of the alert.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Description">
-            <summary>Detailed explanation of the alert.</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand.Status">
-            <summary>Current status of the alert.</summary>
-        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand">
             <summary>
                 Command to create a Equipment aggregate
@@ -2283,7 +2238,7 @@
             <param name="Manufacturer">The Manufacturer of the equipment</param>
             <param name="Online">The Online of the equipment</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
             <summary>
                 Command to create a Equipment aggregate
             </summary>
@@ -2307,59 +2262,8 @@
         <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Status">
             <summary>The Status of the equipment</summary>
         </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.SetPoint">
-            <summary>The Set Point of the equipment</summary>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Manufacturer">
-            <summary>The Manufacturer of the equipment</summary>
-        </member>
         <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.Online">
             <summary>The Online of the equipment</summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery">
-            <summary>
-            Query to get an Alert aggregate by ID
-            </summary>
-            <param name="Id"> The Alert ID to search </param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery.#ctor(System.Int32)">
-            <summary>
-            Query to get an Alert aggregate by ID
-            </summary>
-            <param name="Id"> The Alert ID to search </param>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery.Id">
-            <summary> The Alert ID to search </summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery">
-            <summary>
-            Query to get all Alert aggregates by the ID of an Equipment
-            </summary>
-            <param name="EquipmentId"> The Equipment ID to search </param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery.#ctor(System.Int32)">
-            <summary>
-            Query to get all Alert aggregates by the ID of an Equipment
-            </summary>
-            <param name="EquipmentId"> The Equipment ID to search </param>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery.EquipmentId">
-            <summary> The Equipment ID to search </summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery">
-            <summary>
-            Query to get all Alert aggregates by the ID of a Tenant
-            </summary>
-            <param name="TenantId"> The Tenant ID to search </param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery.#ctor(System.Int32)">
-            <summary>
-            Query to get all Alert aggregates by the ID of a Tenant
-            </summary>
-            <param name="TenantId"> The Tenant ID to search </param>
-        </member>
-        <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery.TenantId">
-            <summary> The Tenant ID to search </summary>
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery">
             <summary>
@@ -2376,107 +2280,10 @@
         <member name="P:IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetEquipmentByIdQuery.Id">
             <summary>The Source Id to search</summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IAlertRepository.FindByTenantIdAsync(System.Int32)">
-            <summary>
-            Find Alerts by Tenant ID
-            </summary>
-            <param name="tenantId"> The identifier of a Tenant </param>
-            <returns>
-            An Enum of Alert if found; otherwise, an empty Enumerable
-            </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IAlertRepository.FindByEquipmentIdAsync(System.Int32)">
-            <summary>
-            Find Alerts by Equipment ID
-            </summary>
-            <param name="equipmentId"> The identifier of an Equipment </param>
-            <returns>
-            An Enum of Alert if found; otherwise, an empty Enumerable
-            </returns>
-        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository">
             <summary>
                 The Equipment Repository interface
             </summary>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Repositories.IEquipmentRepository.FindByManufacturerAndOnlineAsync(System.String,System.Boolean)">
-            <summary>
-                Find equipment by Manufacturer Key and Online
-            </summary>
-            <param name="manufacturer">The manufacturer key</param>
-            <param name="online">The online key</param>
-            <returns>
-                The equipment if found; otherwise, null
-            </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateAlertCommand)">
-            <summary>
-            Handle the create alert command
-            </summary>
-            <remarks>
-            This method processes the CreateAlertCommand to create a new Alert entity.
-            It performs necessary validations and persists the entity to the data store.
-            If it does not exist, it creates a new Alert and returns it; otherwise, it returns null.
-            </remarks>
-            <param name="command"> The create alert command </param>
-            <returns>
-            A newly created Alert if successful; otherwise, null.
-            </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.AcknowledgeAlertCommand)">
-            <summary>
-            Handle the acknowledge alert command
-            </summary>
-            <param name="command">The acknowledge alert command</param>
-            <returns>The acknowledged alert if found; otherwise, null.</returns>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices">
-            <summary>
-            Interface for Alert Query Services
-            </summary>
-            <remarks>
-            This interface defines the contract for query services related to Alert entities.
-            </remarks>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByTenantIdQuery)">
-            <summary>
-            Handle the GetAllAlertsByTenantIdQuery
-            </summary>
-            <remarks>
-            This method handles the GetAllAlertsByTenantIdQuery to retrieve all
-            Alert entities associated with a specific Tenant ID.
-            </remarks>
-            <param name="query"> The GetAllAlertsByTenantIdQuery query </param>
-            <returns> An IEnumerable containing the Alert objects </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsByEquipmentIdQuery)">
-            <summary>
-            Handle the GetAllAlertsByEquipmentIdQuery
-            </summary>
-            <remarks>
-            This method handles the GetAllAlertsByEquipmentIdQuery to retrieve all
-            Alert entities associated with a specific Equipment ID.
-            </remarks>
-            <param name="query"> The GetAllAlertsByEquipmentIdQuery query </param>
-            <returns> An IEnumerable containing the Alert objects </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAlertByIdQuery)">
-            <summary>
-            Handle the GetAlertByIdQuery
-            </summary>
-            <remarks>
-            This method handles the GetAlertByIdQuery to retrieve an
-            Alert entity by its unique identifier.
-            </remarks>
-            <param name="query"> The GetAlertByIdQuery query </param>
-            <returns> The Alert if found; otherwise, null </returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Queries.GetAllAlertsQuery)">
-            <summary>
-            Handle the GetAllAlertsQuery
-            </summary>
-            <param name="query"></param>
-            <returns></returns>
         </member>
         <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand)">
             <summary>
@@ -2497,6 +2304,11 @@
             <remarks>
                 Returns true if the equipment was deleted; otherwise false.
             </remarks>
+        </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.UpdateEquipmentCommand)">
+            <summary>
+             Handle the update equipment config command
+            </summary>
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices">
             <summary>
@@ -2524,40 +2336,6 @@
                 Handle the GetAllEquipmentQuery 
             </summary>
         </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories.AlertRepository">
-            <summary>
-            Alert Repository Implementation
-            </summary>
-            <remarks>
-            This class implements the repository pattern for managing Alert entities using Entity Framework Core.
-            It provides methods to perform CRUD operations and custom queries specific to Alert.
-            </remarks>
-            <param name="context"></param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories.AlertRepository.#ctor(IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.AppDbContext)">
-            <summary>
-            Alert Repository Implementation
-            </summary>
-            <remarks>
-            This class implements the repository pattern for managing Alert entities using Entity Framework Core.
-            It provides methods to perform CRUD operations and custom queries specific to Alert.
-            </remarks>
-            <param name="context"></param>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.AlertController">
-            <summary>
-            Alert REST API controller.
-            </summary>
-            <param name="alertCommandService"> The Alert Command Service </param>
-            <param name="alertQueryServices"> The Alert Query Service </param>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.AlertController.#ctor(IceTrackPlatform.API.Monitoring.Domain.Services.IAlertCommandService,IceTrackPlatform.API.Monitoring.Domain.Services.IAlertQueryServices)">
-            <summary>
-            Alert REST API controller.
-            </summary>
-            <param name="alertCommandService"> The Alert Command Service </param>
-            <param name="alertQueryServices"> The Alert Query Service </param>
-        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.EquipmentController">
             <summary>
                 Equipment REST API controller.
@@ -2572,32 +2350,12 @@
             <param name="equipmentCommandService">The Equipment Command Service</param>
             <param name="equipmentQueryServices">The Equipment Query Service</param>
         </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.AlertResource">
-            <summary>
-            Represents the resource for an Alert.
-            </summary>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.AlertResource.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus,System.DateTime)">
-            <summary>
-            Represents the resource for an Alert.
-            </summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateAlertResource">
-            <summary>
-            Represents the resource to create an Alert.
-            </summary>
-        </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateAlertResource.#ctor(System.Int32,System.Int32,System.Int32,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertSeverity,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.EAlertStatus)">
-            <summary>
-            Represents the resource to create an Alert.
-            </summary>
-        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource">
             <summary>
                 Represents the resource to create a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
             <summary>
                 Represents the resource to create a new equipment.
             </summary>
@@ -2607,19 +2365,9 @@
                 Represents the resource for a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.Single,System.String,System.String,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
                 Represents the resource for a new equipment.
-            </summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.AlertResourceFromEntityAssembler">
-            <summary>
-            Assembler to transform Alert entity into AlertResource.
-            </summary>
-        </member>
-        <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.CreateAlertCommandFromResourceAssembler">
-            <summary>
-            Assembler to transform CreateAlertResource to CreateAlertCommand.
             </summary>
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform.CreateEquipmentCommandFromResourceAssembler">

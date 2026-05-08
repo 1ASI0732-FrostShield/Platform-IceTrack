@@ -10,5 +10,5 @@ public static class CreateEquipmentCommandFromResourceAssembler
 {
     public static CreateEquipmentCommand ToCommandFromResource(CreateEquipmentResource resource) =>
         new CreateEquipmentCommand(resource.Model, resource.Type, resource.Serial,
-            resource.Status, resource.SetPoint, resource.Name, resource.Manufacturer, resource.Online);
+            resource.Status, resource.Name, resource.SiteId, resource.Online);
 }

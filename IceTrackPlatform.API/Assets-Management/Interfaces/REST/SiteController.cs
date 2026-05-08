@@ -23,33 +23,6 @@ public class SiteController(
     ISiteQueryServices siteQueryServices)
     : ControllerBase
 {
-    [HttpPost]
-    [SwaggerOperation(Summary = "Create a new Site", Description = "Create a new Site", OperationId = "CreateSite")]
-    [SwaggerResponse(201, "Created site", typeof(SiteResource))]
-    [SwaggerResponse(400, "The site was not created")]
-    [SwaggerResponse(409, "The site already exists")]
-    public async Task<IActionResult> CreateSite(
-        [FromBody] CreateSiteResource resource)
-    {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
-        var createSiteCommandFromResourceAssembler = CreateSiteCommandFromResourceAssembler.ToCommandFromResource(resource);
-        try
-        {
-            var result = await siteCommandService.Handle(createSiteCommandFromResourceAssembler);
-            if (result is null) return BadRequest();
-            return CreatedAtAction(nameof(GetSiteById), new { id = result.Id },
-                SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
-        }
-        catch (Exception e) when (e.Message.Contains("already exists"))
-        {
-            return Conflict("A site with the same Contact Name already exists.");
-        }
-        catch
-        {
-            return BadRequest();
-        }
-    }
-    
     [HttpGet("{id}")]
     [SwaggerOperation(Summary = "Gets a Site by Id", Description = "Gets a Site for a given identifier", OperationId = "GetSiteById")]
     [SwaggerResponse(200, "The site was found", typeof(SiteResource))]
@@ -77,22 +50,31 @@ public class SiteController(
         return Ok(resources);
     }
     
-    [HttpDelete("{id:int}")]
-    [SwaggerOperation(
-        Summary = "Delete Site",
-        Description = "Deletes a site.",
-        OperationId = "DeleteSite")]
-    [SwaggerResponse(204, "Site deleted.")]
-    [SwaggerResponse(404, "Site not found.")]
-    public async Task<IActionResult> DeleteSite(int id)
+    [HttpPost]
+    [SwaggerOperation(Summary = "Create a new Site", Description = "Create a new Site", OperationId = "CreateSite")]
+    [SwaggerResponse(201, "Created site", typeof(SiteResource))]
+    [SwaggerResponse(400, "The site was not created")]
+    [SwaggerResponse(409, "The site already exists")]
+    public async Task<IActionResult> CreateSite(
+        [FromBody] CreateSiteResource resource)
     {
-        var command = new DeleteSiteCommand(id);
-        var result = await siteCommandService.Handle(command);
-
-        if (!result)
-            return NotFound($"Site with ID {id} not found.");
-
-        return NoContent();
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var createSiteCommandFromResourceAssembler = CreateSiteCommandFromResourceAssembler.ToCommandFromResource(resource);
+        try
+        {
+            var result = await siteCommandService.Handle(createSiteCommandFromResourceAssembler);
+            if (result is null) return BadRequest();
+            return CreatedAtAction(nameof(GetSiteById), new { id = result.Id },
+                SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
+        }
+        catch (Exception e) when (e.Message.Contains("already exists"))
+        {
+            return Conflict("A site with the same Contact Name already exists.");
+        }
+        catch
+        {
+            return BadRequest();
+        }
     }
     
     [HttpPut("{id:int}")]
@@ -121,5 +103,23 @@ public class SiteController(
             return NotFound($"Site with ID {id} not found.");
 
         return Ok(SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+    
+    [HttpDelete("{id:int}")]
+    [SwaggerOperation(
+        Summary = "Delete Site",
+        Description = "Deletes a site.",
+        OperationId = "DeleteSite")]
+    [SwaggerResponse(204, "Site deleted.")]
+    [SwaggerResponse(404, "Site not found.")]
+    public async Task<IActionResult> DeleteSite(int id)
+    {
+        var command = new DeleteSiteCommand(id);
+        var result = await siteCommandService.Handle(command);
+
+        if (!result)
+            return NotFound($"Site with ID {id} not found.");
+
+        return NoContent();
     }
 }

@@ -15,8 +15,28 @@ public class SiteCommandService(ISiteRepository siteRepository,
                                     IUnitOfWork unitOfWork)
     : ISiteCommandService
 {
+    private void ValidateSite(string name, string address, string contactName, string phone)
+    {
+        if (name != name.Trim())
+            throw new Exception("Name cannot be empty or with spaces");
+
+        if (address != address.Trim())
+            throw new Exception("Address cannot be empty or with spaces");
+
+        if (contactName != contactName.Trim())
+            throw new Exception("ContactName cannot be empty or with spaces");
+
+        if (string.IsNullOrWhiteSpace(phone) || phone.Contains(" ") || phone != phone.Trim())
+            throw new Exception("Phone cannot be empty or with spaces");
+        
+        if (!System.Text.RegularExpressions.Regex.IsMatch(phone, @"^\d{9}$"))
+            throw new Exception("Phone must contain exactly 9 digits");
+    }
+    
     public async Task<Site?> Handle(CreateSiteCommand command)
     {
+        ValidateSite(command.Name, command.Address, command.ContactName, command.Phone);
+        
         var site = new Site(command);
         try
         {
@@ -49,6 +69,8 @@ public class SiteCommandService(ISiteRepository siteRepository,
 
     public async Task<Site?> Handle(UpdateSiteCommand command)
     {
+        ValidateSite(command.Name, command.Address, command.ContactName, command.Phone);
+        
         var site = await siteRepository.FindByIdAsync(command.SiteId);
         if (site is null) return null;
 

@@ -13,4 +13,4 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 /// <param name="Manufacturer">The Manufacturer of the equipment</param>
 /// <param name="Online">The Online of the equipment</param>
 public record CreateEquipmentCommand(string Model, string Type, string Serial, 
-    StatusEquipment Status, float SetPoint, string Name, string Manufacturer, bool Online);
+    StatusEquipment Status, string Name, int SiteId, bool Online);

@@ -1,6 +1,7 @@
 ﻿using System.Net.Mime;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Queries;
+using IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects;
 using IceTrackPlatform.API.Monitoring.Domain.Services;
 using IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources;
 using IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform;
@@ -23,6 +24,33 @@ public class EquipmentController(
     IEquipmentQueryServices equipmentQueryServices)
     : ControllerBase
 {
+    [HttpGet("{id}")]
+    [SwaggerOperation(Summary = "Gets a Equipment by Id", Description = "Gets a Equipment for a given identifier", OperationId = "GetEquipmentById")]
+    [SwaggerResponse(200, "The equipment was found", typeof(EquipmentResource))]
+    public async Task<IActionResult> GetEquipmentById(int id)
+    {
+        var getEquipmentByIdQuery = new GetEquipmentByIdQuery(id);
+        var result = await equipmentQueryServices.Handle(getEquipmentByIdQuery);
+        if (result is null) return NotFound();
+        var resource = EquipmentResourceFromEntityAssembler.ToResourceFromEntity(result);
+        return Ok(resource);
+    }
+    
+    [HttpGet]
+    [SwaggerOperation(Summary = "Get all equipments", Description = "Gets the complete list of equipments", OperationId = "GetAllEquipments")]
+    [SwaggerResponse(200, "List of equipments", typeof(IEnumerable<EquipmentResource>))]
+    public async Task<IActionResult> GetAllEquipments()
+    {
+        var query = new GetAllEquipmentQuery();
+        var results = await equipmentQueryServices.Handle(query);
+
+        var resources = results
+            .Select(EquipmentResourceFromEntityAssembler.ToResourceFromEntity)
+            .ToList();
+
+        return Ok(resources);
+    }
+    
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new Equipment", Description = "Create a new Equipment", OperationId = "CreateEquipment")]
     [SwaggerResponse(201, "Created equipment", typeof(EquipmentResource))]
@@ -50,31 +78,18 @@ public class EquipmentController(
         }
     }
     
-    [HttpGet("{id}")]
-    [SwaggerOperation(Summary = "Gets a Equipment by Id", Description = "Gets a Equipment for a given identifier", OperationId = "GetEquipmentById")]
-    [SwaggerResponse(200, "The equipment was found", typeof(EquipmentResource))]
-    public async Task<IActionResult> GetEquipmentById(int id)
+    [HttpPut("{id:int}")]
+    [SwaggerOperation(Summary = "Update Equipment", Description = "Updates an existing equipment", OperationId = "UpdateEquipment")]
+    [SwaggerResponse(200, "Equipment updated", typeof(EquipmentResource))]
+    [SwaggerResponse(400, "Bad request")]
+    [SwaggerResponse(404, "Equipment not found")]
+    public async Task<IActionResult> UpdateEquipment(int id, [FromBody] UpdateEquipmentResource resource)
     {
-        var getEquipmentByIdQuery = new GetEquipmentByIdQuery(id);
-        var result = await equipmentQueryServices.Handle(getEquipmentByIdQuery);
-        if (result is null) return NotFound();
-        var resource = EquipmentResourceFromEntityAssembler.ToResourceFromEntity(result);
-        return Ok(resource);
-    }
-    
-    [HttpGet]
-    [SwaggerOperation(Summary = "Get all equipments", Description = "Gets the complete list of equipments", OperationId = "GetAllEquipments")]
-    [SwaggerResponse(200, "List of equipments", typeof(IEnumerable<EquipmentResource>))]
-    public async Task<IActionResult> GetAllEquipments()
-    {
-        var query = new GetAllEquipmentQuery();
-        var results = await equipmentQueryServices.Handle(query);
-
-        var resources = results
-            .Select(EquipmentResourceFromEntityAssembler.ToResourceFromEntity)
-            .ToList();
-
-        return Ok(resources);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var command = UpdateEquipmentCommandFromResourceAssembler.ToCommandFromResource(id, resource);
+        var result = await equipmentCommandService.Handle(command);
+        if (result is null) return NotFound($"Equipment with ID {id} not found.");
+        return Ok(EquipmentResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
     
     [HttpDelete("{id:int}")]

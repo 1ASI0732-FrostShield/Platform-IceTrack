@@ -8,13 +8,4 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Repositories;
 /// </summary>
 public interface IEquipmentRepository : IBaseRepository<Equipment>
 {
-    /// <summary>
-    ///     Find equipment by Manufacturer Key and Online
-    /// </summary>
-    /// <param name="manufacturer">The manufacturer key</param>
-    /// <param name="online">The online key</param>
-    /// <returns>
-    ///     The equipment if found; otherwise, null
-    /// </returns>
-    Task<Equipment?> FindByManufacturerAndOnlineAsync(string manufacturer, bool online);
 }

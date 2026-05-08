@@ -13,10 +13,4 @@ public class EquipmentRepository(AppDbContext context)
     {
         return await Context.Set<Equipment>().Where( f => f.Type == type).ToListAsync();
     }
-
-    public async Task<Equipment?> FindByManufacturerAndOnlineAsync(string manufacturer, bool online)
-    {
-        return await Context.Set<Equipment>()
-            .FirstOrDefaultAsync(f => f.Manufacturer == manufacturer && f.Online == online);
-    }
 }

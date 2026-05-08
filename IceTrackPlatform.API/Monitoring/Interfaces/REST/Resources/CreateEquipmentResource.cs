@@ -11,7 +11,6 @@ public record CreateEquipmentResource(
     [Required] string  Type,
     [Required] string  Serial,
     [Required] StatusEquipment  Status,
-    [Required] float  SetPoint,
     [Required] string  Name,
-    [Required] string  Manufacturer,
+    [Required] int  SiteId,
     [Required] bool  Online);

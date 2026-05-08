@@ -15,177 +15,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/awsToolkit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/2e103a62-a6ae-4996-93ba-0492f773cccf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/2e103a62-a6ae-4996-93ba-0492f773cccf/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/2e103a62-a6ae-4996-93ba-0492f773cccf/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/2e103a62-a6ae-4996-93ba-0492f773cccf/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/2e103a62-a6ae-4996-93ba-0492f773cccf/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/deviceManager.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Commands/UpdateSiteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/UpdateSiteResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/BCrypt.Net-Next.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/BouncyCastle.Cryptography.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Cortex.Mediator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/EntityFrameworkCore.CreatedUpdatedDate.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Google.Protobuf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Humanizer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.staticwebassets.endpoints.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/K4os.Compression.LZ4.Streams.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/K4os.Compression.LZ4.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/K4os.Hash.xxHash.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/MySql.Data.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/MySql.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Scrutor.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Annotations.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/System.Security.Permissions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ZstdSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/af/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/appsettings.Production.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ar/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/az/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/bg/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/bn-BD/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/cs/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/da/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/de/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/el/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/es/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/fa/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/fi-FI/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/fr-BE/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/fr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/he/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/hr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/hu/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/hy/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/id/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/is/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/it/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ja/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ko-KR/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ku/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/lv/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ms-MY/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/mt/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/nb-NO/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/nb/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/nl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/pl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/pt/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ro/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/ru/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/comerr64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/gssapi64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/k5sprt64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/sk/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/sl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/sr-Latn/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/sr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/sv/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/th-TH/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/tr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/uk/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/uz-Cyrl-UZ/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/uz-Latn-UZ/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/vi/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/zh-CN/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/zh-Hans/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/zh-Hant/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrack.5B65C2C1.Up2Date" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rpswa.dswa.cache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/swae.build.ex.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Domain/Model/ValueObjects/PasswordPolicyValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/UpdateEquipmentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/UpdateEquipmentResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/UpdateEquipmentCommandFromResourceAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Application/Internal/CommandServices/SiteCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Application/Internal/CommandServices/SiteCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Services/ISiteCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Services/ISiteCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Application/Internal/CommandServices/UserCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Application/Internal/CommandServices/UserCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Interfaces/REST/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Interfaces/REST/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/AlertCommandService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/QueryServices/AlertQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Alert.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/AlertAudit.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/AcknowledgeAlertCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/CreateAlertCommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/CreateEquipmentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/CreateEquipmentCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/DeleteAlertCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Queries/GetAlertById.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Queries/GetAllAlertsByEquipmentId.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Queries/GetAllAlertsByTenantId.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Queries/GetAllAlertsQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/EAlertSeverity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/EAlertStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/StatusEquipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/StatusEquipment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IAlertRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Services/IAlertCommandService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Services/IAlertQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Services/IEquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Services/IEquipmentCommandService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Repositories/AlertRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Repositories/EquipmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Repositories/EquipmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/AlertsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/AlertResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/CreateAlertResource.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/CreateEquipmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/CreateEquipmentResource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/AlertResourceFromEntityAssembler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/CreateAlertCommandFromResourceAssembler.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/CreateEquipmentCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/CreateEquipmentCommandFromResourceAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GlobalUsings.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,16 +95,24 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Commands/UpdateSiteCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/UpdateSiteResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/IAM/Domain/Model/ValueObjects/PasswordPolicyValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/UpdateEquipmentCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/UpdateEquipmentResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/UpdateEquipmentCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="36OtbCiVXH0l2xmICpEBkg4Vn6c" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -290,13 +189,18 @@
       <workItem from="1764889517520" duration="300000" />
       <workItem from="1777962289660" duration="308000" />
       <workItem from="1777998173582" duration="8836000" />
-      <workItem from="1778013800777" duration="12668000" />
+      <workItem from="1778013800777" duration="12918000" />
+      <workItem from="1778085836079" duration="13197000" />
+      <workItem from="1778107534833" duration="40000" />
+      <workItem from="1778224314691" duration="256000" />
+      <workItem from="1778260022275" duration="5566000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
