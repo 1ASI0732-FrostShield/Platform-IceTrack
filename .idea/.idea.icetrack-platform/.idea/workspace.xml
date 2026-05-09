@@ -16,24 +16,14 @@
   <component name="ChangeListManager">
     <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Application/Internal/CommandServices/SiteCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Application/Internal/CommandServices/SiteCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Repositories/ISiteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Repositories/ISiteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Infrastructure/Persistence/EFC/Repositories/SiteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Infrastructure/Persistence/EFC/Repositories/SiteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Repositories/EquipmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Infrastructure/Persistence/EFC/Repositories/EquipmentRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
@@ -156,7 +146,9 @@
       <workItem from="1778107534833" duration="40000" />
       <workItem from="1778224314691" duration="256000" />
       <workItem from="1778260022275" duration="5566000" />
-      <workItem from="1778270146299" duration="8211000" />
+      <workItem from="1778270146299" duration="8475000" />
+      <workItem from="1778305967220" duration="3436000" />
+      <workItem from="1778342327997" duration="5002000" />
     </task>
     <servers />
   </component>
