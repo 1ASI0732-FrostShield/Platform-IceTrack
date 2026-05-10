@@ -45,7 +45,13 @@ public partial class ServiceRequest
     }
 
     public void Accept() => Status = new ServiceRequestStatus(EServiceRequestStatus.Accepted);
-    public void Reject() => Status = new ServiceRequestStatus(EServiceRequestStatus.Rejected);
+    
+    // aquiiii
+    public void Reject()
+    {
+        Status = new ServiceRequestStatus(EServiceRequestStatus.Rejected);
+        CanceledAt = DateTime.UtcNow;
+    }
     public void Cancel()
     {
         Status = new ServiceRequestStatus(EServiceRequestStatus.Canceled);

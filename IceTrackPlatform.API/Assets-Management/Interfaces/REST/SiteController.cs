@@ -4,6 +4,8 @@ using IceTrackPlatform.API.Assets_Management.Domain.Model.Queries;
 using IceTrackPlatform.API.Assets_Management.Domain.Services;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
+using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

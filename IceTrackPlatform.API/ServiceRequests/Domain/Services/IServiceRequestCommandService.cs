@@ -11,4 +11,5 @@ public interface IServiceRequestCommandService
     Task<ServiceRequest?> Handle(CancelServiceRequestCommand command);
     Task<ServiceRequest?> Handle(AssignTechnicianToServiceRequestCommand command);
     Task<ServiceRequest?> Handle(CompleteServiceRequestCommand command);
+    Task<bool> Handle(DeleteServiceRequestCommand command);
 }

@@ -18,11 +18,6 @@ using IceTrackPlatform.API.Monitoring.Application.Internal.QueryServices;
 using IceTrackPlatform.API.Monitoring.Domain.Repositories;
 using IceTrackPlatform.API.Monitoring.Domain.Services;
 using IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories;
-using IceTrackPlatform.API.Reporting.Application.Internal.CommandServices;
-using IceTrackPlatform.API.Reporting.Application.Internal.QueryServices;
-using IceTrackPlatform.API.Reporting.Domain.Repositories;
-using IceTrackPlatform.API.Reporting.Domain.Services;
-using IceTrackPlatform.API.Reporting.Infrastructure.Persistence.EFC.Repositories;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.CommandServices;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.QueryServices;
 using IceTrackPlatform.API.ServiceRequests.Domain.Repositories;
@@ -67,11 +62,6 @@ builder.AddOpenApiDocumentationServices();
 builder.AddSharedContextServices();
 builder.AddIamContextServices();
 builder.AddDashboardContextServices();
-
-// Report Bounded Context Injections
-builder.Services.AddScoped<IReportRepository, ReportRepository>();
-builder.Services.AddScoped<IReportQueryServices, ReportQueryService>();
-builder.Services.AddScoped<IReportCommandService, ReportCommandService>();
 
 // Assets Management Bounded Context Injections
 builder.Services.AddScoped<ISiteRepository, SiteRepository>();

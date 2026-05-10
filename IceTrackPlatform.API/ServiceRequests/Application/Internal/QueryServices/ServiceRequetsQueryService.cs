@@ -21,4 +21,9 @@ public class ServiceRequestQueryService(IServiceRequestRepository serviceRequest
     {
         return await serviceRequestRepository.FindByProviderIdAndStatusAsync(query.ProviderId, query.Status);
     }
+    
+    public async Task<IEnumerable<ServiceRequest>> Handle(GetAllServiceRequestsQuery query)
+    {
+        return await serviceRequestRepository.ListAsync();
+    }
 }

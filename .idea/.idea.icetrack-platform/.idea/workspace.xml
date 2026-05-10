@@ -15,15 +15,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Commands/DeleteServiceRequestCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Queries/GetAllServiceRequestsQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AuthorizeAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/IAM/Infrastructure/Pipeline/Middleware/Attributes/AuthorizeAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Repositories/IEquipmentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Application/Internal/CommandServices/ReportCommandService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Application/Internal/QueryServices/ReportQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Aggregates/Report.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Aggregates/ReportAudit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Commands/CreateReportCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Commands/DeleteReportCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Commands/UpdateReportCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Queries/GetAllReportsByEquipmentIdQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Queries/GetAllReportsByTenantIdQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Queries/GetAllReportsQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/Queries/GetReportByIdQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/ValueObjects/EReportStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Model/ValueObjects/EReportType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Repositories/IReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Services/IReportCommandService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Domain/Services/IReportQueryServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Infrastructure/Persistence/EFC/Repositories/ReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/ReportController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Resources/CreateReportResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Resources/ReportResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Resources/UpdateReportResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Transform/CreateReportCommandFromResourceAssembler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Transform/ReportResourceFromEntityAssembler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Reporting/Interfaces/REST/Transform/UpdateReportCommandFromResourceAssembler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/CommandServices/ServiceRequestCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/CommandServices/ServiceRequestCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/QueryServices/ServiceRequetsQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/QueryServices/ServiceRequetsQueryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Aggregates/ServiceRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Aggregates/ServiceRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Services/IServiceRequestCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Services/IServiceRequestCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Services/IServiceRequestQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Services/IServiceRequestQueryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/InterventionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/InterventionsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/ServiceRequestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/ServiceRequestsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Technicians/Interfaces/REST/TechniciansController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Technicians/Interfaces/REST/TechniciansController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
@@ -39,7 +83,8 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="278" />
+    <option name="cachedIndexableFilesCount" value="240" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +96,8 @@
     <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/UpdateEquipmentCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/UpdateEquipmentResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/UpdateEquipmentCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Commands/DeleteServiceRequestCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Queries/GetAllServiceRequestsQuery.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -148,7 +195,11 @@
       <workItem from="1778260022275" duration="5566000" />
       <workItem from="1778270146299" duration="8475000" />
       <workItem from="1778305967220" duration="3436000" />
-      <workItem from="1778342327997" duration="5002000" />
+      <workItem from="1778342327997" duration="6983000" />
+      <workItem from="1778372278456" duration="2813000" />
+      <workItem from="1778378373495" duration="13381000" />
+      <workItem from="1778394396021" duration="3842000" />
+      <workItem from="1778430811349" duration="10908000" />
     </task>
     <servers />
   </component>

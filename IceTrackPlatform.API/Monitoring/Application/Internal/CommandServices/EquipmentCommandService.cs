@@ -36,9 +36,6 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
     {
         ValidateEquipment(command.Model, command.Type, command.Serial, command.Name);
         
-        if (await equipmentRepository.ExistsBySerialAsync(command.Serial))
-            throw new Exception("An Equipment with the same Serial already exists");
-        
         var equipment = new Equipment(command);
         try
         {
@@ -89,9 +86,6 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
     public async Task<Equipment?> Handle(UpdateEquipmentCommand command)
     {
         ValidateEquipment(command.Model, command.Type, command.Serial, command.Name);
-        
-        if (await equipmentRepository.ExistsBySerialAsync(command.Serial))
-            throw new Exception("An Equipment with the same Serial already exists");
         
         var equipment = await equipmentRepository.FindByIdAsync(command.EquipmentId);
         

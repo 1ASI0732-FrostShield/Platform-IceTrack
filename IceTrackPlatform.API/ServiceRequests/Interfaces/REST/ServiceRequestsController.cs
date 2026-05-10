@@ -1,4 +1,6 @@
 ﻿using System.Net.Mime;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
+using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.Commands;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.Queries;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects;
@@ -74,6 +76,21 @@ public class ServiceRequestsController(
         var query = new GetServiceRequestsByProviderIdQuery(providerId, status);
         var serviceRequests = await serviceRequestQueryService.Handle(query);
         var serviceRequestResources = serviceRequests.Select(ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity);
+        return Ok(serviceRequestResources);
+    }
+    
+    [HttpGet]
+    [SwaggerOperation(
+        Summary = "Get All Service Requests",
+        Description = "Gets all Service Requests",
+        OperationId = "GetAllServiceRequests")]
+    [SwaggerResponse(StatusCodes.Status200OK, "The service requests were found", typeof(IEnumerable<ServiceRequestResource>))]
+    public async Task<IActionResult> GetAllServiceRequests()
+    {
+        var query = new GetAllServiceRequestsQuery();
+        var serviceRequests = await serviceRequestQueryService.Handle(query);
+        var serviceRequestResources = serviceRequests.Select(ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity);
+
         return Ok(serviceRequestResources);
     }
 
@@ -155,5 +172,22 @@ public class ServiceRequestsController(
         if (serviceRequest == null) return NotFound();
         var serviceRequestResource = ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity(serviceRequest);
         return Ok(serviceRequestResource);
+    }
+    
+    [HttpDelete("{serviceRequestId:int}")]
+    [SwaggerOperation(
+        Summary = "Delete a Service Request",
+        Description = "Deletes a Service Request by its Id",
+        OperationId = "DeleteServiceRequest")]
+    [SwaggerResponse(StatusCodes.Status204NoContent, "The service request was deleted")]
+    [SwaggerResponse(StatusCodes.Status404NotFound, "The service request was not found")]
+    public async Task<IActionResult> DeleteServiceRequest(int serviceRequestId)
+    {
+        var command = new DeleteServiceRequestCommand(serviceRequestId);
+        var deleted = await serviceRequestCommandService.Handle(command);
+
+        if (!deleted) return NotFound();
+
+        return NoContent();
     }
 }
