@@ -106,3 +106,4 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
         }
     }
 }
+
