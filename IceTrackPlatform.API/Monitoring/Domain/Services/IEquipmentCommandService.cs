@@ -24,4 +24,9 @@ public interface IEquipmentCommandService
     ///     Returns true if the equipment was deleted; otherwise false.
     /// </remarks>
     Task<bool> Handle(DeleteEquipmentCommand command);
+    
+    /// <summary>
+    ///  Handle the update equipment config command
+    /// </summary>
+    Task<Equipment?> Handle(UpdateEquipmentCommand command);
 }

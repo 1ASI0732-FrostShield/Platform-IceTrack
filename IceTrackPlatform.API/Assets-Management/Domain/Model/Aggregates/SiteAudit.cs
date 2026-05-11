@@ -7,4 +7,5 @@ public partial class SiteAudit : IEntityWithCreatedUpdatedDate
 {
     [Column("Created")] public DateTimeOffset? CreatedDate { get; set; }
     [Column("Updated")] public DateTimeOffset? UpdatedDate { get; set; }
+    [Column("DeletedAt")] public DateTimeOffset? DeletedAt { get; set; }
 }

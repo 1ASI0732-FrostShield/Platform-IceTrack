@@ -1,7 +1,5 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Cortex.Mediator.Commands;
-using Cortex.Mediator.DependencyInjection;
 using IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices;
 using IceTrackPlatform.API.Assets_Management.Application.Internal.QueryServices;
 using IceTrackPlatform.API.Assets_Management.Domain.Repositories;
@@ -20,23 +18,15 @@ using IceTrackPlatform.API.Monitoring.Application.Internal.QueryServices;
 using IceTrackPlatform.API.Monitoring.Domain.Repositories;
 using IceTrackPlatform.API.Monitoring.Domain.Services;
 using IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories;
-using IceTrackPlatform.API.Reporting.Application.Internal.CommandServices;
-using IceTrackPlatform.API.Reporting.Application.Internal.QueryServices;
-using IceTrackPlatform.API.Reporting.Domain.Repositories;
-using IceTrackPlatform.API.Reporting.Domain.Services;
-using IceTrackPlatform.API.Reporting.Infrastructure.Persistence.EFC.Repositories;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.CommandServices;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.QueryServices;
 using IceTrackPlatform.API.ServiceRequests.Domain.Repositories;
 using IceTrackPlatform.API.ServiceRequests.Domain.Services;
 using IceTrackPlatform.API.ServiceRequests.Infrastructure.Persistence.EFC.Repositories;
-using IceTrackPlatform.API.Shared.Domain.Repositories;
 using IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
-using IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using IceTrackPlatform.API.Shared.Infrastructure.Documentation.OpenApi.Configuration.Extensions;
 using IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using IceTrackPlatform.API.Shared.Infrastructure.Interfaces.ASP.Configuration.Extensions;
-using IceTrackPlatform.API.Shared.Infrastructure.Mediator.Cortex.Configuration;
 using IceTrackPlatform.API.Shared.Infrastructure.Mediator.Cortex.Configuration.Extensions;
 using IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.Technicians.Application.Internal.CommandServices;
@@ -55,7 +45,6 @@ builder.Services.AddCors(options =>
         policy => policy.AllowAnyOrigin()
             .AllowAnyMethod().AllowAnyHeader());
 });
-// ------------------------------------
 
 // Add services to the container.
 
@@ -70,22 +59,9 @@ builder.AddDatabaseServices();
 
 // Open API Configuration (Configuración de Swagger)
 builder.AddOpenApiDocumentationServices();
-
 builder.AddSharedContextServices();
-
 builder.AddIamContextServices();
 builder.AddDashboardContextServices();
-
-// Report Bounded Context Injections
-builder.Services.AddScoped<IReportRepository, ReportRepository>();
-builder.Services.AddScoped<IReportQueryServices, ReportQueryService>();
-builder.Services.AddScoped<IReportCommandService, ReportCommandService>();
-
-
-// Alerts Bounded Context Injections
-builder.Services.AddScoped<IAlertRepository, AlertRepository>();
-builder.Services.AddScoped<IAlertQueryServices, AlertQueryService>();
-builder.Services.AddScoped<IAlertCommandService, AlertCommandService>();
 
 // Assets Management Bounded Context Injections
 builder.Services.AddScoped<ISiteRepository, SiteRepository>();
@@ -97,17 +73,21 @@ builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 builder.Services.AddScoped<IEquipmentCommandService, EquipmentCommandService>();
 builder.Services.AddScoped<IEquipmentQueryServices, EquipmentQueryService>();
 
+// Service Requests Bounded Context Injections
 builder.Services.AddScoped<IServiceRequestRepository, ServiceRequestRepository>();
 builder.Services.AddScoped<IServiceRequestCommandService, ServiceRequestCommandService>();
 builder.Services.AddScoped<IServiceRequestQueryService, ServiceRequestQueryService>();
-     
+    
+
 builder.Services.AddScoped<IInterventionRepository, InterventionRepository>();
 builder.Services.AddScoped<IInterventionCommandService, InterventionCommandService>();
 builder.Services.AddScoped<IInterventionQueryService, InterventionQueryService>();
 
+// Technicians Bounded Context Injections
 builder.Services.AddScoped<ITechnicianRepository, TechnicianRepository>();
 builder.Services.AddScoped<ITechnicianCommandService, TechnicianCommandService>();
 builder.Services.AddScoped<ITechnicianQueryService, TechnicianQueryService>();
+
 
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IReviewCommandService, ReviewCommandService>();
@@ -138,7 +118,6 @@ app.UseCors("AllowAllPolicy");
 // Configure the HTTP request pipeline.
 app.UseOpenApiDocumentation();
 app.UseHttpsRedirection();
-// ------------------------------------
 
 app.UseAuthorization();
 app.UseRequestAuthorization();

@@ -8,4 +8,6 @@ public interface IServiceRequestQueryService
     Task<ServiceRequest?> Handle(GetServiceRequestByIdQuery query);
     Task<IEnumerable<ServiceRequest>> Handle(GetServiceRequestsByRequesterIdQuery query);
     Task<IEnumerable<ServiceRequest>> Handle(GetServiceRequestsByProviderIdQuery query);
+    
+    Task<IEnumerable<ServiceRequest>> Handle(GetAllServiceRequestsQuery query);
 }

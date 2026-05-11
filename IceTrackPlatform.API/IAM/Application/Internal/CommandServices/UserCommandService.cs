@@ -1,6 +1,7 @@
 ﻿using IceTrackPlatform.API.IAM.Application.Internal.OutboundServices;
 using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
 using IceTrackPlatform.API.IAM.Domain.Model.Commands;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
 using IceTrackPlatform.API.IAM.Domain.Repositories;
 using IceTrackPlatform.API.IAM.Domain.Services;
 using IceTrackPlatform.API.Shared.Domain.Repositories;
@@ -43,9 +44,29 @@ public class UserCommandService(
     /// <exception cref="Exception">Thrown when the username is already taken or creation fails.</exception>
     public async Task Handle(SignUpCommand command)
     {
+        if (string.IsNullOrWhiteSpace(command.Username))
+            throw new Exception("Username cannot be empty");
+        
+        if (string.IsNullOrWhiteSpace(command.Password))
+            throw new Exception("Password cannot be empty");
+        
         if (userRepository.ExistsByUsername(command.Username))
             throw new Exception($"Username {command.Username} is already taken");
+        
+        if (userRepository.ExistsByUsername(command.Username))
+            throw new Exception($"Username {command.Username} is already taken");
+        
+        if (string.IsNullOrWhiteSpace(command.Username))
+            throw new Exception("Username cannot be empty or contain only spaces");
+        
+        if (command.Username.Contains(' '))
+            throw new Exception("Username cannot contain spaces");
 
+        if (command.Username != command.Username.Trim())
+            throw new Exception("Username cannot start or end with spaces");
+
+        PasswordPolicyValidator.Validate(command.Password);
+        
         var hashedPassword = hashingService.HashPassword(command.Password);
         
         var user = new User(command.Username, hashedPassword, command.Role); 

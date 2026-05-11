@@ -1,4 +1,5 @@
 ﻿using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -15,6 +16,13 @@ namespace IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 public class AuthorizeAttribute : Attribute, IAuthorizationFilter
 {
+    private readonly Roles[] _allowedRoles;
+
+    public AuthorizeAttribute(params Roles[] allowedRoles)
+    {
+        _allowedRoles = allowedRoles;
+    }
+    
     /// <summary>
     ///     Called by the MVC framework to perform authorization.
     /// </summary>
@@ -34,5 +42,11 @@ public class AuthorizeAttribute : Attribute, IAuthorizationFilter
 
         // if a user is not signed in, then return 401-status code
         if (user == null) context.Result = new UnauthorizedResult();
+        
+        // if roles were provided, verify if the user has one of the allowed roles
+        if (_allowedRoles.Length > 0 && !_allowedRoles.Contains(user.Role))
+        {
+            context.Result = new ForbidResult();
+        }
     }
 }

@@ -18,11 +18,14 @@ public class SiteQueryService(ISiteRepository siteRepository)
 {
     public async Task<Site?> Handle(GetSiteByIdQuery query)
     {
-        return await siteRepository.FindByIdAsync(query.Id);
+        var site = await siteRepository.FindByIdAsync(query.Id);
+        if (site?.DeletedAt != null) return null;
+        return site;
     }
-    
+
     public async Task<IEnumerable<Site>> Handle(GetAllSitesQuery query)
     {
-        return await siteRepository.ListAsync();
+        var sites = await siteRepository.ListAsync();
+        return sites.Where(s => s.DeletedAt == null);
     }
 }

@@ -54,6 +54,8 @@ public class AuthenticationController(IUserCommandService userCommandService) : 
     [SwaggerResponse(StatusCodes.Status200OK, "The user was created successfully")]
     public async Task<IActionResult> SignUp([FromBody] SignUpResource signUpResource)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
         var signUpCommand = SignUpCommandFromResourceAssembler.ToCommandFromResource(signUpResource);
         await userCommandService.Handle(signUpCommand);
         return Ok(new { message = "User created successfully" });
