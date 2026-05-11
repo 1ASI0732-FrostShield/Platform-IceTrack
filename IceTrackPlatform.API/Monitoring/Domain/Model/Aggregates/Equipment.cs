@@ -5,19 +5,6 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Model.Aggregates;
 
 public partial class Equipment : EquipmentAudit
 {
-    public int Id { get; }
-    public Guid EquipmentId { get;}
-    public string Model { get; private set; }
-    public string Type { get; private set; }
-    public string Serial { get; private set; }
-    public StatusEquipment Status { get; private set; }
-    public DateTime Installed { get; }
-    public DateTime LastSeen { get; private set; }
-    public float SetPoint { get; private set; }
-    public string Name { get; private set; }
-    public string Manufacturer { get; private set; }
-    public bool Online { get; private set; }
-
     protected Equipment()
     {
         EquipmentId = Guid.NewGuid();
@@ -25,11 +12,8 @@ public partial class Equipment : EquipmentAudit
         Type = string.Empty;
         Serial = string.Empty;
         Status = StatusEquipment.OFF;
-        Installed = DateTime.Now;
-        LastSeen = DateTime.Now;
-        SetPoint = 0;
         Name = string.Empty;
-        Manufacturer = string.Empty;
+        SiteId = 0;
         Online = false;
     }
     
@@ -40,11 +24,34 @@ public partial class Equipment : EquipmentAudit
         Type = command.Type;
         Serial = command.Serial;
         Status = command.Status;
-        Installed = command.Installed;
-        LastSeen = command.LastSeen;
-        SetPoint = command.SetPoint;
         Name = command.Name;
-        Manufacturer = command.Manufacturer;
+        SiteId = command.SiteId;
         Online = command.Online;
     }
+    
+    public void Update(UpdateEquipmentCommand command)
+    {
+        Model = command.Model;
+        Type = command.Type;
+        Serial = command.Serial;
+        Status = command.Status;
+        Name = command.Name;
+        SiteId = command.SiteId;
+        Online = command.Online;
+    }
+    
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
+    
+    public int Id { get; }
+    public Guid EquipmentId { get;}
+    public string Model { get; private set; }
+    public string Type { get; private set; }
+    public string Serial { get; private set; }
+    public StatusEquipment Status { get; private set; }
+    public string Name { get; private set; }
+    public int SiteId { get; private set; }
+    public bool Online { get; private set; }
 }

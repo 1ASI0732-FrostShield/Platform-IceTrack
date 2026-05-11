@@ -2,11 +2,8 @@ using IceTrackPlatform.API.Assets_Management.Infrastructure.Persistence.EFC.Conf
 using IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.Feedback.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Configuration.Extensions;
-using IceTrackPlatform.API.Monitoring.Domain.Model.Aggregates;
 using IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Configuration.Extensions;
-using IceTrackPlatform.API.Reporting.Domain.Model.Aggregates;
 using IceTrackPlatform.API.ServiceRequests.Infrastructure.Persistence.EFC.Configuration.Extensions;
-using IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.Technicians.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 namespace IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
@@ -63,13 +60,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
         // Create all entities configurations
         
-        builder.Entity<Report>().HasKey(r => r.Id);
-        builder.Entity<Report>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Report>().Property(r => r.TenantId).IsRequired();
-        builder.Entity<Report>().Property(r => r.Type).HasConversion<string>();
-        builder.Entity<Report>().Property(r => r.EquipmentId).IsRequired();
-        builder.Entity<Report>().Property(r => r.Status).HasConversion<string>().IsRequired();
-
         // Assets Management Context
         builder.ApplyAssetsManagementConfiguration();
         

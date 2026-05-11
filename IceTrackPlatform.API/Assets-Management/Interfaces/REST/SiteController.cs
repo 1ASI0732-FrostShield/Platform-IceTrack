@@ -4,6 +4,8 @@ using IceTrackPlatform.API.Assets_Management.Domain.Model.Queries;
 using IceTrackPlatform.API.Assets_Management.Domain.Services;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
+using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -23,6 +25,33 @@ public class SiteController(
     ISiteQueryServices siteQueryServices)
     : ControllerBase
 {
+    [HttpGet("{id}")]
+    [SwaggerOperation(Summary = "Gets a Site by Id", Description = "Gets a Site for a given identifier", OperationId = "GetSiteById")]
+    [SwaggerResponse(200, "The site was found", typeof(SiteResource))]
+    public async Task<IActionResult> GetSiteById(int id)
+    {
+        var getSiteByIdQuery = new GetSiteByIdQuery(id);
+        var result = await siteQueryServices.Handle(getSiteByIdQuery);
+        if (result is null) return NotFound();
+        var resource = SiteResourceFromEntityAssembler.ToResourceFromEntity(result);
+        return Ok(resource);
+    }
+    
+    [HttpGet]
+    [SwaggerOperation(Summary = "Get all sites", Description = "Gets the complete list of sites", OperationId = "GetAllSites")]
+    [SwaggerResponse(200, "List of sites", typeof(IEnumerable<SiteResource>))]
+    public async Task<IActionResult> GetAllSites()
+    {
+        var query = new GetAllSitesQuery();
+        var results = await siteQueryServices.Handle(query);
+
+        var resources = results
+            .Select(SiteResourceFromEntityAssembler.ToResourceFromEntity)
+            .ToList();
+
+        return Ok(resources);
+    }
+    
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new Site", Description = "Create a new Site", OperationId = "CreateSite")]
     [SwaggerResponse(201, "Created site", typeof(SiteResource))]
@@ -50,31 +79,32 @@ public class SiteController(
         }
     }
     
-    [HttpGet("{id}")]
-    [SwaggerOperation(Summary = "Gets a Site by Id", Description = "Gets a Site for a given identifier", OperationId = "GetSiteById")]
-    [SwaggerResponse(200, "The site was found", typeof(SiteResource))]
-    public async Task<IActionResult> GetSiteById(int id)
+    [HttpPut("{id:int}")]
+    [SwaggerOperation(
+        Summary = "Update Site",
+        Description = "Updates an existing site.",
+        OperationId = "UpdateSite")]
+    [SwaggerResponse(200, "Site updated.", typeof(SiteResource))]
+    [SwaggerResponse(404, "Site not found.")]
+    [SwaggerResponse(400, "Invalid request.")]
+    public async Task<IActionResult> UpdateSite(int id, [FromBody] UpdateSiteResource resource)
     {
-        var getSiteByIdQuery = new GetSiteByIdQuery(id);
-        var result = await siteQueryServices.Handle(getSiteByIdQuery);
-        if (result is null) return NotFound();
-        var resource = SiteResourceFromEntityAssembler.ToResourceFromEntity(result);
-        return Ok(resource);
-    }
-    
-    [HttpGet]
-    [SwaggerOperation(Summary = "Get all sites", Description = "Gets the complete list of sites", OperationId = "GetAllSites")]
-    [SwaggerResponse(200, "List of sites", typeof(IEnumerable<SiteResource>))]
-    public async Task<IActionResult> GetAllSites()
-    {
-        var query = new GetAllSitesQuery();
-        var results = await siteQueryServices.Handle(query);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        var resources = results
-            .Select(SiteResourceFromEntityAssembler.ToResourceFromEntity)
-            .ToList();
+        var command = new UpdateSiteCommand(
+            id,
+            resource.Name,
+            resource.Address,
+            resource.ContactName,
+            resource.Phone
+        );
 
-        return Ok(resources);
+        var result = await siteCommandService.Handle(command);
+
+        if (result is null)
+            return NotFound($"Site with ID {id} not found.");
+
+        return Ok(SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
     
     [HttpDelete("{id:int}")]

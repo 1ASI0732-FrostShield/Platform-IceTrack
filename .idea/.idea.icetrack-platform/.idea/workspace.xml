@@ -4,35 +4,129 @@
     <projectFile profileName="http">IceTrackPlatform.API/IceTrackPlatform.API.csproj</projectFile>
     <projectFile profileName="https">IceTrackPlatform.API/IceTrackPlatform.API.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="" />
+    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.GlobalUsings.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/staticwebassets.build.json.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/IceTrackPlatform.API.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icetrack-platform.sln" beforeDir="false" afterPath="$PROJECT_DIR$/icetrack-platform.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="8" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Commands/UpdateSiteCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/UpdateSiteResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/IAM/Domain/Model/ValueObjects/PasswordPolicyValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/UpdateEquipmentCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/ValueObjects/UpdateEquipmentResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/UpdateEquipmentCommandFromResourceAssembler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Commands/DeleteServiceRequestCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Queries/GetAllServiceRequestsQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IcetrackTest/Test1.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="36OtbCiVXH0l2xmICpEBkg4Vn6c" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.IceTrackPlatform.API: http.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "fix",
     "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.IceTrackPlatform.API: http">
@@ -77,12 +171,32 @@
       <option name="presentableId" value="Default" />
       <updated>1764889517518</updated>
       <workItem from="1764889517520" duration="300000" />
+      <workItem from="1777962289660" duration="308000" />
+      <workItem from="1777998173582" duration="8836000" />
+      <workItem from="1778013800777" duration="12918000" />
+      <workItem from="1778085836079" duration="13197000" />
+      <workItem from="1778107534833" duration="40000" />
+      <workItem from="1778224314691" duration="256000" />
+      <workItem from="1778260022275" duration="5566000" />
+      <workItem from="1778270146299" duration="8475000" />
+      <workItem from="1778305967220" duration="3436000" />
+      <workItem from="1778342327997" duration="6983000" />
+      <workItem from="1778372278456" duration="2813000" />
+      <workItem from="1778378373495" duration="13381000" />
+      <workItem from="1778394396021" duration="3842000" />
+      <workItem from="1778430811349" duration="13272000" />
+      <workItem from="1778460060290" duration="7560000" />
+      <workItem from="1778478049399" duration="3465000" />
+      <workItem from="1778509241065" duration="1646000" />
+      <workItem from="1778510961720" duration="688000" />
+      <workItem from="1778511758026" duration="2471000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

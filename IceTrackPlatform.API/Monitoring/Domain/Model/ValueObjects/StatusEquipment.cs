@@ -4,5 +4,6 @@ public enum StatusEquipment
 {
     ACTIVE,
     OFF,
-    MAINTENANCE
+    MAINTENANCE,
+    REPAIR
 }

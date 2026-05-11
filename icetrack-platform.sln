@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceTrackPlatform.API", "IceTrackPlatform.API\IceTrackPlatform.API.csproj", "{634FFF60-390A-4A8F-A1A1-70BC656A5FEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcetrackTest", "IcetrackTest\IcetrackTest.csproj", "{33392823-F21A-491E-8C05-330BAFB30CE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{634FFF60-390A-4A8F-A1A1-70BC656A5FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{634FFF60-390A-4A8F-A1A1-70BC656A5FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{634FFF60-390A-4A8F-A1A1-70BC656A5FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33392823-F21A-491E-8C05-330BAFB30CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33392823-F21A-491E-8C05-330BAFB30CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33392823-F21A-491E-8C05-330BAFB30CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33392823-F21A-491E-8C05-330BAFB30CE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -18,11 +18,14 @@ public class EquipmentQueryService(IEquipmentRepository equipmentRepository)
 {
     public async Task<Equipment?> Handle(GetEquipmentByIdQuery query)
     {
-        return await equipmentRepository.FindByIdAsync(query.Id);
+        var equipment = await equipmentRepository.FindByIdAsync(query.Id);
+        if (equipment?.DeletedAt != null) return null;
+        return equipment;
     }
-    
+
     public async Task<IEnumerable<Equipment?>> Handle(GetAllEquipmentQuery query)
     {
-        return await equipmentRepository.ListAsync();
+        var equipments = await equipmentRepository.ListAsync();
+        return equipments.Where(e => e.DeletedAt == null);
     }
 }

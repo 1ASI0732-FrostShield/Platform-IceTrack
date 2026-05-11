@@ -76,4 +76,15 @@ public class ServiceRequestCommandService(
         await unitOfWork.CompleteAsync();
         return serviceRequest;
     }
+    
+    public async Task<bool> Handle(DeleteServiceRequestCommand command)
+    {
+        var serviceRequest = await serviceRequestRepository.FindByIdAsync(command.ServiceRequestId);
+        if (serviceRequest == null) return false;
+
+        serviceRequest.SoftDelete();
+        serviceRequestRepository.Update(serviceRequest);
+        await unitOfWork.CompleteAsync();
+        return true;
+    }
 }
