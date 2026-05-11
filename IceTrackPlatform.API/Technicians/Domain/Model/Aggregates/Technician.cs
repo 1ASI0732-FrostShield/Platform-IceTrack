@@ -32,4 +32,9 @@ public partial class Technician
         Specialty = specialty;
         Phone = phone;
     }
+    
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
 }

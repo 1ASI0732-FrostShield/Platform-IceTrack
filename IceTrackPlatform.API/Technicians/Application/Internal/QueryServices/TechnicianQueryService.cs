@@ -10,12 +10,15 @@ public class TechnicianQueryService(ITechnicianRepository technicianRepository) 
 {
     public async Task<Technician?> Handle(GetTechnicianByIdQuery query)
     {
-        return await technicianRepository.FindByIdAsync(query.Id);
+        var technician = await technicianRepository.FindByIdAsync(query.Id);
+        if (technician?.DeletedAt != null) return null;
+        return technician;
     }
 
     public async Task<IEnumerable<Technician>> Handle(GetTechniciansByProviderIdQuery query)
     {
-        return await technicianRepository.FindByProviderIdAsync(query.ProviderId);
+        var technicians = await technicianRepository.FindByProviderIdAsync(query.ProviderId);
+        return technicians.Where(t => t.DeletedAt == null);
     }
 }
 

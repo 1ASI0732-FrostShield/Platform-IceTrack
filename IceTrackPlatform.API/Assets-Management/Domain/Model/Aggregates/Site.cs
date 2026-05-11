@@ -56,6 +56,11 @@ public partial class Site : SiteAudit
         if (CantEquipment > 0) CantEquipment--;
     }
     
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
+    
     public int Id { get; }
     public string Name { get; private set; }
     public string Address { get; private set; }

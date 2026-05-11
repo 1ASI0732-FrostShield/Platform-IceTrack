@@ -4,20 +4,6 @@ namespace IceTrackPlatform.API.ServiceRequests.Domain.Model.Aggregates;
 
 public partial class ServiceRequest
 {
-    public int Id { get; }
-    public RequesterId RequesterId { get; private set; }
-    public SiteId SiteId { get; private set; }
-    public EquipmentId EquipmentId { get; private set; }
-    public AssignedTo AssignedTo { get; private set; }
-    public string Origin { get; private set; }
-    public ServiceRequestType Type { get; private set; }
-    public ServiceRequestPriority Priority { get; private set; }
-    public string Description { get; private set; }
-    public ServiceRequestStatus Status { get; private set; }
-    public DateTime? CompletedAt { get; private set; }
-    public DateTime? CanceledAt { get; private set; }
-    public TechnicianId? TechnicianId { get; private set; }
-
     public ServiceRequest()
     {
         RequesterId = new RequesterId();
@@ -46,7 +32,6 @@ public partial class ServiceRequest
 
     public void Accept() => Status = new ServiceRequestStatus(EServiceRequestStatus.Accepted);
     
-    // aquiiii
     public void Reject()
     {
         Status = new ServiceRequestStatus(EServiceRequestStatus.Rejected);
@@ -67,4 +52,23 @@ public partial class ServiceRequest
         Status = new ServiceRequestStatus(EServiceRequestStatus.Completed);
         CompletedAt = DateTime.UtcNow;
     }
+    
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
+    
+    public int Id { get; }
+    public RequesterId RequesterId { get; private set; }
+    public SiteId SiteId { get; private set; }
+    public EquipmentId EquipmentId { get; private set; }
+    public AssignedTo AssignedTo { get; private set; }
+    public string Origin { get; private set; }
+    public ServiceRequestType Type { get; private set; }
+    public ServiceRequestPriority Priority { get; private set; }
+    public string Description { get; private set; }
+    public ServiceRequestStatus Status { get; private set; }
+    public DateTime? CompletedAt { get; private set; }
+    public DateTime? CanceledAt { get; private set; }
+    public TechnicianId? TechnicianId { get; private set; }
 }

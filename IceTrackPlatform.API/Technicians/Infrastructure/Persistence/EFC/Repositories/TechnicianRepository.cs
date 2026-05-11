@@ -11,12 +11,16 @@ public class TechnicianRepository(AppDbContext context) : BaseRepository<Technic
 {
     public async Task<IEnumerable<Technician>> FindByProviderIdAsync(int providerId)
     {
-        return await Context.Set<Technician>().Where(t => t.ProviderId.Value == providerId).ToListAsync(); // Changed from t.ProviderId.Id to t.ProviderId.Value
+        return await Context.Set<Technician>()
+            .Where(t => t.ProviderId.Value == providerId && t.DeletedAt == null)
+            .ToListAsync();
     }
 
     public new async Task<IEnumerable<Technician>> ListAsync()
     {
-        return await Context.Set<Technician>().ToListAsync();
+        return await Context.Set<Technician>()
+            .Where(t => t.DeletedAt == null)
+            .ToListAsync();
     }
 }
 

@@ -100,65 +100,7 @@ public class DashboardConfigsController(
             return Conflict(ex.Message);
         }
     }
-
-    /// <summary>
-    ///     Updates an existing dashboard configuration.
-    /// </summary>
-    /// <param name="id">The dashboard configuration ID.</param>
-    /// <param name="resource">The update dashboard config resource.</param>
-    /// <returns>The updated dashboard configuration.</returns>
-    [HttpPut("{id:int}")]
-    [SwaggerOperation(
-        Summary = "Update Dashboard Config",
-        Description = "Updates an existing dashboard configuration.",
-        OperationId = "UpdateDashboardConfig")]
-    [SwaggerResponse(200, "Dashboard configuration updated.", typeof(DashboardConfigResource))]
-    [SwaggerResponse(400, "Invalid request data.")]
-    [SwaggerResponse(404, "Dashboard configuration not found.")]
-    public async Task<IActionResult> UpdateDashboardConfig(int id, [FromBody] UpdateDashboardConfigResource resource)
-    {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
-
-        var command = UpdateDashboardConfigCommandFromResourceAssembler.ToCommandFromResource(id, resource);
-
-        try
-        {
-            var result = await commandService.Handle(command);
-            if (result is null)
-                return NotFound($"Dashboard configuration with ID {id} not found.");
-
-            var dashboardResource = DashboardConfigResourceFromEntityAssembler.ToResourceFromEntity(result);
-            return Ok(dashboardResource);
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
-
-    /// <summary>
-    ///     Deletes a dashboard configuration.
-    /// </summary>
-    /// <param name="id">The dashboard configuration ID.</param>
-    /// <returns>No content if successful.</returns>
-    [HttpDelete("{id:int}")]
-    [SwaggerOperation(
-        Summary = "Delete Dashboard Config",
-        Description = "Deletes a dashboard configuration.",
-        OperationId = "DeleteDashboardConfig")]
-    [SwaggerResponse(204, "Dashboard configuration deleted.")]
-    [SwaggerResponse(404, "Dashboard configuration not found.")]
-    public async Task<IActionResult> DeleteDashboardConfig(int id)
-    {
-        var command = new DeleteDashboardConfigCommand(id);
-        var result = await commandService.Handle(command);
-
-        if (!result)
-            return NotFound($"Dashboard configuration with ID {id} not found.");
-
-        return NoContent();
-    }
-
+   
     /// <summary>
     ///     Adds a card to a dashboard.
     /// </summary>
@@ -197,36 +139,6 @@ public class DashboardConfigsController(
         }
     }
 
-    /// <summary>
-    ///     Removes a card from a dashboard.
-    /// </summary>
-    /// <param name="id">The dashboard configuration ID.</param>
-    /// <param name="cardId">The card ID to remove.</param>
-    /// <returns>No content if successful.</returns>
-    [HttpDelete("{id:int}/cards/{cardId:int}")]
-    [SwaggerOperation(
-        Summary = "Remove Card from Dashboard",
-        Description = "Removes a specific card from the dashboard configuration.",
-        OperationId = "RemoveCardFromDashboard")]
-    [SwaggerResponse(204, "Card removed successfully.")]
-    [SwaggerResponse(404, "Dashboard configuration or card not found.")]
-    public async Task<IActionResult> RemoveCardFromDashboard(int id, int cardId)
-    {
-        var command = new RemoveCardFromDashboardCommand(id, cardId);
-
-        try
-        {
-            var result = await commandService.Handle(command);
-            if (result is null)
-                return NotFound($"Dashboard configuration with ID {id} not found.");
-
-            return NoContent();
-        }
-        catch (InvalidOperationException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
 
     /// <summary>
     ///     Updates the visibility of a card.

@@ -4,15 +4,6 @@ namespace IceTrackPlatform.API.ServiceRequests.Domain.Model.Aggregates;
 
 public partial class Intervention
 {
-    public int Id { get; }
-    public ServiceRequestId ServiceRequestId { get; private set; }
-    public TechnicianId TechnicianId { get; private set; }
-    public InterventionStatus Status { get; private set; }
-    public string Summary { get; private set; }
-    public DateTime StartTime { get; private set; }
-    public DateTime? EndTime { get; private set; }
-    public List<string> PhotoUrls { get; private set; }
-
     public Intervention()
     {
         ServiceRequestId = new ServiceRequestId();
@@ -32,4 +23,18 @@ public partial class Intervention
         Status = endTime.HasValue ? new InterventionStatus(EInterventionStatus.Completed) : new InterventionStatus(EInterventionStatus.Pending);
         PhotoUrls = photoUrls;
     }
+    
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
+    
+    public int Id { get; }
+    public ServiceRequestId ServiceRequestId { get; private set; }
+    public TechnicianId TechnicianId { get; private set; }
+    public InterventionStatus Status { get; private set; }
+    public string Summary { get; private set; }
+    public DateTime StartTime { get; private set; }
+    public DateTime? EndTime { get; private set; }
+    public List<string> PhotoUrls { get; private set; }
 }

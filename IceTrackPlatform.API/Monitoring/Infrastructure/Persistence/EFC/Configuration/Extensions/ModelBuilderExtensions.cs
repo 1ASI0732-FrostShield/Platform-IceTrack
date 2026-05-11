@@ -18,5 +18,6 @@ public static class ModelBuilderExtensions
         builder.Entity<Equipment>().Property(e => e.Name).IsRequired();
         builder.Entity<Equipment>().Property(e => e.SiteId).IsRequired();
         builder.Entity<Equipment>().Property(e => e.Online).IsRequired();
+        builder.Entity<Equipment>().Property(e => e.DeletedAt).IsRequired(false);
     }
 }

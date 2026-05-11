@@ -15,5 +15,6 @@ public static class ModelBuilderExtensions
         builder.Entity<Site>().Property(s => s.ContactName).IsRequired();
         builder.Entity<Site>().Property(s => s.Phone).IsRequired();
         builder.Entity<Site>().Property(s => s.CantEquipment).HasDefaultValue(0);
+        builder.Entity<Site>().Property(s => s.DeletedAt).IsRequired(false);
     }
 }

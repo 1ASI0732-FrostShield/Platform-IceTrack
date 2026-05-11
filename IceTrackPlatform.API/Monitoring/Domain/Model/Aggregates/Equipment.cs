@@ -40,6 +40,11 @@ public partial class Equipment : EquipmentAudit
         Online = command.Online;
     }
     
+    public void SoftDelete()
+    {
+        DeletedAt = DateTimeOffset.UtcNow;
+    }
+    
     public int Id { get; }
     public Guid EquipmentId { get;}
     public string Model { get; private set; }

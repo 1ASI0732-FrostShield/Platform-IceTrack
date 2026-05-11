@@ -82,9 +82,9 @@ public class ServiceRequestCommandService(
         var serviceRequest = await serviceRequestRepository.FindByIdAsync(command.ServiceRequestId);
         if (serviceRequest == null) return false;
 
-        serviceRequestRepository.Remove(serviceRequest);
+        serviceRequest.SoftDelete();
+        serviceRequestRepository.Update(serviceRequest);
         await unitOfWork.CompleteAsync();
-
         return true;
     }
 }

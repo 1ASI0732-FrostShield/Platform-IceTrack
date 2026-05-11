@@ -11,21 +11,24 @@ public class ServiceRequestRepository(AppDbContext context) : BaseRepository<Ser
 {
     public async Task<IEnumerable<ServiceRequest>> FindByRequesterIdAsync(int requesterId)
     {
-        return await Context.Set<ServiceRequest>().Where(sr => sr.RequesterId.Value == requesterId).ToListAsync(); // Changed from .Id to .Value
+        return await Context.Set<ServiceRequest>()
+            .Where(sr => sr.RequesterId.Value == requesterId && sr.DeletedAt == null)
+            .ToListAsync();
     }
 
     public async Task<IEnumerable<ServiceRequest>> FindByProviderIdAndStatusAsync(int providerId, EServiceRequestStatus? status)
     {
-        var query = Context.Set<ServiceRequest>().Where(sr => sr.AssignedTo.Value == providerId); // Changed from .Id to .Value
+        var query = Context.Set<ServiceRequest>()
+            .Where(sr => sr.AssignedTo.Value == providerId && sr.DeletedAt == null);
         if (status.HasValue)
-        {
             query = query.Where(sr => sr.Status.Status == status.Value);
-        }
         return await query.ToListAsync();
     }
 
     public new async Task<IEnumerable<ServiceRequest>> ListAsync()
     {
-        return await Context.Set<ServiceRequest>().ToListAsync();
+        return await Context.Set<ServiceRequest>()
+            .Where(sr => sr.DeletedAt == null)
+            .ToListAsync();
     }
 }

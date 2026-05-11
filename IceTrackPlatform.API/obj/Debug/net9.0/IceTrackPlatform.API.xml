@@ -1078,21 +1078,6 @@
             <param name="resource">The create dashboard config resource.</param>
             <returns>The created dashboard configuration.</returns>
         </member>
-        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.UpdateDashboardConfig(System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateDashboardConfigResource)">
-            <summary>
-                Updates an existing dashboard configuration.
-            </summary>
-            <param name="id">The dashboard configuration ID.</param>
-            <param name="resource">The update dashboard config resource.</param>
-            <returns>The updated dashboard configuration.</returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.DeleteDashboardConfig(System.Int32)">
-            <summary>
-                Deletes a dashboard configuration.
-            </summary>
-            <param name="id">The dashboard configuration ID.</param>
-            <returns>No content if successful.</returns>
-        </member>
         <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.AddCardToDashboard(System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.AddCardResource)">
             <summary>
                 Adds a card to a dashboard.
@@ -1100,14 +1085,6 @@
             <param name="id">The dashboard configuration ID.</param>
             <param name="resource">The add card resource.</param>
             <returns>The updated dashboard configuration.</returns>
-        </member>
-        <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.RemoveCardFromDashboard(System.Int32,System.Int32)">
-            <summary>
-                Removes a card from a dashboard.
-            </summary>
-            <param name="id">The dashboard configuration ID.</param>
-            <param name="cardId">The card ID to remove.</param>
-            <returns>No content if successful.</returns>
         </member>
         <member name="M:IceTrackPlatform.API.Dashboard.Interfaces.REST.DashboardConfigsController.UpdateCardVisibility(System.Int32,System.Int32,IceTrackPlatform.API.Dashboard.Interfaces.REST.Resources.UpdateCardVisibilityResource)">
             <summary>
@@ -2191,6 +2168,18 @@
             </summary>
             <param name="role">The role to filter users by.</param>
             <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains a collection of <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> objects.</returns>
+        </member>
+        <member name="T:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">
             <summary>

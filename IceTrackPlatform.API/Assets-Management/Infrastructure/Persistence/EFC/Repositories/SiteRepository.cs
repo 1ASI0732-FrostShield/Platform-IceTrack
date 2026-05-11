@@ -18,14 +18,21 @@ public class SiteRepository(AppDbContext context)
     : BaseRepository<Site>(context), ISiteRepository
 {
     public async Task<bool> ExistsByNameAsync(string name, int? excludeId = null)
-        => await Context.Set<Site>().AnyAsync(s => s.Name == name && s.Id != excludeId);
+        => await Context.Set<Site>().AnyAsync(s => s.Name == name 
+                                                   && s.Id != excludeId 
+                                                   && s.DeletedAt == null);
 
     public async Task<bool> ExistsByAddressAsync(string address, int? excludeId = null)
-        => await Context.Set<Site>().AnyAsync(s => s.Address == address && s.Id != excludeId);
+        => await Context.Set<Site>().AnyAsync(s => s.Address == address 
+                                                   && s.Id != excludeId 
+                                                   && s.DeletedAt == null);
 
     public async Task<bool> ExistsByPhoneAsync(string phone, int? excludeId = null)
-        => await Context.Set<Site>().AnyAsync(s => s.Phone == phone && s.Id != excludeId);
-    
+        => await Context.Set<Site>().AnyAsync(s => s.Phone == phone 
+                                                   && s.Id != excludeId 
+                                                   && s.DeletedAt == null);
+
     public async Task<Site?> FindByNameAsync(string name)
-        => await Context.Set<Site>().FirstOrDefaultAsync(s => s.Name == name);
+        => await Context.Set<Site>().FirstOrDefaultAsync(s => s.Name == name 
+                                                              && s.DeletedAt == null);
 }

@@ -7,4 +7,5 @@ public partial class EquipmentAudit : IEntityWithCreatedUpdatedDate
 {
     [Column("Created")] public DateTimeOffset? CreatedDate { get; set; }
     [Column("Updated")] public DateTimeOffset? UpdatedDate { get; set; }
+    [Column("deleted_at")] public DateTimeOffset? DeletedAt { get; set; }
 }

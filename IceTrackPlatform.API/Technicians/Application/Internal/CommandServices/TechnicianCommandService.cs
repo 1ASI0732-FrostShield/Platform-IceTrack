@@ -34,7 +34,8 @@ public class TechnicianCommandService(
     {
         var technician = await technicianRepository.FindByIdAsync(command.Id);
         if (technician == null) return;
-        technicianRepository.Remove(technician);
+        technician.SoftDelete();
+        technicianRepository.Update(technician);
         await unitOfWork.CompleteAsync();
     }
 }

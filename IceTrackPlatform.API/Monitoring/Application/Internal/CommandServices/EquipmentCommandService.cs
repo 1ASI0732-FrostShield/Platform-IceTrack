@@ -72,7 +72,8 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
                 siteRepository.Update(site);
             }
 
-            equipmentRepository.Remove(equipment);
+            equipment.SoftDelete();
+            equipmentRepository.Update(equipment);
             await unitOfWork.CompleteAsync();
             return true;
         }

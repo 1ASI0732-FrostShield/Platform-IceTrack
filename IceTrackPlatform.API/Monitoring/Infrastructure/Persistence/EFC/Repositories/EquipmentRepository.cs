@@ -11,9 +11,13 @@ public class EquipmentRepository(AppDbContext context)
 {
     public async Task<IEnumerable<Equipment>> FindByTypeAsync(string type)
     {
-        return await Context.Set<Equipment>().Where( f => f.Type == type).ToListAsync();
+        return await Context.Set<Equipment>()
+            .Where(f => f.Type == type && f.DeletedAt == null)
+            .ToListAsync();
     }
-    
+
     public async Task<bool> ExistsBySerialAsync(string serial, int? excludeId = null)
-        => await Context.Set<Equipment>().AnyAsync(e => e.Serial == serial && e.Id != excludeId);
+        => await Context.Set<Equipment>().AnyAsync(e => e.Serial == serial 
+                                                        && e.Id != excludeId 
+                                                        && e.DeletedAt == null);
 }

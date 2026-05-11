@@ -65,7 +65,8 @@ public class SiteCommandService(ISiteRepository siteRepository,
         if (site is null) return false;
         try
         {
-            siteRepository.Remove(site);
+            site.SoftDelete();
+            siteRepository.Update(site);
             await unitOfWork.CompleteAsync();
             return true;
         }

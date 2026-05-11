@@ -9,21 +9,26 @@ public class ServiceRequestQueryService(IServiceRequestRepository serviceRequest
 {
     public async Task<ServiceRequest?> Handle(GetServiceRequestByIdQuery query)
     {
-        return await serviceRequestRepository.FindByIdAsync(query.ServiceRequestId);
+        var sr = await serviceRequestRepository.FindByIdAsync(query.ServiceRequestId);
+        if (sr?.DeletedAt != null) return null;
+        return sr;
+    }
+
+    public async Task<IEnumerable<ServiceRequest>> Handle(GetAllServiceRequestsQuery query)
+    {
+        var list = await serviceRequestRepository.ListAsync();
+        return list.Where(sr => sr.DeletedAt == null);
     }
 
     public async Task<IEnumerable<ServiceRequest>> Handle(GetServiceRequestsByRequesterIdQuery query)
     {
-        return await serviceRequestRepository.FindByRequesterIdAsync(query.RequesterId);
+        var list = await serviceRequestRepository.FindByRequesterIdAsync(query.RequesterId);
+        return list.Where(sr => sr.DeletedAt == null);
     }
 
     public async Task<IEnumerable<ServiceRequest>> Handle(GetServiceRequestsByProviderIdQuery query)
     {
-        return await serviceRequestRepository.FindByProviderIdAndStatusAsync(query.ProviderId, query.Status);
-    }
-    
-    public async Task<IEnumerable<ServiceRequest>> Handle(GetAllServiceRequestsQuery query)
-    {
-        return await serviceRequestRepository.ListAsync();
+        var list = await serviceRequestRepository.FindByProviderIdAndStatusAsync(query.ProviderId, query.Status);
+        return list.Where(sr => sr.DeletedAt == null);
     }
 }
