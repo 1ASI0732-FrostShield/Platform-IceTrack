@@ -1,27 +1,37 @@
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+# Dockerfile for CatchUpPlatform.API
+# Summary: 
+# This Dockerfile builds and runs the CatchUpPlatform.API application using .NET 9.0
+# Description:
+# This Dockerfile is designed to create a Docker image for the CatchUpPlatform.API application.
+# It uses a multi-stage build process to first compile the application using the .NET SDK,
+# and then run it using the .NET runtime. The final image is lightweight and contains only the necessary files to run the application.
+# Version: 1.0
+# Maintainer: Web Application Team
+
+# Step 1: Build the application
+# Use the official .NET SDK image to build the application
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS builder
+# Set the working directory in the container
 WORKDIR /app
-
-ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
-
-EXPOSE 8080
-EXPOSE 8081
-
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-
-COPY ["IceTrackPlatform.API/IceTrackPlatform.API.csproj", "IceTrackPlatform.API/"]
-RUN dotnet restore "IceTrackPlatform.API/IceTrackPlatform.API.csproj"
-
+# Copy the project files
+# Copy the project files and restore dependencies
+COPY IceTrackPlatform.API/*.csproj IceTrackPlatform.API/
+# Restore dependencies
+RUN dotnet restore ./IceTrackPlatform.API
+# Copy the rest of the application files
 COPY . .
-WORKDIR "/src/IceTrackPlatform.API"
-RUN dotnet build "./IceTrackPlatform.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./IceTrackPlatform.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Step 2: Deploy the application to builder stage
+# Publish the application in Release mode
+RUN dotnet publish ./IceTrackPlatform.API -c Release -o out
 
-FROM base AS final
+# Step 3: Publish to Production and Run the application
+# Use the official .NET runtime image to run the application
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
+# Set the working directory in the container
 WORKDIR /app
-COPY --from=publish /app/publish .
+# Copy the published application from the builder stage
+COPY --from=builder /app/out .
+EXPOSE 80
+# Set EntryPoint to run the application
 ENTRYPOINT ["dotnet", "IceTrackPlatform.API.dll"]
