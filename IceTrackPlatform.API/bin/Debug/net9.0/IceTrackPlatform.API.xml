@@ -2169,16 +2169,16 @@
             <param name="role">The role to filter users by.</param>
             <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains a collection of <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> objects.</returns>
         </member>
-        <member name="T:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite">
+        <member name="T:IceTrackPlatform.API.Migrations.InitPostgres">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">

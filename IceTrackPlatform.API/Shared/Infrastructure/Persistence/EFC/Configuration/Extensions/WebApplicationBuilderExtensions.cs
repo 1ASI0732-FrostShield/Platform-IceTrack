@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
@@ -13,12 +14,12 @@ public static class WebApplicationBuilderExtensions
         builder.Services.AddDbContext<AppDbContext>(options =>
         {
             if (builder.Environment.IsDevelopment())
-                options.UseMySQL(connectionString)
+                options.UseNpgsql(connectionString)
                     .LogTo(Console.WriteLine, LogLevel.Information)
                     .EnableSensitiveDataLogging()
                     .EnableDetailedErrors();
             else if (builder.Environment.IsProduction())
-                options.UseMySQL(connectionString)
+                options.UseNpgsql(connectionString)
                     .LogTo(Console.WriteLine, LogLevel.Error);
         });
     }
