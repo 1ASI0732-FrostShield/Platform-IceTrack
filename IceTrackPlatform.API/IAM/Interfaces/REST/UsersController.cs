@@ -6,7 +6,6 @@ using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using IceTrackPlatform.API.IAM.Interfaces.REST.Resources;
 using IceTrackPlatform.API.IAM.Interfaces.REST.Transform;
 using Microsoft.AspNetCore.Mvc;
-using Org.BouncyCastle.Asn1.Cms;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace IceTrackPlatform.API.IAM.Interfaces.REST;

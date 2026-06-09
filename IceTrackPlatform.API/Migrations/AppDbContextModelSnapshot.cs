@@ -4,6 +4,7 @@ using IceTrackPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -17,50 +18,54 @@ namespace IceTrackPlatform.API.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "9.0.10")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("IceTrackPlatform.API.Assets_Management.Domain.Model.Aggregates.Site", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("address");
 
                     b.Property<int>("CantEquipment")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasDefaultValue(0)
                         .HasColumnName("cant_equipment");
 
                     b.Property<string>("ContactName")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("contact_name");
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created");
 
                     b.Property<DateTimeOffset?>("DeletedAt")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("deleted_at");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("name");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("phone");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated");
 
                     b.HasKey("Id")
@@ -73,22 +78,24 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
                     b.Property<int?>("DefaultSiteId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("default_site_id");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
                     b.Property<int>("UserId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("user_id");
 
                     b.HasKey("Id")
@@ -105,22 +112,24 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CardType")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("card_type");
 
                     b.Property<int>("DashboardConfigId")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("IsVisible")
-                        .HasColumnType("tinyint(1)")
+                        .HasColumnType("boolean")
                         .HasColumnName("is_visible");
 
                     b.Property<int>("Order")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("order");
 
                     b.HasKey("Id")
@@ -136,30 +145,32 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Comment")
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("comment");
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
                     b.Property<int>("OwnerId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("owner_id");
 
                     b.Property<int>("ServiceRequestId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("service_request_id");
 
                     b.Property<int>("TechnicianId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("technician_id");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id")
@@ -172,21 +183,23 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("password_hash");
 
                     b.Property<string>("Role")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("role");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("username");
 
                     b.HasKey("Id")
@@ -199,51 +212,57 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created");
+
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deleted_at");
 
                     b.Property<Guid>("EquipmentId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)")
+                        .HasColumnType("uuid")
                         .HasColumnName("equipment_id");
 
                     b.Property<string>("Model")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("model");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("name");
 
                     b.Property<bool>("Online")
-                        .HasColumnType("tinyint(1)")
+                        .HasColumnType("boolean")
                         .HasColumnName("online");
 
                     b.Property<string>("Serial")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("serial");
 
                     b.Property<int>("SiteId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("site_id");
 
                     b.Property<int>("Status")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("status");
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("type");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated");
 
                     b.HasKey("Id")
@@ -256,32 +275,38 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deleted_at");
+
                     b.Property<DateTime?>("EndTime")
-                        .HasColumnType("datetime(6)")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("end_time");
 
                     b.Property<string>("PhotoUrls")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("photo_urls");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime(6)")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("start_time");
 
                     b.Property<string>("Summary")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("summary");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id")
@@ -294,32 +319,38 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime?>("CanceledAt")
-                        .HasColumnType("datetime(6)")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("canceled_at");
 
                     b.Property<DateTime?>("CompletedAt")
-                        .HasColumnType("datetime(6)")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("completed_at");
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
+
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deleted_at");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("description");
 
                     b.Property<string>("Origin")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("origin");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id")
@@ -332,28 +363,34 @@ namespace IceTrackPlatform.API.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
+
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deleted_at");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("name");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("phone");
 
                     b.Property<string>("Specialty")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("text")
                         .HasColumnName("specialty");
 
                     b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id")
@@ -367,16 +404,16 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.Dashboard.Domain.Model.ValueObjects.TemperatureRange", "DefaultTemperatureRange", b1 =>
                         {
                             b1.Property<int>("Id")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<string>("Label")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("default_temperature_range_label");
 
                             b1.Property<string>("Value")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("default_temperature_range_value");
 
                             b1.HasKey("Id")
@@ -408,10 +445,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.Feedback.Domain.Model.ValueObjects.ReviewRating", "Rating", b1 =>
                         {
                             b1.Property<int>("ReviewId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("rating");
 
                             b1.HasKey("ReviewId")
@@ -433,10 +470,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.TechnicianId", "TechnicianId", b1 =>
                         {
                             b1.Property<int>("InterventionId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("technician_id");
 
                             b1.HasKey("InterventionId")
@@ -452,11 +489,11 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.InterventionStatus", "Status", b1 =>
                         {
                             b1.Property<int>("InterventionId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<string>("Status")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("status");
 
                             b1.HasKey("InterventionId")
@@ -472,10 +509,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.ServiceRequestId", "ServiceRequestId", b1 =>
                         {
                             b1.Property<int>("InterventionId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("service_request_id");
 
                             b1.HasKey("InterventionId")
@@ -503,10 +540,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.TechnicianId", "TechnicianId", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("technician_id");
 
                             b1.HasKey("ServiceRequestId")
@@ -522,10 +559,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.AssignedTo", "AssignedTo", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("assigned_to");
 
                             b1.HasKey("ServiceRequestId")
@@ -541,10 +578,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.EquipmentId", "EquipmentId", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("equipment_id");
 
                             b1.HasKey("ServiceRequestId")
@@ -560,10 +597,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.RequesterId", "RequesterId", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("requester_id");
 
                             b1.HasKey("ServiceRequestId")
@@ -579,11 +616,11 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.ServiceRequestPriority", "Priority", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<string>("Priority")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("priority");
 
                             b1.HasKey("ServiceRequestId")
@@ -599,11 +636,11 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.ServiceRequestStatus", "Status", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<string>("Status")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("status");
 
                             b1.HasKey("ServiceRequestId")
@@ -619,11 +656,11 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.ServiceRequestType", "Type", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<string>("Type")
                                 .IsRequired()
-                                .HasColumnType("longtext")
+                                .HasColumnType("text")
                                 .HasColumnName("type");
 
                             b1.HasKey("ServiceRequestId")
@@ -639,10 +676,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects.SiteId", "SiteId", b1 =>
                         {
                             b1.Property<int>("ServiceRequestId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("site_id");
 
                             b1.HasKey("ServiceRequestId")
@@ -684,10 +721,10 @@ namespace IceTrackPlatform.API.Migrations
                     b.OwnsOne("IceTrackPlatform.API.Technicians.Domain.Model.ValueObjects.ProviderId", "ProviderId", b1 =>
                         {
                             b1.Property<int>("TechnicianId")
-                                .HasColumnType("int");
+                                .HasColumnType("integer");
 
                             b1.Property<int>("Value")
-                                .HasColumnType("int")
+                                .HasColumnType("integer")
                                 .HasColumnName("provider_id");
 
                             b1.HasKey("TechnicianId")
