@@ -16,7 +16,8 @@ public class Monitoring
             Status: StatusEquipment.ACTIVE,
             Name: "Main refrigerator",
             SiteId: 1,
-            Online: true
+            Online: true,
+            OwnerId: 1
         );
     }
 
@@ -56,7 +57,8 @@ public class Monitoring
             Status: StatusEquipment.ACTIVE,
             Name: "Active freezer",
             SiteId: 2,
-            Online: true
+            Online: true,
+            OwnerId: 1
         );
 
         var equipment = new Equipment(command);
@@ -74,7 +76,8 @@ public class Monitoring
             Status: StatusEquipment.MAINTENANCE,
             Name: "Maintenance cooler",
             SiteId: 3,
-            Online: false
+            Online: false,
+            OwnerId: 1
         );
 
         var equipment = new Equipment(command);
@@ -93,7 +96,8 @@ public class Monitoring
             Status: StatusEquipment.OFF,
             Name: "Offline freezer",
             SiteId: 4,
-            Online: false
+            Online: false,
+            OwnerId: 1
         );
 
         var equipment = new Equipment(command);

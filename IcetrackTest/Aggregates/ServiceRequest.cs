@@ -16,7 +16,8 @@ public class ServiceRequests
             origin: "Web Application",
             type: EServiceRequestType.Corrective,
             priority: EServiceRequestPriority.High,
-            description: "The refrigeration equipment is not cooling properly."
+            description: "The refrigeration equipment is not cooling properly.",
+            ownerId: 1
         );
     }
 

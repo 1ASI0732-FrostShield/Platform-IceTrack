@@ -4,8 +4,7 @@ using IceTrackPlatform.API.Assets_Management.Domain.Model.Queries;
 using IceTrackPlatform.API.Assets_Management.Domain.Services;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources;
 using IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform;
-using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
-using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
+using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -61,7 +60,11 @@ public class SiteController(
         [FromBody] CreateSiteResource resource)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var createSiteCommandFromResourceAssembler = CreateSiteCommandFromResourceAssembler.ToCommandFromResource(resource);
+
+        var user = HttpContext.Items["User"] as User;
+        if (user is null) return Unauthorized();
+
+        var createSiteCommandFromResourceAssembler = CreateSiteCommandFromResourceAssembler.ToCommandFromResource(resource, user.Id);
         try
         {
             var result = await siteCommandService.Handle(createSiteCommandFromResourceAssembler);

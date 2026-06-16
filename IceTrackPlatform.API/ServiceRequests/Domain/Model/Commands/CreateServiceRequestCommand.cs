@@ -10,4 +10,6 @@ public record CreateServiceRequestCommand(
     string Origin,
     EServiceRequestType Type,
     EServiceRequestPriority Priority,
-    string Description);
+    string Description,
+    int OwnerId
+    );

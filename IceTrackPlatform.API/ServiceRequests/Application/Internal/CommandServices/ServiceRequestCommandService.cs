@@ -20,7 +20,9 @@ public class ServiceRequestCommandService(
             command.Origin,
             command.Type,
             command.Priority,
-            command.Description);
+            command.Description,
+            command.OwnerId
+            );
         
         await serviceRequestRepository.AddAsync(serviceRequest);
         await unitOfWork.CompleteAsync();

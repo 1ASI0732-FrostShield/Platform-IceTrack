@@ -8,6 +8,12 @@ namespace IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform;
 /// </summary>
 public static class CreateSiteCommandFromResourceAssembler
 {
-    public static CreateSiteCommand ToCommandFromResource(CreateSiteResource resource) => 
-        new CreateSiteCommand(resource.Name, resource.Address, resource.ContactName, resource.Phone);
+    public static CreateSiteCommand ToCommandFromResource(CreateSiteResource resource, int ownerId) => 
+        new CreateSiteCommand(
+            resource.Name, 
+            resource.Address, 
+            resource.ContactName, 
+            resource.Phone,
+            ownerId
+            );
 }

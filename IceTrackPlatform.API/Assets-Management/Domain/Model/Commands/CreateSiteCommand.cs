@@ -7,4 +7,10 @@
 /// <param name="Address">The Address of the site</param>
 /// <param name="ContactName">The ContactName of the site</param>
 /// <param name="Phone">The Phone of the site</param>
-public record CreateSiteCommand(string Name, string Address, string ContactName, string Phone);
+public record CreateSiteCommand(
+    string Name, 
+    string Address, 
+    string ContactName, 
+    string Phone,
+    int OwnerId
+    );

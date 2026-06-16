@@ -8,7 +8,15 @@ namespace IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform;
 /// </summary>
 public static class CreateEquipmentCommandFromResourceAssembler
 {
-    public static CreateEquipmentCommand ToCommandFromResource(CreateEquipmentResource resource) =>
-        new CreateEquipmentCommand(resource.Model, resource.Type, resource.Serial,
-            resource.Status, resource.Name, resource.SiteId, resource.Online);
+    public static CreateEquipmentCommand ToCommandFromResource(CreateEquipmentResource resource, int ownerId) =>
+        new CreateEquipmentCommand(
+            resource.Model, 
+            resource.Type, 
+            resource.Serial,
+            resource.Status, 
+            resource.Name, 
+            resource.SiteId, 
+            resource.Online,
+            ownerId
+            );
 }

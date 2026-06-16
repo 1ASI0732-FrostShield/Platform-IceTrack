@@ -1,6 +1,5 @@
 ﻿using System.Net.Mime;
-using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
-using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
+using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.Commands;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.Queries;
 using IceTrackPlatform.API.ServiceRequests.Domain.Model.ValueObjects;
@@ -28,7 +27,10 @@ public class ServiceRequestsController(
     [SwaggerResponse(StatusCodes.Status201Created, "The service request was created", typeof(ServiceRequestResource))]
     public async Task<IActionResult> CreateServiceRequest([FromBody] CreateServiceRequestResource resource)
     {
-        var command = CreateServiceRequestCommandFromResourceAssembler.ToCommandFromResource(resource);
+        var user = HttpContext.Items["User"] as User;
+        if (user is null) return Unauthorized();
+
+        var command = CreateServiceRequestCommandFromResourceAssembler.ToCommandFromResource(resource, user.Id);
         var serviceRequest = await serviceRequestCommandService.Handle(command);
         if (serviceRequest == null) return BadRequest();
         var serviceRequestResource = ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity(serviceRequest);

@@ -12,5 +12,13 @@ namespace IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 /// <param name="SetPoint">The Set Point of the equipment</param>
 /// <param name="Manufacturer">The Manufacturer of the equipment</param>
 /// <param name="Online">The Online of the equipment</param>
-public record CreateEquipmentCommand(string Model, string Type, string Serial, 
-    StatusEquipment Status, string Name, int SiteId, bool Online);
+public record CreateEquipmentCommand(
+    string Model, 
+    string Type, 
+    string Serial, 
+    StatusEquipment Status, 
+    string Name, 
+    int SiteId, 
+    bool Online,
+    int OwnerId
+    );

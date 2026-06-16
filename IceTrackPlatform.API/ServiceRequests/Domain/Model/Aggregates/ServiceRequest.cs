@@ -15,9 +15,10 @@ public partial class ServiceRequest
         Priority = new ServiceRequestPriority();
         Description = string.Empty;
         Status = new ServiceRequestStatus();
+        OwnerId = 0;
     }
 
-    public ServiceRequest(int requesterId, int siteId, int equipmentId, int assignedTo, string origin, EServiceRequestType type, EServiceRequestPriority priority, string description)
+    public ServiceRequest(int requesterId, int siteId, int equipmentId, int assignedTo, string origin, EServiceRequestType type, EServiceRequestPriority priority, string description, int ownerId)
     {
         RequesterId = new RequesterId(requesterId);
         SiteId = new SiteId(siteId);
@@ -28,6 +29,7 @@ public partial class ServiceRequest
         Priority = new ServiceRequestPriority(priority);
         Description = description;
         Status = new ServiceRequestStatus(EServiceRequestStatus.Pending);
+        OwnerId = ownerId;
     }
 
     public void Accept() => Status = new ServiceRequestStatus(EServiceRequestStatus.Accepted);
@@ -59,6 +61,7 @@ public partial class ServiceRequest
     }
     
     public int Id { get; }
+    public int OwnerId { get; private set; }
     public RequesterId RequesterId { get; private set; }
     public SiteId SiteId { get; private set; }
     public EquipmentId EquipmentId { get; private set; }

@@ -11,6 +11,7 @@ public partial class Site : SiteAudit
         ContactName = string.Empty;
         Phone = string.Empty;
         CantEquipment = 0;
+        OwnerId = 0;
     }
 
     protected Site(string name, string address, string contactName, string phone)
@@ -35,6 +36,7 @@ public partial class Site : SiteAudit
         Address = command.Address;
         ContactName = command.ContactName;
         Phone = command.Phone;
+        OwnerId = command.OwnerId;
         CantEquipment = 0;
     }
     
@@ -62,6 +64,7 @@ public partial class Site : SiteAudit
     }
     
     public int Id { get; }
+    public int OwnerId { get; private set; }
     public string Name { get; private set; }
     public string Address { get; private set; }
     public string ContactName { get; private set; }

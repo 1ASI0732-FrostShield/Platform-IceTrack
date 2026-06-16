@@ -1,6 +1,5 @@
 ﻿using System.Net.Mime;
-using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
-using IceTrackPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
+using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Queries;
 using IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects;
@@ -62,7 +61,11 @@ public class EquipmentController(
         [FromBody] CreateEquipmentResource resource)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var createEquipmentCommand = CreateEquipmentCommandFromResourceAssembler.ToCommandFromResource(resource);
+
+        var user = HttpContext.Items["User"] as User;
+        if (user is null) return Unauthorized();
+
+        var createEquipmentCommand = CreateEquipmentCommandFromResourceAssembler.ToCommandFromResource(resource, user.Id);
         try
         {
             var result = await equipmentCommandService.Handle(createEquipmentCommand);

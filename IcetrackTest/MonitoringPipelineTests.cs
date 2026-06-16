@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using IceTrackPlatform.API.IAM.Domain.Model.Aggregates;
+using IceTrackPlatform.API.IAM.Domain.Model.ValueObjects;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
 using IceTrackPlatform.API.Monitoring.Interfaces.REST;
@@ -8,6 +10,7 @@ using IceTrackPlatform.API.Monitoring.Domain.Model.Commands;
 using IceTrackPlatform.API.Monitoring.Domain.Model.Queries;
 using IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects;
 using IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources;
+using Microsoft.AspNetCore.Http;
 
 namespace IcetrackTest.Monitoring;
 
@@ -18,18 +21,24 @@ public class MonitoringPipelineTests
     private Mock<IEquipmentQueryServices> _queryServiceMock;
     private EquipmentController _controller;
 
-    [TestInitialize]
     public void Setup()
     {
         _commandServiceMock = new Mock<IEquipmentCommandService>();
         _queryServiceMock = new Mock<IEquipmentQueryServices>();
         _controller = new EquipmentController(_commandServiceMock.Object, _queryServiceMock.Object);
+
+        _controller.ControllerContext = new ControllerContext
+        {
+            HttpContext = new DefaultHttpContext()
+        };
+
+        _controller.HttpContext.Items["User"] = new User("owner@test.com", "hashed-password", Roles.Owner);
     }
 
     // Helper para crear instancia de Equipment usando el constructor de comando
     private Equipment CreateTestEquipment()
     {
-        var command = new CreateEquipmentCommand("ModelX", "TypeA", "SN123", StatusEquipment.ACTIVE, "SiteName", 1, true);
+        var command = new CreateEquipmentCommand("ModelX", "TypeA", "SN123", StatusEquipment.ACTIVE, "SiteName", 1, true, 1);
         return new Equipment(command);
     }
 

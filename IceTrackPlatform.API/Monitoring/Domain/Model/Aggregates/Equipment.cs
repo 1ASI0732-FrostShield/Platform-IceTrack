@@ -15,6 +15,7 @@ public partial class Equipment : EquipmentAudit
         Name = string.Empty;
         SiteId = 0;
         Online = false;
+        OwnerId = 0;
     }
     
     public Equipment(CreateEquipmentCommand command)
@@ -27,6 +28,7 @@ public partial class Equipment : EquipmentAudit
         Name = command.Name;
         SiteId = command.SiteId;
         Online = command.Online;
+        OwnerId = command.OwnerId;
     }
     
     public void Update(UpdateEquipmentCommand command)
@@ -46,6 +48,7 @@ public partial class Equipment : EquipmentAudit
     }
     
     public int Id { get; }
+    public int OwnerId { get; private set; }
     public Guid EquipmentId { get;}
     public string Model { get; private set; }
     public string Type { get; private set; }
