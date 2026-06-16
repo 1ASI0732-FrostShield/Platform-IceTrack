@@ -17,18 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Resources/ServiceRequestResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Resources/ServiceRequestResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/ServiceRequestResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/ServiceRequestResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Production.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Production.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +242,7 @@
       <workItem from="1778511758026" duration="2471000" />
       <workItem from="1778550727432" duration="1036000" />
       <workItem from="1781566892437" duration="3337000" />
-      <workItem from="1781572835082" duration="2064000" />
+      <workItem from="1781572835082" duration="2687000" />
     </task>
     <servers />
   </component>
