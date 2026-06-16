@@ -8,15 +8,16 @@ public static class ServiceRequestResourceFromEntityAssembler
     {
         return new ServiceRequestResource(
             entity.Id,
+            entity.OwnerId,
             entity.RequesterId.Value,
             entity.SiteId.Value,
             entity.EquipmentId.Value,
             entity.AssignedTo.Value,
             entity.Origin,
-            entity.Type.Type, // Pass enum directly
-            entity.Priority.Priority, // Pass enum directly
+            entity.Type.Type,
+            entity.Priority.Priority,
             entity.Description,
-            entity.Status.Status, // Pass enum directly
+            entity.Status.Status,
             entity.CompletedAt,
             entity.CanceledAt,
             entity.TechnicianId?.Value);

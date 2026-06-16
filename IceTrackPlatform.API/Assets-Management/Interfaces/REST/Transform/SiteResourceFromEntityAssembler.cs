@@ -9,7 +9,9 @@ namespace IceTrackPlatform.API.Assets_Management.Interfaces.REST.Transform;
 public static class SiteResourceFromEntityAssembler
 {
     public static SiteResource ToResourceFromEntity(Site entity) =>
-        new SiteResource(entity.Id, 
+        new SiteResource(
+            entity.Id, 
+            entity.OwnerId,
             entity.Name, 
             entity.Address, 
             entity.ContactName, 

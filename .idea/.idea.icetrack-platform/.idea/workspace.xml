@@ -16,46 +16,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Aggregates/Site.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Commands/CreateSiteCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Domain/Model/Commands/CreateSiteCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/SiteController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/CreateSiteCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/CreateSiteCommandFromResourceAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Aggregates/Equipment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/CreateEquipmentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Domain/Model/Commands/CreateEquipmentCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/EquipmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/CreateEquipmentCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/CreateEquipmentCommandFromResourceAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/CommandServices/ServiceRequestCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Application/Internal/CommandServices/ServiceRequestCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Aggregates/ServiceRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Aggregates/ServiceRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Commands/CreateServiceRequestCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Domain/Model/Commands/CreateServiceRequestCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/ServiceRequestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/ServiceRequestsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/CreateServiceRequestCommandFromResourceAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/CreateServiceRequestCommandFromResourceAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Production.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.Production.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Resources/SiteResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Assets-Management/Interfaces/REST/Transform/SiteResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Resources/EquipmentResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Interfaces/REST/Transform/EquipmentResourceFromEntityAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Resources/ServiceRequestResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Resources/ServiceRequestResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/ServiceRequestResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/ServiceRequests/Interfaces/REST/Transform/ServiceRequestResourceFromEntityAssembler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/Aggregates/Monitoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/Aggregates/Monitoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/Aggregates/ServiceRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/Aggregates/ServiceRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/MonitoringPipelineTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/MonitoringPipelineTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/.msCoverageSourceRootsMapping_IcetrackTest" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/.msCoverageSourceRootsMapping_IcetrackTest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.GlobalUsings.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/IcetrackTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/IcetrackTest.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/IcetrackTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/IcetrackTest.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,23 +63,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.7205301560871538" />
-      <entry key="MS500" value="3.684471143928282" />
-      <entry key="S2" value="4.608735078369454" />
-      <entry key="S5" value="4.873098935999612" />
-      <entry key="S10" value="5.338992439439428" />
-      <entry key="S30" value="7.189813919311205" />
-      <entry key="S60" value="9.222531816601236" />
-      <entry key="M2" value="16.532538546965704" />
-      <entry key="M5" value="48.1073663130692" />
-      <entry key="M10" value="92.79022210155576" />
-      <entry key="M15" value="126.9274102592047" />
-      <entry key="M30" value="188.16364507990505" />
-      <entry key="H1" value="237.59641869784613" />
-      <entry key="H2" value="269.6206907622478" />
-      <entry key="H4" value="287.932809750271" />
-      <entry key="D1" value="304.52578304301005" />
-      <entry key="W1" value="307.5004000751908" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.00000432835348" />
+      <entry key="S2" value="1.173209095516296" />
+      <entry key="S5" value="2.460862719247584" />
+      <entry key="S10" value="4.160872582007022" />
+      <entry key="S30" value="7.493235492817837" />
+      <entry key="S60" value="10.101789376867004" />
+      <entry key="M2" value="17.54275518829206" />
+      <entry key="M5" value="48.97823561835265" />
+      <entry key="M10" value="93.70547344928008" />
+      <entry key="M15" value="127.93906255080077" />
+      <entry key="M30" value="189.43146563210303" />
+      <entry key="H1" value="239.13420334782472" />
+      <entry key="H2" value="271.35843421763207" />
+      <entry key="H4" value="289.7927738015277" />
+      <entry key="D1" value="306.5010982958739" />
+      <entry key="W1" value="309.49683922397895" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -128,23 +101,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.6728965968096288" />
-      <entry key="MS500" value="3.6607413544176652" />
-      <entry key="S2" value="4.601127450260261" />
-      <entry key="S5" value="4.8698536997095445" />
-      <entry key="S10" value="5.337143747442872" />
-      <entry key="S30" value="7.188885230630863" />
-      <entry key="S60" value="9.221911615876932" />
-      <entry key="M2" value="16.531982017081692" />
-      <entry key="M5" value="48.10668085400838" />
-      <entry key="M10" value="92.7894178851372" />
-      <entry key="M15" value="126.9265924925733" />
-      <entry key="M30" value="188.16296399347726" />
-      <entry key="H1" value="237.59596434109773" />
-      <entry key="H2" value="269.6204262634028" />
-      <entry key="H4" value="287.93266677853353" />
-      <entry key="D1" value="304.52575759091246" />
-      <entry key="W1" value="307.50039639754766" />
+      <entry key="MS100" value="0.9201876506248751" />
+      <entry key="MS500" value="0.983506096625514" />
+      <entry key="S2" value="1.166571323385825" />
+      <entry key="S5" value="2.4512268901724994" />
+      <entry key="S10" value="4.151966572726942" />
+      <entry key="S30" value="7.488441981075745" />
+      <entry key="S60" value="10.098977754972804" />
+      <entry key="M2" value="17.54103748038417" />
+      <entry key="M5" value="48.977073077695586" />
+      <entry key="M10" value="93.70442941783122" />
+      <entry key="M15" value="127.93808442094927" />
+      <entry key="M30" value="189.43070353831035" />
+      <entry key="H1" value="239.1337079734923" />
+      <entry key="H2" value="271.35814900719845" />
+      <entry key="H4" value="289.7926204103678" />
+      <entry key="D1" value="306.501071097052" />
+      <entry key="W1" value="309.49683529653623" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -162,38 +135,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.IceTrackPlatform.API: http.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.IceTrackPlatform.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.IceTrackPlatform.API: http">
     <configuration name="icetrack.test" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -277,7 +250,8 @@
       <workItem from="1778510961720" duration="688000" />
       <workItem from="1778511758026" duration="2471000" />
       <workItem from="1778550727432" duration="1036000" />
-      <workItem from="1781566892437" duration="2469000" />
+      <workItem from="1781566892437" duration="3337000" />
+      <workItem from="1781572835082" duration="2064000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,17 @@ namespace IceTrackPlatform.API.Monitoring.Interfaces.REST.Transform;
 public static class EquipmentResourceFromEntityAssembler
 {
     public static EquipmentResource ToResourceFromEntity(Equipment entity) =>
-        new EquipmentResource(entity.Id, entity.EquipmentId, entity.Model, entity.Type, entity.Serial, entity.Status,
-            entity.Name, entity.SiteId, entity.Online, entity.CreatedDate, entity.UpdatedDate);
+        new EquipmentResource(
+            entity.Id, 
+            entity.OwnerId,
+            entity.EquipmentId, 
+            entity.Model, 
+            entity.Type, 
+            entity.Serial, 
+            entity.Status,
+            entity.Name, 
+            entity.SiteId, 
+            entity.Online, 
+            entity.CreatedDate, 
+            entity.UpdatedDate);
 }
