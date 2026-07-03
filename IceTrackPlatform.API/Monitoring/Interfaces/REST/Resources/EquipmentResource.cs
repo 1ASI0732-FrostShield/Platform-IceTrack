@@ -17,5 +17,6 @@ public record EquipmentResource(
     int SiteId, 
     bool Online, 
     DateTimeOffset? Created, 
-    DateTimeOffset? Updated
+    DateTimeOffset? Updated,
+    int? ReminderIntervalDays = null
     );

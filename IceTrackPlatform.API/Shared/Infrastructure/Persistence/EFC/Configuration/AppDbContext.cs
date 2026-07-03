@@ -3,6 +3,7 @@ using IceTrackPlatform.API.Dashboard.Infrastructure.Persistence.EFC.Configuratio
 using IceTrackPlatform.API.Feedback.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.IAM.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using IceTrackPlatform.API.Notifications.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.ServiceRequests.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using IceTrackPlatform.API.Technicians.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
@@ -74,6 +75,9 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         
         // Feedback Context
         builder.ApplyFeedbackConfiguration();
+
+        // Notifications Context
+        builder.ApplyNotificationsConfiguration();
       
         // General Naming Convention for the database objects
         builder.UseSnakeCaseNamingConvention();

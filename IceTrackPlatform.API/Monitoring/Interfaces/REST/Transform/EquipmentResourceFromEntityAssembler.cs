@@ -21,5 +21,6 @@ public static class EquipmentResourceFromEntityAssembler
             entity.SiteId, 
             entity.Online, 
             entity.CreatedDate, 
-            entity.UpdatedDate);
+            entity.UpdatedDate,
+            entity.ReminderIntervalDays);
 }

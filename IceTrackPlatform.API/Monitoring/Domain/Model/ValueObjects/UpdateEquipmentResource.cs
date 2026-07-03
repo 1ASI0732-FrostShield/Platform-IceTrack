@@ -9,4 +9,5 @@ public record UpdateEquipmentResource(
     [Required] StatusEquipment Status,
     [Required] string Name,
     [Required] int SiteId,
-    [Required] bool Online);
+    [Required] bool Online,
+    int? ReminderIntervalDays = null);

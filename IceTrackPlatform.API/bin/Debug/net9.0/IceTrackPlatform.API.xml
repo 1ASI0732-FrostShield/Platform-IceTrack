@@ -2181,6 +2181,18 @@
         <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">
             <summary>
             This class handles commands related to Equipment entities.
@@ -2227,7 +2239,7 @@
             <param name="Manufacturer">The Manufacturer of the equipment</param>
             <param name="Online">The Online of the equipment</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Int32)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Int32,System.Nullable{System.Int32})">
             <summary>
                 Command to create a Equipment aggregate
             </summary>
@@ -2344,7 +2356,7 @@
                 Represents the resource to create a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.Int32})">
             <summary>
                 Represents the resource to create a new equipment.
             </summary>
@@ -2354,7 +2366,7 @@
                 Represents the resource for a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int32})">
             <summary>
                 Represents the resource for a new equipment.
             </summary>

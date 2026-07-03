@@ -20,5 +20,6 @@ public record CreateEquipmentCommand(
     string Name, 
     int SiteId, 
     bool Online,
-    int OwnerId
+    int OwnerId,
+    int? ReminderIntervalDays = null
     );

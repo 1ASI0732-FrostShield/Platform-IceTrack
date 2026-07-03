@@ -16,6 +16,7 @@ public partial class Equipment : EquipmentAudit
         SiteId = 0;
         Online = false;
         OwnerId = 0;
+        ReminderIntervalDays = null;
     }
     
     public Equipment(CreateEquipmentCommand command)
@@ -29,6 +30,7 @@ public partial class Equipment : EquipmentAudit
         SiteId = command.SiteId;
         Online = command.Online;
         OwnerId = command.OwnerId;
+        ReminderIntervalDays = command.ReminderIntervalDays;
     }
     
     public void Update(UpdateEquipmentCommand command)
@@ -40,6 +42,7 @@ public partial class Equipment : EquipmentAudit
         Name = command.Name;
         SiteId = command.SiteId;
         Online = command.Online;
+        ReminderIntervalDays = command.ReminderIntervalDays;
     }
     
     public void SoftDelete()
@@ -57,4 +60,5 @@ public partial class Equipment : EquipmentAudit
     public string Name { get; private set; }
     public int SiteId { get; private set; }
     public bool Online { get; private set; }
+    public int? ReminderIntervalDays { get; private set; }
 }

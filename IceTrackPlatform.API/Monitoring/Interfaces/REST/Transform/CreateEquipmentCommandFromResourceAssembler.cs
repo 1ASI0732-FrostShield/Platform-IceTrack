@@ -17,6 +17,7 @@ public static class CreateEquipmentCommandFromResourceAssembler
             resource.Name, 
             resource.SiteId, 
             resource.Online,
-            ownerId
+            ownerId,
+            resource.ReminderIntervalDays
             );
 }

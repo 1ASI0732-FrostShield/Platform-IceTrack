@@ -18,6 +18,10 @@ using IceTrackPlatform.API.Monitoring.Application.Internal.QueryServices;
 using IceTrackPlatform.API.Monitoring.Domain.Repositories;
 using IceTrackPlatform.API.Monitoring.Domain.Services;
 using IceTrackPlatform.API.Monitoring.Infrastructure.Persistence.EFC.Repositories;
+using IceTrackPlatform.API.Notifications.Application.Internal.QueryServices;
+using IceTrackPlatform.API.Notifications.Domain.Repositories;
+using IceTrackPlatform.API.Notifications.Domain.Services;
+using IceTrackPlatform.API.Notifications.Infrastructure.Persistence.EFC.Repositories;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.CommandServices;
 using IceTrackPlatform.API.ServiceRequests.Application.Internal.QueryServices;
 using IceTrackPlatform.API.ServiceRequests.Domain.Repositories;
@@ -92,6 +96,10 @@ builder.Services.AddScoped<ITechnicianQueryService, TechnicianQueryService>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IReviewCommandService, ReviewCommandService>();
 builder.Services.AddScoped<IReviewQueryService, ReviewQueryService>();
+
+// Notifications Bounded Context Injections
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+builder.Services.AddScoped<INotificationQueryService, NotificationQueryService>();
 
 // Mediator Configuration
 builder.AddCortexConfigurationServices();

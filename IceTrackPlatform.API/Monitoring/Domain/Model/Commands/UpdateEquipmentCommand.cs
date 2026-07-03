@@ -10,5 +10,6 @@ public record UpdateEquipmentCommand(
     StatusEquipment Status, 
     string Name, 
     int SiteId,
-    bool Online
+    bool Online,
+    int? ReminderIntervalDays = null
     );

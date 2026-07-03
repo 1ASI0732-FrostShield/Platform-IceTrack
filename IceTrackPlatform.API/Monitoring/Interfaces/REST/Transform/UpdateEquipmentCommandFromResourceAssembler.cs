@@ -7,5 +7,6 @@ public static class UpdateEquipmentCommandFromResourceAssembler
 {
     public static UpdateEquipmentCommand ToCommandFromResource(int id, UpdateEquipmentResource resource) =>
         new UpdateEquipmentCommand(id, resource.Model, resource.Type, resource.Serial,
-            resource.Status, resource.Name, resource.SiteId, resource.Online);
+            resource.Status, resource.Name, resource.SiteId, resource.Online,
+            resource.ReminderIntervalDays);
 }
