@@ -59,7 +59,7 @@ public class InterventionsController(
     {
         var query = new GetInterventionsByServiceRequestIdQuery(serviceRequestId);
         var interventions = await interventionQueryService.Handle(query);
-        var interventionResources = interventions.Select(InterventionResourceFromEntityAssembler.ToResourceFromEntity);
+        var interventionResources = interventions.Select(iv => InterventionResourceFromEntityAssembler.ToResourceFromEntity(iv));
         return Ok(interventionResources);
     }
 }

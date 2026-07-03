@@ -5,7 +5,9 @@ namespace IceTrackPlatform.API.ServiceRequests.Interfaces.REST.Transform;
 
 public static class InterventionResourceFromEntityAssembler
 {
-    public static InterventionResource ToResourceFromEntity(Intervention entity)
+    public static InterventionResource ToResourceFromEntity(
+        Intervention entity,
+        string? technicianName = null)
     {
         return new InterventionResource(
             entity.Id,
@@ -15,6 +17,7 @@ public static class InterventionResourceFromEntityAssembler
             entity.Summary,
             entity.StartTime,
             entity.EndTime,
-            entity.PhotoUrls);
+            entity.PhotoUrls,
+            technicianName);
     }
 }

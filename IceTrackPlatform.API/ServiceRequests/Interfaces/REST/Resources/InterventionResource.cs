@@ -8,4 +8,5 @@ public record InterventionResource(
     string Summary,
     DateTime StartTime,
     DateTime? EndTime,
-    List<string> PhotoUrls);
+    List<string> PhotoUrls,
+    string? TechnicianName = null);

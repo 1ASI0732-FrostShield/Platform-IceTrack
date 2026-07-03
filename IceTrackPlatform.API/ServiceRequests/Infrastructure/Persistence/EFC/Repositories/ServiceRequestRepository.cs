@@ -25,6 +25,13 @@ public class ServiceRequestRepository(AppDbContext context) : BaseRepository<Ser
         return await query.ToListAsync();
     }
 
+    public async Task<IEnumerable<ServiceRequest>> FindByEquipmentIdAsync(int equipmentId)
+    {
+        return await Context.Set<ServiceRequest>()
+            .Where(sr => sr.EquipmentId.Value == equipmentId && sr.DeletedAt == null)
+            .ToListAsync();
+    }
+
     public new async Task<IEnumerable<ServiceRequest>> ListAsync()
     {
         return await Context.Set<ServiceRequest>()

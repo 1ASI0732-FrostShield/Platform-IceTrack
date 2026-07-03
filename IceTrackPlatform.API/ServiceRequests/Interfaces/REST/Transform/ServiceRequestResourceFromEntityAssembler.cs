@@ -4,7 +4,10 @@ using IceTrackPlatform.API.ServiceRequests.Interfaces.REST.Resources;
 namespace IceTrackPlatform.API.ServiceRequests.Interfaces.REST.Transform;
 public static class ServiceRequestResourceFromEntityAssembler
 {
-    public static ServiceRequestResource ToResourceFromEntity(ServiceRequest entity)
+    public static ServiceRequestResource ToResourceFromEntity(
+        ServiceRequest entity,
+        string? providerName = null,
+        string? technicianName = null)
     {
         return new ServiceRequestResource(
             entity.Id,
@@ -20,6 +23,8 @@ public static class ServiceRequestResourceFromEntityAssembler
             entity.Status.Status,
             entity.CompletedAt,
             entity.CanceledAt,
-            entity.TechnicianId?.Value);
+            entity.TechnicianId?.Value,
+            providerName,
+            technicianName);
     }
 }

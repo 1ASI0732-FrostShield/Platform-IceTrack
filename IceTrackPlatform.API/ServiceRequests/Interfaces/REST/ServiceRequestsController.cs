@@ -63,10 +63,10 @@ public class ServiceRequestsController(
     {
         var query = new GetServiceRequestsByRequesterIdQuery(requesterId);
         var serviceRequests = await serviceRequestQueryService.Handle(query);
-        var serviceRequestResources = serviceRequests.Select(ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity);
+        var serviceRequestResources = serviceRequests.Select(sr => ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity(sr));
         return Ok(serviceRequestResources);
     }
-    
+
     [HttpGet("provider/{providerId:int}")]
     [SwaggerOperation(
         Summary = "Get Service Requests by Provider Id",
@@ -77,10 +77,10 @@ public class ServiceRequestsController(
     {
         var query = new GetServiceRequestsByProviderIdQuery(providerId, status);
         var serviceRequests = await serviceRequestQueryService.Handle(query);
-        var serviceRequestResources = serviceRequests.Select(ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity);
+        var serviceRequestResources = serviceRequests.Select(sr => ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity(sr));
         return Ok(serviceRequestResources);
     }
-    
+
     [HttpGet]
     [SwaggerOperation(
         Summary = "Get All Service Requests",
@@ -91,7 +91,7 @@ public class ServiceRequestsController(
     {
         var query = new GetAllServiceRequestsQuery();
         var serviceRequests = await serviceRequestQueryService.Handle(query);
-        var serviceRequestResources = serviceRequests.Select(ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity);
+        var serviceRequestResources = serviceRequests.Select(sr => ServiceRequestResourceFromEntityAssembler.ToResourceFromEntity(sr));
 
         return Ok(serviceRequestResources);
     }

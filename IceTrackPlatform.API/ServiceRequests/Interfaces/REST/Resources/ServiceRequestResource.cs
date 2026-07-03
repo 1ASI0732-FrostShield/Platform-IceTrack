@@ -16,4 +16,6 @@ public record ServiceRequestResource(
     EServiceRequestStatus Status,
     DateTime? CompletedAt,
     DateTime? CanceledAt,
-    int? TechnicianId);
+    int? TechnicianId,
+    string? ProviderName = null,
+    string? TechnicianName = null);
