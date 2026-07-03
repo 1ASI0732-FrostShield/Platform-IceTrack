@@ -105,5 +105,25 @@ public class EquipmentCommandService(IEquipmentRepository equipmentRepository,
             return null;
         }
     }
+
+    public async Task<Equipment?> Handle(UpdateReminderIntervalCommand command)
+    {
+        var equipment = await equipmentRepository.FindByIdAsync(command.EquipmentId);
+        if (equipment is null) return null;
+
+        try
+        {
+            equipment.SetReminderInterval(command.ReminderIntervalDays);
+            equipmentRepository.Update(equipment);
+            await unitOfWork.CompleteAsync();
+            return equipment;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating reminder interval: {ex.Message}");
+            return null;
+        }
+    }
+
 }
 

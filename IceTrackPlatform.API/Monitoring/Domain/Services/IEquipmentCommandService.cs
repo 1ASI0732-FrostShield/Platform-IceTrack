@@ -29,4 +29,9 @@ public interface IEquipmentCommandService
     ///  Handle the update equipment config command
     /// </summary>
     Task<Equipment?> Handle(UpdateEquipmentCommand command);
+
+    /// <summary>
+    ///  Handle the update reminder interval command
+    /// </summary>
+    Task<Equipment?> Handle(UpdateReminderIntervalCommand command);
 }

@@ -2311,6 +2311,11 @@
              Handle the update equipment config command
             </summary>
         </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.UpdateReminderIntervalCommand)">
+            <summary>
+             Handle the update reminder interval command
+            </summary>
+        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices">
             <summary>
                 Interface for Equipment Query Services

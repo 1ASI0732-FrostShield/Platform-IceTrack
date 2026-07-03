@@ -96,7 +96,19 @@ public class EquipmentController(
         if (result is null) return NotFound($"Equipment with ID {id} not found.");
         return Ok(EquipmentResourceFromEntityAssembler.ToResourceFromEntity(result));
     }
-    
+
+    [HttpPatch("{id:int}/reminder-interval")]
+    [SwaggerOperation(Summary = "Update reminder interval", Description = "Updates only the reminder interval days for an equipment", OperationId = "UpdateReminderInterval")]
+    [SwaggerResponse(200, "Reminder interval updated", typeof(EquipmentResource))]
+    [SwaggerResponse(404, "Equipment not found")]
+    public async Task<IActionResult> UpdateReminderInterval(int id, [FromBody] UpdateReminderIntervalResource resource)
+    {
+        var command = new UpdateReminderIntervalCommand(id, resource.ReminderIntervalDays);
+        var result = await equipmentCommandService.Handle(command);
+        if (result is null) return NotFound($"Equipment with ID {id} not found.");
+        return Ok(EquipmentResourceFromEntityAssembler.ToResourceFromEntity(result));
+    }
+
     [HttpDelete("{id:int}")]
     [SwaggerOperation(
         Summary = "Delete Equipment",

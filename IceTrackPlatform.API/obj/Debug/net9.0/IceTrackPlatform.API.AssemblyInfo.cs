@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IceTrackPlatform.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aec72cdf2165b568ad64d445681d4d110f799d38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14f3154c20ef6079e2918fec9f4ea2bd1f436574")]
 [assembly: System.Reflection.AssemblyProductAttribute("IceTrackPlatform.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IceTrackPlatform.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

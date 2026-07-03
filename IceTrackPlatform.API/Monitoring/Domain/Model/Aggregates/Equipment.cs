@@ -45,6 +45,11 @@ public partial class Equipment : EquipmentAudit
         ReminderIntervalDays = command.ReminderIntervalDays;
     }
     
+    public void SetReminderInterval(int? reminderIntervalDays)
+    {
+        ReminderIntervalDays = reminderIntervalDays;
+    }
+
     public void SoftDelete()
     {
         DeletedAt = DateTimeOffset.UtcNow;
