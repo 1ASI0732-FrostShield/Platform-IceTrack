@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IcetrackTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1177d1fc0da056a7d3c22725e11e5da7b8cc952f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15a52916c4ea3b8e775abcc98ca23096f21716a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("IcetrackTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IcetrackTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

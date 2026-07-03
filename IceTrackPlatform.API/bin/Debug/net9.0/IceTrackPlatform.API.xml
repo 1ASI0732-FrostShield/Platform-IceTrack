@@ -56,7 +56,7 @@
             <param name="ContactName">The ContactName of the site</param>
             <param name="Phone">The Phone of the site</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
                 Command to create a FavoriteSource aggregate
             </summary>
@@ -178,7 +178,7 @@
                 Represents the resource for a site.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
                 Represents the resource for a site.
             </summary>
@@ -2227,7 +2227,7 @@
             <param name="Manufacturer">The Manufacturer of the equipment</param>
             <param name="Online">The Online of the equipment</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Int32)">
             <summary>
                 Command to create a Equipment aggregate
             </summary>
@@ -2354,7 +2354,7 @@
                 Represents the resource for a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
                 Represents the resource for a new equipment.
             </summary>
