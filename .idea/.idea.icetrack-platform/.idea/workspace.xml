@@ -15,23 +15,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.icetrack-platform/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/Monitoring/Application/Internal/CommandServices/EquipmentCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-    </list>
+    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,6 +250,7 @@
       <workItem from="1781572835082" duration="4385000" />
       <workItem from="1781583850820" duration="592000" />
       <workItem from="1783100593816" duration="1531000" />
+      <workItem from="1783348606626" duration="2456000" />
     </task>
     <servers />
   </component>
