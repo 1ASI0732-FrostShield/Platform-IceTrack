@@ -11,7 +11,9 @@ public static class CreateReviewCommandFromResourceAssembler
             resource.ServiceRequestId,
             resource.OwnerId,
             resource.TechnicianId,
-            resource.Rating,
+            resource.Comunicacion,
+            resource.Eficiencia,
+            resource.Profesionalidad,
             resource.Comment);
     }
 }

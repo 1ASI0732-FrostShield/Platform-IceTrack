@@ -17,12 +17,12 @@ public partial class Review
         Rating = new ReviewRating();
     }
 
-    public Review(int serviceRequestId, int ownerId, int technicianId, int rating, string comment)
+    public Review(int serviceRequestId, int ownerId, int technicianId, int comunicacion, int eficiencia, int profesionalidad, string comment)
     {
         ServiceRequestId = serviceRequestId;
         OwnerId = ownerId;
         TechnicianId = technicianId;
-        Rating = new ReviewRating(rating);
+        Rating = new ReviewRating(comunicacion, eficiencia, profesionalidad);
         Comment = comment;
     }
 }

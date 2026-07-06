@@ -6,5 +6,8 @@ public record ReviewResource(
     int ServiceRequestId,
     int OwnerId,
     int TechnicianId,
-    int Rating,
+    int Comunicacion,
+    int Eficiencia,
+    int Profesionalidad,
+    double Average,
     string Comment);

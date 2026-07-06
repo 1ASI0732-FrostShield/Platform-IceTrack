@@ -13,7 +13,7 @@ public class ReviewCommandService(
 {
     public async Task<Review?> Handle(CreateReviewCommand command)
     {
-        var review = new Review(command.ServiceRequestId, command.OwnerId, command.TechnicianId, command.Rating, command.Comment);
+        var review = new Review(command.ServiceRequestId, command.OwnerId, command.TechnicianId, command.Comunicacion, command.Eficiencia, command.Profesionalidad, command.Comment);
         await reviewRepository.AddAsync(review);
         await unitOfWork.CompleteAsync();
         return review;

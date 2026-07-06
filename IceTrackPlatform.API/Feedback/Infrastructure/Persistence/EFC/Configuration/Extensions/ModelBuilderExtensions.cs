@@ -18,7 +18,9 @@ public static class ModelBuilderExtensions
         builder.Entity<Review>()
             .OwnsOne(r => r.Rating, rr =>
             {
-                rr.Property(p => p.Value).HasColumnName("Rating");
+                rr.Property(p => p.Comunicacion).HasColumnName("comunicacion");
+                rr.Property(p => p.Eficiencia).HasColumnName("eficiencia");
+                rr.Property(p => p.Profesionalidad).HasColumnName("profesionalidad");
             });
     }
 }

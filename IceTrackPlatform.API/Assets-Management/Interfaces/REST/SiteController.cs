@@ -21,7 +21,8 @@ namespace IceTrackPlatform.API.Assets_Management.Interfaces.REST;
 [Tags("Site")]
 public class SiteController(
     ISiteCommandService siteCommandService,
-    ISiteQueryServices siteQueryServices)
+    ISiteQueryServices siteQueryServices,
+    ILogger<SiteController> logger)
     : ControllerBase
 {
     [HttpGet("{id}")]
@@ -68,16 +69,22 @@ public class SiteController(
         try
         {
             var result = await siteCommandService.Handle(createSiteCommandFromResourceAssembler);
-            if (result is null) return BadRequest();
+            if (result is null)
+            {
+                logger.LogWarning("Site creation failed: service returned null for resource {@Resource}", resource);
+                return BadRequest();
+            }
             return CreatedAtAction(nameof(GetSiteById), new { id = result.Id },
                 SiteResourceFromEntityAssembler.ToResourceFromEntity(result));
         }
         catch (Exception e) when (e.Message.Contains("already exists"))
         {
+            logger.LogWarning("Site creation conflict: {Message}", e.Message);
             return Conflict("A site with the same Contact Name already exists.");
         }
-        catch
+        catch (Exception e)
         {
+            logger.LogError(e, "Site creation failed for resource {@Resource}", resource);
             return BadRequest();
         }
     }

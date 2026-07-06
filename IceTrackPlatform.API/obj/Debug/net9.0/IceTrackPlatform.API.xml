@@ -10,13 +10,15 @@
             </summary>
             <param name="siteRepository">The instance of SiteRepository</param>
             <param name="unitOfWork">The instance of UnitOfwork</param>
+            <param name="logger">The logger instance</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork,Microsoft.Extensions.Logging.ILogger{IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService})">
             <summary>
             This class handles commands related to Site entities.
             </summary>
             <param name="siteRepository">The instance of SiteRepository</param>
             <param name="unitOfWork">The instance of UnitOfwork</param>
+            <param name="logger">The logger instance</param>
         </member>
         <member name="T:IceTrackPlatform.API.Assets_Management.Application.Internal.QueryServices.SiteQueryService">
             <summary>
@@ -190,7 +192,7 @@
             <param name="siteCommandService">The Site Command Service</param>
             <param name="siteQueryServices">The Site Query Service</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService,IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService,IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices,Microsoft.Extensions.Logging.ILogger{IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController})">
             <summary>
                 Site REST API controller.
             </summary>
@@ -2191,6 +2193,18 @@
             <inheritdoc />
         </member>
         <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">

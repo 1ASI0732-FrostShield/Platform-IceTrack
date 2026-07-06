@@ -12,7 +12,10 @@ public static class ReviewResourceFromEntityAssembler
             entity.ServiceRequestId,
             entity.OwnerId,
             entity.TechnicianId,
-            entity.Rating.Value,
+            entity.Rating.Comunicacion,
+            entity.Rating.Eficiencia,
+            entity.Rating.Profesionalidad,
+            entity.Rating.Average,
             entity.Comment);
     }
 }
