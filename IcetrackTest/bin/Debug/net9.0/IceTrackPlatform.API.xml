@@ -10,13 +10,15 @@
             </summary>
             <param name="siteRepository">The instance of SiteRepository</param>
             <param name="unitOfWork">The instance of UnitOfwork</param>
+            <param name="logger">The logger instance</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Repositories.ISiteRepository,IceTrackPlatform.API.Shared.Domain.Repositories.IUnitOfWork,Microsoft.Extensions.Logging.ILogger{IceTrackPlatform.API.Assets_Management.Application.Internal.CommandServices.SiteCommandService})">
             <summary>
             This class handles commands related to Site entities.
             </summary>
             <param name="siteRepository">The instance of SiteRepository</param>
             <param name="unitOfWork">The instance of UnitOfwork</param>
+            <param name="logger">The logger instance</param>
         </member>
         <member name="T:IceTrackPlatform.API.Assets_Management.Application.Internal.QueryServices.SiteQueryService">
             <summary>
@@ -56,7 +58,7 @@
             <param name="ContactName">The ContactName of the site</param>
             <param name="Phone">The Phone of the site</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Domain.Model.Commands.CreateSiteCommand.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
                 Command to create a FavoriteSource aggregate
             </summary>
@@ -178,7 +180,7 @@
                 Represents the resource for a site.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.Resources.SiteResource.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
                 Represents the resource for a site.
             </summary>
@@ -190,7 +192,7 @@
             <param name="siteCommandService">The Site Command Service</param>
             <param name="siteQueryServices">The Site Query Service</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService,IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices)">
+        <member name="M:IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController.#ctor(IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteCommandService,IceTrackPlatform.API.Assets_Management.Domain.Services.ISiteQueryServices,Microsoft.Extensions.Logging.ILogger{IceTrackPlatform.API.Assets_Management.Interfaces.REST.SiteController})">
             <summary>
                 Site REST API controller.
             </summary>
@@ -2169,16 +2171,40 @@
             <param name="role">The role to filter users by.</param>
             <returns>Returns an <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult" /> that contains a collection of <see cref="T:IceTrackPlatform.API.IAM.Interfaces.REST.Resources.UserResource" /> objects.</returns>
         </member>
-        <member name="T:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite">
+        <member name="T:IceTrackPlatform.API.Migrations.InitPostgres">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:IceTrackPlatform.API.Migrations.AddSoftDeleteToSite.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:IceTrackPlatform.API.Migrations.InitPostgres.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.AddNotificationsAndReminderInterval.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:IceTrackPlatform.API.Migrations.SplitRatingIntoThreeFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Application.Internal.CommandServices.EquipmentCommandService">
@@ -2227,7 +2253,7 @@
             <param name="Manufacturer">The Manufacturer of the equipment</param>
             <param name="Online">The Online of the equipment</param>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Model.Commands.CreateEquipmentCommand.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Int32,System.Nullable{System.Int32})">
             <summary>
                 Command to create a Equipment aggregate
             </summary>
@@ -2299,6 +2325,11 @@
              Handle the update equipment config command
             </summary>
         </member>
+        <member name="M:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentCommandService.Handle(IceTrackPlatform.API.Monitoring.Domain.Model.Commands.UpdateReminderIntervalCommand)">
+            <summary>
+             Handle the update reminder interval command
+            </summary>
+        </member>
         <member name="T:IceTrackPlatform.API.Monitoring.Domain.Services.IEquipmentQueryServices">
             <summary>
                 Interface for Equipment Query Services
@@ -2344,7 +2375,7 @@
                 Represents the resource to create a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean)">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.CreateEquipmentResource.#ctor(System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.Int32})">
             <summary>
                 Represents the resource to create a new equipment.
             </summary>
@@ -2354,7 +2385,7 @@
                 Represents the resource for a new equipment.
             </summary>
         </member>
-        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:IceTrackPlatform.API.Monitoring.Interfaces.REST.Resources.EquipmentResource.#ctor(System.Int32,System.Int32,System.Guid,System.String,System.String,System.String,IceTrackPlatform.API.Monitoring.Domain.Model.ValueObjects.StatusEquipment,System.String,System.Int32,System.Boolean,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int32})">
             <summary>
                 Represents the resource for a new equipment.
             </summary>

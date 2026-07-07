@@ -85,4 +85,24 @@ public class ServiceRequests
         Assert.AreEqual(EServiceRequestStatus.Completed, request.Status.Status);
         Assert.IsNotNull(request.CompletedAt);
     }
+
+    [TestMethod]
+    public void EmptyConstructor_WhenCalled_ShouldCreateDefaultServiceRequest()
+    {
+        var request = new ServiceRequest();
+
+        Assert.AreEqual(EServiceRequestStatus.Pending, request.Status.Status);
+        Assert.AreEqual(string.Empty, request.Description);
+        Assert.AreEqual(string.Empty, request.Origin);
+    }
+
+    [TestMethod]
+    public void SoftDelete_WhenCalled_ShouldSetDeletedAt()
+    {
+        var request = CreateValidServiceRequest();
+
+        request.SoftDelete();
+
+        Assert.IsNotNull(request.DeletedAt);
+    }
 }

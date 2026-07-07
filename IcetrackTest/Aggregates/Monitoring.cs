@@ -105,4 +105,64 @@ public class Monitoring
         Assert.AreEqual(StatusEquipment.OFF, equipment.Status);
         Assert.IsFalse(equipment.Online);
     }
+
+    [TestMethod]
+    public void Update_WithValidCommand_ShouldUpdateAllProperties()
+    {
+        var equipment = new Equipment(CreateValidEquipmentCommand());
+
+        var updateCommand = new UpdateEquipmentCommand(
+            EquipmentId: 0,
+            Model: "New Model",
+            Type: "New Type",
+            Serial: "SN-NEW-001",
+            Status: StatusEquipment.MAINTENANCE,
+            Name: "Updated equipment",
+            SiteId: 5,
+            Online: false,
+            ReminderIntervalDays: 30
+        );
+
+        equipment.Update(updateCommand);
+
+        Assert.AreEqual("New Model", equipment.Model);
+        Assert.AreEqual("New Type", equipment.Type);
+        Assert.AreEqual("SN-NEW-001", equipment.Serial);
+        Assert.AreEqual(StatusEquipment.MAINTENANCE, equipment.Status);
+        Assert.AreEqual("Updated equipment", equipment.Name);
+        Assert.AreEqual(5, equipment.SiteId);
+        Assert.IsFalse(equipment.Online);
+        Assert.AreEqual(30, equipment.ReminderIntervalDays);
+    }
+
+    [TestMethod]
+    public void SoftDelete_WhenCalled_ShouldSetDeletedAt()
+    {
+        var equipment = new Equipment(CreateValidEquipmentCommand());
+
+        equipment.SoftDelete();
+
+        Assert.IsNotNull(equipment.DeletedAt);
+    }
+
+    [TestMethod]
+    public void SetReminderInterval_WithValidDays_ShouldUpdateReminderInterval()
+    {
+        var equipment = new Equipment(CreateValidEquipmentCommand());
+
+        equipment.SetReminderInterval(15);
+
+        Assert.AreEqual(15, equipment.ReminderIntervalDays);
+    }
+
+    [TestMethod]
+    public void SetReminderInterval_WithNull_ShouldClearReminderInterval()
+    {
+        var equipment = new Equipment(CreateValidEquipmentCommand());
+        equipment.SetReminderInterval(15);
+
+        equipment.SetReminderInterval(null);
+
+        Assert.IsNull(equipment.ReminderIntervalDays);
+    }
 }

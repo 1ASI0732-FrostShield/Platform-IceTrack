@@ -15,7 +15,68 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="" />
+    <list default="true" id="75df0a9e-622d-4cf6-b387-93611a0a68df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/IceTrackPlatform.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/ref/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/refint/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IceTrackPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/Aggregates/Dashboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/Aggregates/Dashboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/Aggregates/Monitoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/Aggregates/Monitoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/Aggregates/ServiceRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/Aggregates/ServiceRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/MonitoringPipelineTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/MonitoringPipelineTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/BouncyCastle.Cryptography.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/Google.Protobuf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IceTrackPlatform.API.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/IcetrackTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/K4os.Compression.LZ4.Streams.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/K4os.Compression.LZ4.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/K4os.Hash.xxHash.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/MySql.Data.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/MySql.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/System.Security.Permissions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/ZstdSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.Production.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.Production.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win-x64/native/comerr64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win-x64/native/gssapi64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win-x64/native/k5sprt64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/IcetrackTest.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/ref/IcetrackTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/ref/IcetrackTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/refint/IcetrackTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/Debug/net9.0/refint/IcetrackTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/IcetrackTest/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icetrack-platform.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/icetrack-platform.sln.DotSettings.user" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,6 +312,7 @@
       <workItem from="1781583850820" duration="592000" />
       <workItem from="1783100593816" duration="1531000" />
       <workItem from="1783348606626" duration="2456000" />
+      <workItem from="1783394766639" duration="1193000" />
     </task>
     <servers />
   </component>

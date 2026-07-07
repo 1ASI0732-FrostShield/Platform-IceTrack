@@ -21,6 +21,7 @@ public class MonitoringPipelineTests
     private Mock<IEquipmentQueryServices> _queryServiceMock;
     private EquipmentController _controller;
 
+    [TestInitialize]
     public void Setup()
     {
         _commandServiceMock = new Mock<IEquipmentCommandService>();
